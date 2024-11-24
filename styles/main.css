@@ -17,6 +17,14 @@ header h1 {
     padding-top: 1em;
 }
 
+#top {
+    float: left;
+}
+
+#test-name {
+    text-align: right;
+}
+
 header a:link {
     color: white;
 }

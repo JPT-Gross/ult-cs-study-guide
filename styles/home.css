@@ -1,0 +1,47 @@
+a:link {
+    color: cyan;
+}
+
+a:visited {
+    color: cyan;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0 15% 0 15%;
+}
+
+header h1 {
+    padding-top: 1em;
+}
+
+header a:link {
+    color: white;
+}
+
+header a:visited {
+    color: white;
+}
+
+#home-nav {
+    margin: auto;
+    margin-top: 4em;
+    padding: 1em;
+    width: 60%;
+    border: 2px solid dimgray;
+    border-radius: 10px;
+    background-color: rgb(27, 27, 27);
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#home-nav ul {
+    margin: auto;
+    list-style-type: none;
+}
+
+#home-nav li {
+    padding: 0.5em 0.5em;
+}

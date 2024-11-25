@@ -36,7 +36,7 @@ header a:visited {
 nav {
     border-top: 1px solid dimgray;
     border-bottom: 1px solid dimgray;
-    margin-top: 0.5em;
+    margin: 0.5em 0.5em;
     padding: 0.5em;
     display: flex;
     justify-content: center;
@@ -70,4 +70,49 @@ nav li a:hover {
 
 nav li:not(:last-child) {
     border-right: 1px solid dimgray;
+}
+
+.section-numbers,
+h1 {
+    font-size: 2rem;
+}
+
+.section-numbers p {
+    font-size: 1rem;
+}
+
+.article-numbers,
+h2 {
+    font-size: 1.5rem;
+}
+
+ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+}
+
+ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+}
+
+ol > li:before {
+    content: counters(item, '.') '. ';
+    display: table-cell;
+    padding-right: 0.6em;
+}
+
+li ol > li {
+    margin: 0;
+}
+
+li ol > li:before {
+    content: counters(item, '.') ' ';
+}
+
+p {
+    margin-bottom: 1em;
 }

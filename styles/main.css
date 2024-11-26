@@ -72,16 +72,12 @@ nav li:not(:last-child) {
     border-right: 1px solid dimgray;
 }
 
-.section-numbers,
+li.section-numbers::before,
 h1 {
     font-size: 2rem;
 }
 
-.section-numbers p {
-    font-size: 1rem;
-}
-
-.article-numbers,
+li.article-numbers::before,
 h2 {
     font-size: 1.5rem;
 }
@@ -115,4 +111,57 @@ li ol > li:before {
 
 p {
     margin-bottom: 1em;
+}
+
+aside {
+    margin-bottom: 1em;
+}
+
+img {
+    margin: auto;
+    width: 90%;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.key-term {
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+div.example {
+    display: flex;
+    border: 2px solid dimgray;
+    border-radius: 4px;
+    margin: 0.5em 0.5em;
+}
+
+div.snippet {
+    display: flex;
+    flex-basis: 100%;
+    border-right: 2px solid dimgray;
+    padding: 0.5em;
+    background: #272822;
+}
+
+div.result {
+    display: flex;
+    flex-basis: 100%;
+    padding: 0.5em;
+}
+
+div.result img {
+    width: fit-content;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
 }

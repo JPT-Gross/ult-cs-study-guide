@@ -131,6 +131,14 @@ ul {
     list-style-type: disc;
 }
 
+li {
+    margin-bottom: 1em;
+}
+
+nav li {
+    margin-bottom: initial;
+}
+
 .key-term {
     font-weight: bold;
     font-size: 1.15em;
@@ -140,7 +148,7 @@ div.example {
     display: flex;
     border: 2px solid dimgray;
     border-radius: 4px;
-    margin: 0.5em 0.5em;
+    margin-bottom: 1em;
 }
 
 div.snippet {

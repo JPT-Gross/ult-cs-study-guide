@@ -143,10 +143,12 @@
                                 about data) for our document. The meta element
                                 always goes inside the head element. Review the
                                 example below, then a breakdown of common meta
-                                element attributes will follow.
+                                element attributes will follow. Notice that the
+                                meta elements are void elements and thus have a
+                                start tag, but no end tag.
                             </li>
                             <div class="example">
-                                <div class="snippet">
+                                <div class="snippet" style="border: hidden">
                                     <!-- prettier-ignore -->
                                     <script type="text/plain" class="language-html line-numbers"><head>
     <meta charset="utf-8" />
@@ -154,6 +156,158 @@
     <meta name="description" content="A free HTML/CSS Study Guide" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head></script>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">Encoding</span>: On
+                                    line two of the example above, you'll see a
+                                    meta element with an attribute name of
+                                    "charset" and an attribute value of "utf-8".
+                                    "charset" allows us to set what character
+                                    encoding standard we'd like to use for our
+                                    document. Don't worry if that sounds a
+                                    little complicated. utf-8 is the modern
+                                    encoding that most web pages use as it
+                                    supports nearly all of the languages and
+                                    special characters/symbols you would ever
+                                    need to display.
+                                </li>
+                                <li>
+                                    <span class="key-term">keyword</span>: On
+                                    line three of the example above, you'll see
+                                    a meta element with an attribute name of
+                                    "name" and a value of "keywords". This sets
+                                    this meta element up to describe which
+                                    keywords can be used to find this page using
+                                    a search engine such as Google, Bing, or
+                                    DuckDuckGo. Following the "name" attribute
+                                    is the "content" attribute. Inside of the
+                                    value for this attribute we can write a list
+                                    of keywords (seperated by commas), that can
+                                    help search engines connect our page with
+                                    users that search for those words.
+                                </li>
+                                <li>
+                                    <span class="key-term">description</span>:
+                                    On line four of the example above, you'll
+                                    see a meta element with an attribute name of
+                                    "name" and a value of "description". This
+                                    sets this meta element up to give search
+                                    engines a brief description of our page that
+                                    can be diplayed when someone searches for
+                                    our site. The description text is written in
+                                    the value area of the "content" attribute.
+                                </li>
+                                <li>
+                                    <span class="key-term">viewport</span>: On
+                                    line five of the example above, you'll see a
+                                    meta element with an attribute name of
+                                    "name" and a value of "viewport". This sets
+                                    this meta element up to tell the browser how
+                                    we'd like to configure the viewable area of
+                                    the page. Here, we set the "content"
+                                    attribute to "width=device-width,
+                                    initial-scale=1.0". That looks very complex,
+                                    but all it does is set the width of the web
+                                    page to the width of the browser.
+                                </li>
+                            </ul>
+                        </ul>
+                        <li class="article-numbers">
+                            <h2>Construct well-formed page markup</h2>
+                        </li>
+                        <ul>
+                            <li>
+                                <span class="key-term"
+                                    >!DOCTYPE declaration</span
+                                >: While it looks like an element the !DOCTYPE
+                                decleration stands outside of the html code and
+                                tells the browser what type of document you are
+                                writing. For our purposes, this will always be
+                                set to html and will look like the example
+                                below.
+                            </li>
+                            <div class="example">
+                                <div class="snippet" style="border: hidden">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html></script>
+                                </div>
+                            </div>
+                            <li>
+                                <span class="key-term">html</span>: The "html"
+                                element designates the root of the document and
+                                holds all of the html code inside of it. The
+                                "html" element commonly includes the "lang"
+                                attribute which holds a language in its value.
+                                To specify that our page is written in American
+                                English, we'll use the "en-US" language code in
+                                the example below.
+                            </li>
+                            <div class="example">
+                                <div class="snippet" style="border: hidden">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+</html></script>
+                                </div>
+                            </div>
+                            <li>
+                                <span class="key-term">head</span>: The "head"
+                                element, as we've seen earlier, holds the
+                                metadata for the document. We have already seen
+                                "meta" and "style" written in "head", but there
+                                is one more that is very common. In the example
+                                below we will see how the "title" element is
+                                used to give the document a title that is
+                                displayed in the browser's tab.
+                            </li>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+</html></script>
+                                </div>
+                                <div class="result centered">
+                                    <img
+                                        src="/imgs/title.png"
+                                        alt="title shown in the browser tab"
+                                    />
+                                </div>
+                            </div>
+                            <li>
+                                <span class="key-term">body</span>: The "body"
+                                element designates the start and end of the
+                                visible area of the document. Elements that
+                                display visual content go inside of "body". In
+                                the example below we will use the "h1" heading
+                                element to show how they are written.
+                            </li>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <h1>Hello!</h1>
+    </body>
+</html></script>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <h1>Hello!</h1>
                                 </div>
                             </div>
                         </ul>

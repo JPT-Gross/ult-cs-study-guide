@@ -2,6 +2,7 @@
 <html lang="en-US">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
         <title>The Ultimate CS Study Guide</title>
         <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
         <link rel="stylesheet" type="text/css" href="/styles/main.css" />
@@ -109,19 +110,22 @@
                             <li>
                                 <span class="key-term">style</span>: the style
                                 element allows us to write styling rules into
-                                the document. These rules are written in a
-                                language called CSS that we will cover in more
-                                detail later. For now, review the simple example
-                                below.
+                                the document. The style element always goes
+                                inside the head element. These rules are written
+                                in a language called CSS that we will cover in
+                                more detail later. For now, review the simple
+                                example below.
                             </li>
                             <div class="example">
                                 <div class="snippet">
                                     <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><style>
-    body {
-        background-color: magenta;
-    }
-</style></script>
+                                    <script type="text/plain" class="language-html line-numbers"><head>
+    <style>
+        body {
+            background-color: magenta;
+        }
+    </style>
+</head></script>
                                 </div>
                                 <div
                                     class="result"
@@ -131,6 +135,25 @@
                                     "
                                 >
                                     <p>Hello, world!</p>
+                                </div>
+                            </div>
+                            <li>
+                                <span class="key-term">meta</span>: meta
+                                elements allow us to define the metadata (data
+                                about data) for our document. The meta element
+                                always goes inside the head element. Review the
+                                example below, then a breakdown of common meta
+                                element attributes will follow.
+                            </li>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML, CSS, study, guide" />
+    <meta name="description" content="A free HTML/CSS Study Guide" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head></script>
                                 </div>
                             </div>
                         </ul>

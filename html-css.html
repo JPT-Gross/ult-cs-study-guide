@@ -345,6 +345,99 @@
 </html></script>
                                 </div>
                             </div>
+                            <li>
+                                <span class="key-term">End Tags</span>: Not all
+                                elements have end tags. As we've seen in
+                                previous examples, the "meta" element does not
+                                have an end tag. So, when does an element need
+                                an end tag, and when doesn't it? The short
+                                answer is, an element does not have an end tag
+                                if it cannot have any content. In the example
+                                below we will see the line break, "br", element.
+                                Because this element cannot have any content, it
+                                does not use an end tag.
+                            </li>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <p>
+            Line one, <br />
+            Line two, <br />
+            Line three.
+        </p>
+    </body>
+</html></script>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <p>
+                                        Line one, <br />
+                                        Line two, <br />
+                                        Line three.
+                                    </p>
+                                </div>
+                            </div>
+                            <li>
+                                <span class="key-term"
+                                    >Commonly Used Symbols</span
+                                >: Some symbols cannot be written in the content
+                                area of a visual element without being confused
+                                for html code. &gt; and &lt; are used to
+                                surround elements and we must use a different
+                                method to get them to display on screen. For
+                                this we use
+                                <span class="key-term">entities</span>, also
+                                known as escape codes to get these symbols to
+                                show correctly. Entities are also useful for
+                                symbols that we'd like to display, but are not
+                                on standard keyboards such as &copy;, &reg;, and
+                                &cent;. The example below shows some common
+                                symbols and thier entities in action.
+                            </li>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <p>
+            2 &gt; 1 <br />
+            BAND-AID&reg; <br />
+            The Lord of the Rings &copy; 1954 <br />
+            The gum was 50&cent;.
+        </p>
+    </body>
+</html></script>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <p>
+                                        2 &gt; 1 <br />
+                                        BAND-AID&reg; <br />
+                                        The Lord of the Rings &copy; 1954 <br />
+                                        The gum was 50&cent;.
+                                    </p>
+                                </div>
+                            </div>
                         </ul>
                     </ol>
                 </li>

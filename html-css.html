@@ -481,8 +481,76 @@
                     <ul>
                         <li>
                             <span class="key-term">Stylesheets</span>: A series
-                            of CSS rulesets are called a stylesheet.
+                            of CSS rulesets are called a stylesheet. Stylesheets
+                            can be written into an html document in three
+                            places. One, directly into an element using the
+                            "style" attribute. This is known as
+                            <span class="key-term">inline</span>. Two, in the
+                            "head" element, using the "style" element. This is
+                            known as <span class="key-term">Internal</span>.
+                            Three, in a seperate file. This is known as
+                            <span class="key-term">external</span>. Let's take a
+                            look at the example below where all three techniques
+                            are used and then break them down one by one.
+
+                            <div
+                                class="example"
+                                style="margin-bottom: 0; border-bottom: none"
+                            >
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+            p {
+                color: magenta;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Hello,
+        </p>
+        <p style="color: green">
+            World!
+        </p>
+    </body>
+</html></script>
+                                </div>
+                                <div class="snippet" style="border-right: none">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-css line-numbers">p {
+    color: cyan;
+}</script>
+                                </div>
+                            </div>
+                            <div class="example" style="border-top: none">
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        flex-direction: column;
+                                    "
+                                >
+                                    <p
+                                        style="
+                                            color: magenta;
+                                            margin-bottom: auto;
+                                        "
+                                    >
+                                        Hello,
+                                    </p>
+                                    <p style="color: green">World!</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li><span class="key-term">Inline</span>:</li>
+                            </ul>
                         </li>
+                        <li><span class="key-term">Precedence</span></li>
                     </ul>
                 </ol>
             </ol>

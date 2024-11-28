@@ -495,7 +495,11 @@
 
                             <div
                                 class="example"
-                                style="margin-bottom: 0; border-bottom: none"
+                                style="
+                                    margin-bottom: 0;
+                                    margin-top: 1em;
+                                    border-bottom: none;
+                                "
                             >
                                 <div class="snippet">
                                     <!-- prettier-ignore -->
@@ -511,19 +515,20 @@
         </style>
     </head>
     <body>
+        <h1>Heading 1</h1>
         <p>
-            Hello,
+            Paragraph 1
         </p>
         <p style="color: green">
-            World!
+            Paragraph 2
         </p>
     </body>
 </html></script>
                                 </div>
                                 <div class="snippet" style="border-right: none">
                                     <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">p {
-    color: cyan;
+                                    <script type="text/plain" class="language-css line-numbers">body {
+    color: blue;
 }</script>
                                 </div>
                             </div>
@@ -535,22 +540,65 @@
                                         flex-direction: column;
                                     "
                                 >
+                                    <h1 style="color: blue">Heading 1</h1>
                                     <p
                                         style="
                                             color: magenta;
                                             margin-bottom: auto;
                                         "
                                     >
-                                        Hello,
+                                        Paragraph 1
                                     </p>
-                                    <p style="color: green">World!</p>
+                                    <p style="color: green">Paragraph 2</p>
                                 </div>
                             </div>
                             <ul>
-                                <li><span class="key-term">Inline</span>:</li>
+                                <li>
+                                    <span class="key-term">Inline</span>: On
+                                    line 17 in the top-left example above, we
+                                    can see the inline style being applied.
+                                    Notice that it is written inside an
+                                    attribute named "style". It does not need a
+                                    selector because it is written directly into
+                                    the element that it will be styling.
+                                </li>
+                                <li>
+                                    <span class="key-term">Internal</span>: On
+                                    lines 6 - 10 in the top-left example above,
+                                    we can see the internal style being applied.
+                                    Notice that it is written inside an element
+                                    with the tag name "style", and the ruleset
+                                    is indented to make it easier to read.
+                                </li>
+                                <li>
+                                    <span class="key-term">External</span>: On
+                                    line 5 in the top-left example above, we see
+                                    a new element called "<span class="key-term"
+                                        >link</span
+                                    >". This allows our HTML document to
+                                    communicate with other files. In this case
+                                    we are linking to a CSS file that we named
+                                    "style.css". The code for this file can be
+                                    seen in the top-right example above.
+                                </li>
                             </ul>
                         </li>
-                        <li><span class="key-term">Precedence</span></li>
+                        <li>
+                            <span class="key-term">Precedence</span>: If we take
+                            a look at the bottom window of the example above, we
+                            can see see that some stylesheets overwrite others.
+                            Even though we wrote in the external stylesheet for
+                            everything in the "body" element to be blue, only
+                            the "h1" element actually displays as blue. This is
+                            because external sheets have the lowest
+                            <span class="key-term">precedence</span> i.e. rank.
+                            The first paragraph element is colored magenta
+                            because it was styled in the internal stylesheet,
+                            which has precedence over the external stylesheet.
+                            Finally, the second paragraph element displays as
+                            green because it was styled inline which has the
+                            highest precedence.
+                        </li>
                     </ul>
                 </ol>
             </ol>

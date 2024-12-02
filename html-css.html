@@ -600,6 +600,162 @@
                             highest precedence.
                         </li>
                     </ul>
+                    <li class="article-numbers">
+                        <h2>Construct and analyze rule sets</h2>
+                    </li>
+                    <ul>
+                        <li>
+                            <span class="key-term">Valid Syntax</span>: As we
+                            learned with HTML, syntax is the specfic order and
+                            placement of words and symbols. CSS, like HTML has
+                            standard syntax that we must follow closely. See the
+                            example below, between lines 5 and 19, for properly
+                            written CSS.
+                        </li>
+                        <div class="example">
+                            <div class="snippet">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+        <style>
+            p {
+                color: green;
+            }
+
+            p.alert {
+                color: yellow;
+                background-color: red;
+            }
+
+            #upside-down {
+                transform: rotate(180deg);
+            }
+
+            a:hover {
+                text-decoration: overline;
+                color: orange;
+            }
+
+            div p {
+                color: magenta;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Regular text.
+        </p>
+        <p class="alert">
+            Alert text.
+        </p>
+        <p id="upside-down">
+            Upside down text.
+        </p>
+        <a href="">Hover over me!</a>
+        <div>
+            <p>
+                Text descendant of a div.
+            </p>
+        </div>
+    </body>
+</html></script>
+                            </div>
+                            <div
+                                class="result"
+                                style="
+                                    background-color: white;
+                                    color: black;
+                                    flex-direction: column;
+                                "
+                            >
+                                <p style="color: green">Regular text.</p>
+                                <p style="background-color: red; color: yellow">
+                                    Alert text.
+                                </p>
+                                <p
+                                    style="
+                                        transform: rotate(180deg);
+                                        color: green;
+                                    "
+                                >
+                                    Upside down text.
+                                </p>
+                                <a href="">Hover over me!</a>
+                                <p style="color: magenta">
+                                    Text descendant of a div.
+                                </p>
+                            </div>
+                        </div>
+                        <li>
+                            <span class="key-term">Selectors</span>: Selectors
+                            in a ruleset are used to specify the part of the
+                            document you'd like to style. Refer to the example
+                            code above for the explinations below.
+                        </li>
+                        <ul>
+                            <li>
+                                <span class="key-term">Element</span>: On line 6
+                                in the example above, we see an element selector
+                                being used. Any html element can be used as a
+                                selector to style everything contained within
+                                that element. Here, we used the paragraph, "p"
+                                element to make all of the text in every "p"
+                                element green.
+                            </li>
+                            <li>
+                                <span class="key-term">Class</span>: A class is
+                                an HTML attribute that allows us to give an
+                                element a name. This name can than be used as a
+                                CSS selector in a ruleset to style only the
+                                elements that share that class. On line 10 we
+                                used a class called alert by typing "p.alert" to
+                                make every "p" element with that class name have
+                                a red background and yellow text. On line 29, we
+                                gave a "p" element the "alert" class name by
+                                writing the "class" attribute name and giving it
+                                the value of "alert". Class names are
+                                case-sensitive, meaning that "alert" is
+                                different from "Alert".
+                            </li>
+                            <li>
+                                <span class="key-term">ID</span>: An ID is
+                                similar to a class, but no element on a page can
+                                have the same exact ID name. Each ID name on a
+                                page must be unique. On line 15 we used an ID
+                                called upside-down by typing "#upside-down" as
+                                the selector. We used the "transform" property
+                                with a value of "rotate(180deg)" to flip the
+                                element we give this ID upside down. On line 32
+                                we gave the "p" element the "upside-down" ID by
+                                typing the "id" attribute name and giving it a
+                                value of "upside-down."
+                            </li>
+                            <li>
+                                <span class="key-term">Pseudo-Class</span>: A
+                                pseudo-class selector allows us to style a part
+                                of the page based on specific events. On line 19
+                                we used the hover pseudo-class as a selector by
+                                typing "a:hover". This will only apply the style
+                                to "a" elements that the user is hovering over
+                                with their mouse. We are changing the line to be
+                                above the text and the color to orange.
+                            </li>
+                            <li>
+                                <span class="key-term">Descendent</span>:
+                                Descendent selectors allow us to style only
+                                elements of the page that exist inside of other
+                                elements. On line 24 we select just the "p"
+                                elements that are nested inside of "div"
+                                elements by typing "div p" as our selector and
+                                we chose a value of "magenta" for the "color"
+                                property. Notice that the only "p" element that
+                                is colored magenta is the last one which is
+                                nested in a "div" element.
+                            </li>
+                        </ul>
+                    </ul>
                 </ol>
             </ol>
         </div>

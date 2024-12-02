@@ -535,10 +535,7 @@
                             <div class="example" style="border-top: none">
                                 <div
                                     class="result"
-                                    style="
-                                        background-color: white;
-                                        flex-direction: column;
-                                    "
+                                    style="background-color: white"
                                 >
                                     <h1 style="color: blue">Heading 1</h1>
                                     <p
@@ -664,11 +661,7 @@
                             </div>
                             <div
                                 class="result"
-                                style="
-                                    background-color: white;
-                                    color: black;
-                                    flex-direction: column;
-                                "
+                                style="background-color: white; color: black"
                             >
                                 <p style="color: green">Regular text.</p>
                                 <p style="background-color: red; color: yellow">
@@ -755,6 +748,284 @@
                                 nested in a "div" element.
                             </li>
                         </ul>
+                    </ul>
+                </ol>
+                <li class="section-numbers">
+                    <h1 id="3">Document Structure using HTML</h1>
+                </li>
+                There are over 100 HTML elements in the current version of HTML:
+                HTML5. Thankfully, for this exam we only have to remember a
+                couple dozen of the most commonly used elements for structuring
+                a document.
+                <ol class="article-list">
+                    <li class="article-numbers">
+                        <h2>
+                            Construct and analyze markup to structure content
+                            and organize data
+                        </h2>
+                    </li>
+                    <ul>
+                        <li>
+                            <span class="key-term">Tables</span>: The "table"
+                            element allows us to create tables of data in an
+                            HTML document. We use the "tr" element to designate
+                            a table-row, the "th" element to designate a
+                            table-header, and the "td" element to designate a
+                            table-data cell. Notice that if we would like a cell
+                            to span across multiple columns we use the "colspan"
+                            attribute name and specify the number of columns as
+                            the attribute value, in this case: 2.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <style>
+        table, th, td {
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr colspan="2">
+            <th>Business Hours</th>
+        </tr>
+        <tr>
+            <td>
+                Mondays
+            </td>
+            <td>
+                2-4pm
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Wednesdays
+            </td>
+            <td>
+                1-4pm
+            </td>
+        </tr>
+    </table>
+</body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <table>
+                                <tr>
+                                    <th colspan="2">Business Hours</th>
+                                </tr>
+                                <tr>
+                                    <td>Mondays</td>
+                                    <td>2-4pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Wednesdays</td>
+                                    <td>1-4pm</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-word">Headings</span>: The heading
+                            elements, "h1"-"h6" allow us to create headings for
+                            our document's content. Headings can be used for the
+                            titles of blog posts or news articles for example.
+                            "h1" heading elements are the largest, most
+                            prominent headings and "h6" headings are the
+                            smallest, least prominent headings. The larger the
+                            number in the heading element tag name, the smaller
+                            the heading will be.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+</body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h6>Heading 6</h6>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term"
+                                >Paragraph, line-break, and
+                                horizontal-rule</span
+                            >: As we've already seen many times, the pargraph
+                            element designates the typical text in a document. A
+                            line-break element: "br", is used to break text in a
+                            paragraph element onto a new line. The
+                            horizontal-rule element: "hr", is used to draw a
+                            horizontal line. This is great for breaking a
+                            document into sections with visible dividers. Look
+                            at the example below to see the code for these
+                            elements in action. Notice that like "br" element,
+                            "hr" is void, meaning it does not contain any
+                            content.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+</head>
+<body>
+    <p>
+        Line one, <br />
+        Line two, <br />
+        Line three.
+    </p>
+    <hr />
+    <p>
+        More text here.
+    </p>
+</body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <p>
+                                Line one, <br />
+                                Line two, <br />
+                                Line three.
+                            </p>
+                            <hr />
+                            <p style="margin-top: 1em">More text here.</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">Content Division</span>: The
+                            content division element: "div", does not do
+                            anything on its own, but allows us to divide our
+                            document into chunks that can be positioned with
+                            CSS. This domain focuses solely on HTML, but you
+                            will see some CSS used to move the div to the center
+                            of the example window.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            I am centered!
+        </p>
+    </div>
+</body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <div
+                                style="
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border: 1px solid red;
+                                "
+                            >
+                                <p style="margin-top: 1em">I am centered!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">Span</span>: The "span"
+                            element allows us to pick out a single character,
+                            word, or a small phrase to be styled with CSS. In
+                            the example below we will use an inline style and
+                            the "span" element to change the color of a single
+                            word in a paragraph element.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+</head>
+<body>
+        <p>
+            Today is a
+            <span style="color: green">
+                special
+            </span>
+            day!
+        </p>
+</body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <p>
+                                Today is a
+                                <span style="color: green">special</span>
+                                day.
+                            </p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">Lists</span>: Lists come in
+                            two formats: ordered and unordered.
+                        </li>
                     </ul>
                 </ol>
             </ol>

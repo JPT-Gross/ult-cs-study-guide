@@ -159,7 +159,7 @@ div.snippet {
 }
 
 div.result {
-    display: flex;
+    display: initial;
     flex-basis: 100%;
     padding: 0.5em;
 }
@@ -180,4 +180,10 @@ div.result > a {
 div.result > a:hover {
     color: orange;
     text-decoration: overline;
+}
+
+div.result > table,
+th,
+td {
+    border: 2px solid gray;
 }

@@ -109,6 +109,26 @@ li ol > li:before {
     content: counters(item, '.') ' ';
 }
 
+ol.li-ex {
+    list-style-type: decimal;
+    counter-reset: initial;
+    margin-left: 1em;
+}
+
+ol.li-ex > li {
+    display: list-item;
+    counter-increment: initial;
+}
+
+ol.li-ex > li:before {
+    content: normal;
+    display: list-item;
+}
+
+li ol.li-ex > li:before {
+    content: normal;
+}
+
 p {
     margin-bottom: 1em;
 }

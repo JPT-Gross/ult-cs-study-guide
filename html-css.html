@@ -836,7 +836,7 @@
                     </div>
                     <ul>
                         <li>
-                            <span class="key-word">Headings</span>: The heading
+                            <span class="key-term">Headings</span>: The heading
                             elements, "h1"-"h6" allow us to create headings for
                             our document's content. Headings can be used for the
                             titles of blog posts or news articles for example.
@@ -1024,8 +1024,147 @@
                     <ul>
                         <li>
                             <span class="key-term">Lists</span>: Lists come in
-                            two formats: ordered and unordered.
+                            two formats: ordered and unordered. To make an
+                            ordered list, we use the ordered list element with
+                            the tag name of "ol". To make an unordered list, we
+                            use the unordered list element with the tag name of
+                            "ul". Ordered lists use numbers or letters, while
+                            unordered lists use shapes. Regardless of the list
+                            type used, we always nest the list item element,
+                            with a tag name of "li", inside the list element we
+                            are using. See the example below to see these two
+                            list types.
                         </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+</head>
+<body>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+        </ul>
+        <ol>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+        </ol>
+</body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <ul style="margin-bottom: 2em; margin-left: -1.5em">
+                                <li>Item One</li>
+                                <li>Item Two</li>
+                                <li>Item Three</li>
+                            </ul>
+                            <ol class="li-ex">
+                                <li>Item One</li>
+                                <li>Item Two</li>
+                                <li>Item Three</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <li class="article-numbers">
+                        <h2>
+                            Construct and analyze markup that uses HTML5
+                            semantic elements
+                        </h2>
+                    </li>
+                    <aside>
+                        <figure>
+                            <img
+                                src="imgs/semantics.png"
+                                alt="semantic page layout"
+                            />
+                            <figcaption>
+                                figure 3.2-a: Div page layout vs. semantic page
+                                layout
+                            </figcaption>
+                        </figure>
+                    </aside>
+                    <ul>
+                        <li>
+                            <span class="key-term">Semantic Elements</span>:
+                            Earlier we defined syntax as the placement and order
+                            of characters and symbols.
+                            <span class="key-term">Semantics</span>, on the
+                            other hand, is the meaning that the order of these
+                            characters and symbols produce. As long as the
+                            syntax is correct, your code will run, but semantics
+                            is important for other humans. We want to make our
+                            code as readable and understandable as possible. To
+                            help with semantic readability, HTML5 introduced
+                            semantic elements. Before this, every part of a
+                            webpage was a seperate div with a class name. For
+                            example, the header would look like: &lt;div
+                            class="header"&gt;. The problem with this is that
+                            unless every web developer sticks to this exact
+                            wording, it won't be consistent. With HTML5, we now
+                            have the &lt;header&gt; element. Functionally, this
+                            is no different from the "div" method, but
+                            semantically this is much more consistent and easier
+                            to read. See figure 3.2-a above for an example of
+                            how a page should be layed out using semantic
+                            elements versus the old way of doing it before
+                            HTML5.
+                        </li>
+                        <ul>
+                            <li>
+                                <span class="key-term">details/summary</span>:
+                                The "details" element allows us to create a part
+                                of our page that can be shown and hidden. The
+                                "summary" element allows us to give this feature
+                                a title. To achieve this, we place the start tag
+                                before the parts of our page we'd like to hide,
+                                then we place the end tag after. See the example
+                                below for a demonstration.
+                            </li>
+                        </ul>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+        <html lang="en-US">
+        <head>
+            <title>The Ultimate CS Study Guide</title>
+        </head>
+        <body>
+            <details>
+                <summary>Click to Show</summary>
+                <p>
+                    This text was hidden, but now it's not.
+                </p>
+            </details>
+        </body>
+        </html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <details>
+                                <summary>Click to Show</summary>
+                                <p>This text was hidden, but now it's not.</p>
+                            </details>
+                        </div>
+                    </div>
+                    <ul>
+                        <ul>
+                            <li>
+                                <span class="key-term">figure/figcaption</span>
+                            </li>
+                        </ul>
                     </ul>
                 </ol>
             </ol>

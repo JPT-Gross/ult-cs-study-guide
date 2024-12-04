@@ -660,7 +660,7 @@
 </html></script>
                             </div>
                             <div
-                                class="result"
+                                class="result hover"
                                 style="background-color: white; color: black"
                             >
                                 <p style="color: green">Regular text.</p>
@@ -852,17 +852,17 @@
                             <!-- prettier-ignore -->
                             <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <title>The Ultimate CS Study Guide</title>
-</head>
-<body>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <h4>Heading 4</h4>
-    <h5>Heading 5</h5>
-    <h6>Heading 6</h6>
-</body>
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+    </body>
 </html></script>
                         </div>
                         <div
@@ -900,20 +900,20 @@
                             <!-- prettier-ignore -->
                             <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <title>The Ultimate CS Study Guide</title>
-</head>
-<body>
-    <p>
-        Line one, <br />
-        Line two, <br />
-        Line three.
-    </p>
-    <hr />
-    <p>
-        More text here.
-    </p>
-</body>
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <p>
+            Line one, <br />
+            Line two, <br />
+            Line three.
+        </p>
+        <hr />
+        <p>
+            More text here.
+        </p>
+    </body>
 </html></script>
                         </div>
                         <div
@@ -945,24 +945,24 @@
                             <!-- prettier-ignore -->
                             <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <title>The Ultimate CS Study Guide</title>
-    <style>
-        div {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid red;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <p>
-            I am centered!
-        </p>
-    </div>
-</body>
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+        <style>
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                I am centered!
+            </p>
+        </div>
+    </body>
 </html></script>
                         </div>
                         <div
@@ -996,10 +996,10 @@
                             <!-- prettier-ignore -->
                             <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <title>The Ultimate CS Study Guide</title>
-</head>
-<body>
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
         <p>
             Today is a
             <span style="color: green">
@@ -1007,7 +1007,7 @@
             </span>
             day!
         </p>
-</body>
+    </body>
 </html></script>
                         </div>
                         <div
@@ -1041,10 +1041,10 @@
                             <!-- prettier-ignore -->
                             <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <title>The Ultimate CS Study Guide</title>
-</head>
-<body>
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
         <ul>
             <li>Item One</li>
             <li>Item Two</li>
@@ -1055,7 +1055,7 @@
             <li>Item Two</li>
             <li>Item Three</li>
         </ol>
-</body>
+    </body>
 </html></script>
                         </div>
                         <div
@@ -1085,6 +1085,8 @@
                             <img
                                 src="imgs/semantics.png"
                                 alt="semantic page layout"
+                                width="1332px"
+                                height="651px"
                             />
                             <figcaption>
                                 figure 3.2-a: Div page layout vs. semantic page
@@ -1107,16 +1109,15 @@
                             semantic elements. Before this, every part of a
                             webpage was a seperate div with a class name. For
                             example, the header would look like: &lt;div
-                            class="header"&gt;. The problem with this is that
-                            unless every web developer sticks to this exact
-                            wording, it won't be consistent. With HTML5, we now
-                            have the &lt;header&gt; element. Functionally, this
-                            is no different from the "div" method, but
-                            semantically this is much more consistent and easier
-                            to read. See figure 3.2-a above for an example of
-                            how a page should be layed out using semantic
-                            elements versus the old way of doing it before
-                            HTML5.
+                            class="header"&gt;. The problem with this is, unless
+                            every web developer sticks to this exact wording, it
+                            won't be consistent. With HTML5, we now have the
+                            &lt;header&gt; element. Functionally, this is no
+                            different from the "div" method, but semantically
+                            this is much more consistent and easier to read. See
+                            figure 3.2-a above for an example of how a page
+                            should be layed out using semantic elements versus
+                            the old way of doing it before HTML5.
                         </li>
                         <ul>
                             <li>
@@ -1135,19 +1136,19 @@
                         <div class="snippet">
                             <!-- prettier-ignore -->
                             <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
-        <html lang="en-US">
-        <head>
-            <title>The Ultimate CS Study Guide</title>
-        </head>
-        <body>
-            <details>
-                <summary>Click to Show</summary>
-                <p>
-                    This text was hidden, but now it's not.
-                </p>
-            </details>
-        </body>
-        </html></script>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <details>
+            <summary>Click to Show</summary>
+            <p>
+                This text was hidden, but now it's not.
+            </p>
+        </details>
+    </body>
+</html></script>
                         </div>
                         <div
                             class="result"
@@ -1162,9 +1163,200 @@
                     <ul>
                         <ul>
                             <li>
-                                <span class="key-term">figure/figcaption</span>
+                                <span class="key-term">figure/figcaption</span>:
+                                The "figure" element is a semantic element for
+                                holding pictures, graphs, diagrams, etc. The
+                                "figcaption" element is an optional element for
+                                giving a figure some caption text to help
+                                explain its purpose. Below is an example of
+                                figure and figcaption in action.
                             </li>
                         </ul>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <figure>
+            <img 
+                src="/imgs/the-birthday-cake.jpg" 
+                alt="the birthday cake"
+                width="320px"
+                height="245px"
+            />
+            <figcaption>
+                The Birthday Cake - Frees, Harry Whittier
+            </figcaption>
+        </figure>
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <figure>
+                                <img
+                                    src="/imgs/the-birthday-cake.jpg"
+                                    alt="the birthday cake"
+                                    style="
+                                        margin: 0px;
+                                        width: 320px;
+                                        height: 245px;
+                                    "
+                                />
+                                <figcaption
+                                    style="
+                                        font-style: normal;
+                                        text-align: initial;
+                                    "
+                                >
+                                    The Birthday Cake - Frees, Harry Whittier
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <li class="article-numbers">
+                        <h2>
+                            Construct and analyze markup that implements
+                            navigation
+                        </h2>
+                    </li>
+                    <ul>
+                        <li>
+                            <span class="key-term">Anchor</span>: The "anchor"
+                            element is used to create a hyperlink that can
+                            direct a user to a different webpage or to a
+                            different spot on the same webpage. The "HTML
+                            Reference" attribute with the attribute name of
+                            "href" contains the address for the hyperlink as its
+                            attribute value. The content of the "anchor" element
+                            should clearly indicate the destination of the
+                            hyperlink.
+                        </li>
+                        <li>
+                            <span class="key-term">target</span>: The "target"
+                            attribute is used in the "anchor" element to specify
+                            where the hyperlink will open. There are several
+                            valid values for this attribute, but the two this
+                            exam are concerned with are "_self" and "_blank".
+                            The default place for a hyperlink to open is in the
+                            current tab/window the user is currently in, this is
+                            "_self". Sometimes however, we woud like to keep the
+                            user on our page and have the hyperlink open in a
+                            new tab/window, in which case we use "_blank". Below
+                            is an example of the "anchor" element with the
+                            "target" attribute set to the "_blank" value.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <a href="https://example.com/" target="_blank">
+            example.com
+        </a>
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <a href="https://example.com/" target="_blank">
+                                example.com
+                            </a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">Bookmarks</span>: bookmarks
+                            are hyperlinks that direct the user to a different
+                            location on the current document. This is very
+                            useful if the document is long (like this
+                            study-guide for example). To create a bookmark,
+                            first, give the element where you would like the
+                            hyperlink to direct to an ID with the "id"
+                            attribute. Second, create an "anchor" element and
+                            write the ID in as the value for the "href"
+                            attribute. See the example below.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <a href="#jump">
+            Click to jump
+        </a>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <p id="jump">Jump</p>
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <a href="#jump"> Click to jump </a>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <p id="jump">Jump</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">
+                                Relative vs. Absolute Links
+                            </span>
+                            : A hyperlink can have two general destinations.
+                            One, relative: a link that references a location
+                            based on its relation to the current document. Two,
+                            absolute: a link that references a specific URL
+                            address. A relative link will typically be the name
+                            of the file, such as "contact.html" or "index.html".
+                            An absolute link is a specific web address such as
+                            "https://www.example.com".
+                        </li>
+                        <li>
+                            <span class="key-term">
+                                Navigating Simple Folder Hierarchies
+                            </span>
+                            : Relative hyperlinks are very simple if all of the
+                            documents are in the same folder/directory, however,
+                            larger websites often are organized using many
+                            folders.
+                        </li>
                     </ul>
                 </ol>
             </ol>

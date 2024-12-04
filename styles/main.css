@@ -197,7 +197,7 @@ div.result > a {
     color: blue;
 }
 
-div.result > a:hover {
+div.hover > a:hover {
     color: orange;
     text-decoration: overline;
 }

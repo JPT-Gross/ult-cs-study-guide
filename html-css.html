@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
-        <title>The Ultimate CS Study Guide</title>
+        <title>UCSG | HTML/CSS</title>
         <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
         <link rel="stylesheet" type="text/css" href="/styles/main.css" />
         <link rel="stylesheet" type="text/css" href="/styles/prism.css" />
@@ -796,20 +796,12 @@
             <th>Business Hours</th>
         </tr>
         <tr>
-            <td>
-                Mondays
-            </td>
-            <td>
-                2-4pm
-            </td>
+            <td>Mondays</td>
+            <td>2-4pm</td>
         </tr>
         <tr>
-            <td>
-                Wednesdays
-            </td>
-            <td>
-                1-4pm
-            </td>
+            <td>Wednesdays</td>
+            <td>1-4pm</td>
         </tr>
     </table>
 </body>
@@ -1354,10 +1346,136 @@
                             </span>
                             : Relative hyperlinks are very simple if all of the
                             documents are in the same folder/directory, however,
-                            larger websites often are organized using many
-                            folders.
+                            larger websites are often organized using many
+                            folders. Use the example below to note the four
+                            different ways links are written in the "href"
+                            attributes. The folder diagram on the right is a
+                            visual representation of the contents of the files
+                            that exist on this example website. The code on the
+                            left is for the "about.html" page in the "pages"
+                            folder.
+                        </li>
+                        <ul>
+                            <li>
+                                On line 14, we see the simplest link as
+                                mentioned earlier. Because "contact.html" exists
+                                in the same folder, the link is simply written
+                                as its name.
+                            </li>
+                            <li>
+                                On line 11, we see that to go up one folder in
+                                the directory two dots and a forward slash (../)
+                                must be written before the name of the file.
+                                Because "index.html" exists in the folder above,
+                                the link must be written as "../index.html".
+                            </li>
+                            <li>
+                                On line 17, we see that to go down a folder we
+                                write the name of the folder below, then a
+                                forward slash. Because "license.html" is in a
+                                folder called "sub-pages", and that folder is in
+                                the same folder as the current page, we create
+                                the link as "sub-pages/license.html".
+                            </li>
+                            <li>
+                                On line 5, we see that to go up a folder then
+                                into a different folder we combine the two
+                                previous ideas. We write two dots to go up a
+                                folder, then write the name of the folder in the
+                                folder above that holds the file we are looking
+                                for, then the file name. Because "style.css" is
+                                in a folder above called "styles", we write the
+                                link as "../styles/style.css".
+                            </li>
+                        </ul>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>About</head>
+        <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="sub-pages/license.html">License</a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html></script>
+                        </div>
+                        <div class="result center">
+                            <img
+                                src="/imgs/hierarchy.png"
+                                style="height: 800px; width: 232px"
+                            />
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">map, area</span>: The "map"
+                            element, along with the "area" element, allows for
+                            the creation of images that have spots on them that
+                            can be clickable hyperlinks. You'll see in the
+                            example below that the "map" and "area" elements can
+                            be quite complex. For the exam, all you need to
+                            remember is what these elements do and that the
+                            "area" element must be nested inside the "map"
+                            element.
                         </li>
                     </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>About</head>
+    </head>
+    <body>
+        <img src="/imgs/vitascope.jpg" usemap="#image-map">
+        <map name="image-map">
+            <area 
+            target="_blank"
+            alt="vitascope" 
+            title="vitascope" 
+            href="https://en.wikipedia.org/wiki/Vitascope"
+            coords="461,122,577,95,578,346,459,294"
+            shape="poly"
+            />
+        </map>
+    </body>
+</html></script>
+                        </div>
+                        <div class="result center">
+                            <img
+                                src="/imgs/vitascope.jpg"
+                                usemap="#image-map"
+                            />
+
+                            <map name="image-map">
+                                <area
+                                    target="_blank"
+                                    alt="vitascope"
+                                    title="vitascope"
+                                    href="https://en.wikipedia.org/wiki/Vitascope"
+                                    coords="461,122,577,95,578,346,459,294"
+                                    shape="poly"
+                                />
+                            </map>
+                        </div>
+                    </div>
                 </ol>
             </ol>
         </div>

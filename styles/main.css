@@ -2,6 +2,10 @@ a:link {
     color: cyan;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 a:visited {
     color: cyan;
 }
@@ -61,10 +65,10 @@ nav li a {
 }
 
 nav li a:hover {
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    color: magenta;
+}
+
+nav li a:focus {
     color: magenta;
 }
 

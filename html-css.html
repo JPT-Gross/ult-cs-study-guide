@@ -1098,8 +1098,8 @@
                             is important for other humans. We want to make our
                             code as readable and understandable as possible. To
                             help with semantic readability, HTML5 introduced
-                            semantic elements. Before this, every part of a
-                            webpage was a seperate div with a class name. For
+                            semantic elements. Before this, every part of a web
+                            page was a seperate div with a class name. For
                             example, the header would look like: &lt;div
                             class="header"&gt;. The problem with this is, unless
                             every web developer sticks to this exact wording, it
@@ -1223,8 +1223,8 @@
                         <li>
                             <span class="key-term">Anchor</span>: The "anchor"
                             element is used to create a hyperlink that can
-                            direct a user to a different webpage or to a
-                            different spot on the same webpage. The "HTML
+                            direct a user to a different web page or to a
+                            different spot on the same web page. The "HTML
                             Reference" attribute with the attribute name of
                             "href" contains the address for the hyperlink as its
                             attribute value. The content of the "anchor" element
@@ -1432,7 +1432,8 @@
                             be quite complex. For the exam, all you need to
                             remember is what these elements do and that the
                             "area" element must be nested inside the "map"
-                            element.
+                            element. The movie screen is the clickable area of
+                            the image in the example.
                         </li>
                     </ul>
                     <div class="example">
@@ -1476,6 +1477,287 @@
                             </map>
                         </div>
                     </div>
+                    <li class="article-numbers">
+                        <h2>
+                            Construct and analyze markup that uses form elements
+                        </h2>
+                    </li>
+                    <p style="margin-bottom: 1em">
+                        Forms are the primary method for getting user input on a
+                        web page. If you have ever made an account on a web
+                        page, you have interacted with a form. Forms have text
+                        boxes, drop-down menus, buttons, check-boxes and much
+                        more. Forms send their input to a database. This exam
+                        does not assess our knowledge about databases, so we
+                        will only cover the bare minimum about this process.
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="key-term">Form Attributes</span>: In
+                            the "form" element we use two attributes, "action
+                            and "method". The
+                            <span class="key-term">"action"</span> attribute
+                            allows us to type a URL as its value. This URL is
+                            the page that processes the user input for the form.
+                            The <span class="key-term">"method"</span> attribute
+                            specifies how the user input will be sent. The
+                            example below shows a simple form. Note that this
+                            form will not work correctly because a database
+                            server is not running to recieve and process the
+                            input.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <form action="index.html" method="POST" target="_blank">
+            <input type="radio" name="preference" id="yes">
+            <label for="yes">yes</label>
+            <br />
+            <input type="radio" name="preference" id="no">
+            <label for="no">no</label>
+            <br />
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <form
+                                action="index.html"
+                                method="POST"
+                                target="_blank"
+                            >
+                                <input
+                                    type="radio"
+                                    name="preference"
+                                    id="yes"
+                                />
+                                <label for="yes">yes</label>
+                                <br />
+                                <input type="radio" name="preference" id="no" />
+                                <label for="no">no</label>
+                                <br />
+                                <input type="submit" value="submit" />
+                            </form>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">Submission Methods</span>: in
+                            the example above you will see that the value for
+                            the "method" attribute was "POST". There are two
+                            main submission methods and they are "GET" and
+                            "POST". <span class="key-term">"GET"</span> is a
+                            request to retrieve information from the database
+                            server, such as search results or images. Note that
+                            with "GET" the data from the form will be shown in
+                            the URL. <span class="key-term">"POST"</span> is a
+                            request to modify information on the database server
+                            such as changing a password.
+                        </li>
+                        <li>
+                            <span class="key-term">
+                                Input Types and Restrictions
+                            </span>
+                            : as you can imagine, there are a lot of different
+                            ways we can collect input from users. We will only
+                            cover some of the basic ones here, but if you'd
+                            like, here is a more
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >comprehensive list of examples</a
+                            >. as mentioned earlier, we can have simple inputs
+                            like text, and checkboxes, but we can also have more
+                            complex inputs that restrict what the user may
+                            write. For example, below you will see an "email"
+                            and "password" input. The "email" input will only
+                            allow valid email addresses as input, and "password"
+                            will mask what the user types, typically with dots
+                            or stars so other people cannot see the input.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <form action="index.html" method="POST" target="_blank">
+            <label for="username">Username: </label> <br />
+            <input type="text" name="username" id="username"> <br />
+            <label for="pass">Password: </label> <br />
+            <input type="password" name="pass" id="pass"> <br />
+            <label for="email">Email: </label> <br />
+            <input type="email" name="email" id="email"> <br />
+            <label for="timezone">Time Zone: </label> <br />
+            <select name="timezone" id="timezone">
+                <option value="eastern">Eastern</option>
+                <option value="central">Central</option>
+                <option value="mountain">Mountain</option>
+                <option value="pacific">Pacific</option>
+            </select>
+            <br />
+            <label for="bio">Bio:</label> <br />
+            <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+            <br />
+            <input type="submit" value="Submit">
+            <button type="reset">Reset</button>
+        </form>
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <form
+                                action="index.html"
+                                method="POST"
+                                target="_blank"
+                            >
+                                <label for="username">Username: </label> <br />
+                                <input
+                                    type="text"
+                                    name="username"
+                                    id="username"
+                                />
+                                <br />
+                                <label for="pass">Password: </label> <br />
+                                <input type="password" name="pass" id="pass" />
+                                <br />
+                                <label for="email">Email: </label> <br />
+                                <input type="email" name="email" id="email" />
+                                <br />
+                                <label for="timezone">Time Zone: </label> <br />
+                                <select name="timezone" id="timezone">
+                                    <option value="eastern">Eastern</option>
+                                    <option value="central">Central</option>
+                                    <option value="mountain">Mountain</option>
+                                    <option value="pacific">Pacific</option>
+                                </select>
+                                <br />
+                                <label for="bio">Bio:</label> <br />
+                                <textarea
+                                    name="bio"
+                                    id="bio"
+                                    cols="30"
+                                    rows="10"
+                                ></textarea>
+                                <br />
+                                <input
+                                    type="submit"
+                                    value="Submit"
+                                    style="height: 30px"
+                                />
+                                <button type="reset">Reset</button>
+                            </form>
+                        </div>
+                    </div>
+                    <ul>
+                        <ul>
+                            <li>
+                                <span class="key-term">label</span>: the "label"
+                                element creates a caption for an input. All
+                                inputs should use the "label" element and not
+                                the "paragraph" element. The "label" element is
+                                important for accessibility, as assistive
+                                technology depends on these labels to help users
+                                to fill out forms. Also, the label can be
+                                clicked to select the input that is associated
+                                with it. This helps users to understand what
+                                data should go in which input if they are
+                                confused by the layout of the form. To associate
+                                a label with an input, make sure to write the
+                                same value in the "for" attribute in the "label"
+                                element as the "id" attribute in the "input"
+                                element.
+                            </li>
+                            <li>
+                                <span class="key-term">text</span>: When the
+                                "type" attribute has a value of "text" in an
+                                "input" element a single-line text-box will
+                                appear. You can see this on line 9 of the
+                                example above. In the example it is being used
+                                to take in a Username from the user.
+                            </li>
+                            <li>
+                                <span class="key-term">password</span>: When
+                                "password" is used as the value, a text box is
+                                created just as with "text", but any input into
+                                the box is hidden to protect the user's data. In
+                                the example above, this is created on line 11.
+                            </li>
+                            <li>
+                                <span class="key-term">email</span>: When
+                                "email" us used, a text box is created, but when
+                                the form is submitted the page will check if a
+                                valid email address was entered. If not, the
+                                form will not submit and the user will be
+                                prompted to fix their input. In the example
+                                above, this is created on line 13.
+                            </li>
+                            <li>
+                                <span class="key-term">select</span>: Unlike the
+                                previous input types, "select" is its own
+                                element, not an attribute value for the "input"
+                                element. The "select" element creates a
+                                drop-down box from which the user can select
+                                from a list of options. In the example above,
+                                the "select" element is started on line 15,
+                                ended on line 20, and has the user select from a
+                                list of timezones.
+                            </li>
+                            <li>
+                                <span class="key-term">option</span>: the
+                                "option" element nests inside of the "select"
+                                element and is used to create an item for the
+                                drop-down box. In the example, the timezone
+                                options are created on lines 16-19.
+                            </li>
+                            <li>
+                                <span class="key-term">textarea</span>: The
+                                "textarea" element is like the "input" element
+                                with the "type" attribute set to "text", but
+                                with a multi-line text box. the "textarea"
+                                element has a "cols" attribute for setting how
+                                many columns wide the box will start with when
+                                the page loads, as well as a "rows" attribute
+                                for setting how many rows tall the box will
+                                start with. The user can resize the box by
+                                dragging the bottom right corner. In the example
+                                above, this is created on line 23.
+                            </li>
+                            <li>
+                                <span class="key-term">button</span>: The
+                                "button" element creates a button that the user
+                                can click to initiate some action on the form.
+                                On line 26 a button was created with the "type"
+                                attribute set to a value of "reset" which resets
+                                all of the form input to their default values.
+                                Notice that on line 25 there is an "input"
+                                element with the "type" attribute set to
+                                "submit". This also create a button that submits
+                                the form data. The "button" element could also
+                                have been used here instead to achive the same
+                                thing.
+                            </li>
+                        </ul>
+                    </ul>
                 </ol>
             </ol>
         </div>

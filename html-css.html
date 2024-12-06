@@ -49,7 +49,7 @@
                     <aside>
                         <figure>
                             <img
-                                src="/imgs/elem-anatomy.png"
+                                src="/media/imgs/elem-anatomy.png"
                                 alt="anatomy of an element"
                                 width="1199px"
                                 height="283px"
@@ -115,7 +115,7 @@
 <noscript>Your browser does not support JavaScript.</noscript></script>
                             </div>
                             <div class="result center">
-                                <img src="/imgs/alert.png" />
+                                <img src="/media/imgs/alert.png" />
                             </div>
                         </div>
                         <li>
@@ -277,7 +277,7 @@
                             </div>
                             <div class="result centered">
                                 <img
-                                    src="/imgs/title.png"
+                                    src="/media/imgs/title.png"
                                     alt="title shown in the browser tab"
                                 />
                             </div>
@@ -443,7 +443,7 @@
                     <aside>
                         <figure>
                             <img
-                                src="/imgs/ruleset-anataomy.png"
+                                src="/media/imgs/ruleset-anataomy.png"
                                 alt="anatomy of a ruleset"
                                 width="784px"
                                 height="339px"
@@ -1075,7 +1075,7 @@
                     <aside>
                         <figure>
                             <img
-                                src="imgs/semantics.png"
+                                src="/media/imgs/semantics.png"
                                 alt="semantic page layout"
                                 width="1332px"
                                 height="651px"
@@ -1176,8 +1176,9 @@
     <body>
         <figure>
             <img 
-                src="/imgs/the-birthday-cake.jpg" 
-                alt="the birthday cake"
+                src="/media/imgs/the-birthday-cake.jpg" 
+                alt="two kittens wearing dresses
+                at a table with a birthday cake."
                 width="320px"
                 height="245px"
             />
@@ -1194,7 +1195,7 @@
                         >
                             <figure>
                                 <img
-                                    src="/imgs/the-birthday-cake.jpg"
+                                    src="/media/imgs/the-birthday-cake.jpg"
                                     alt="the birthday cake"
                                     style="
                                         margin: 0px;
@@ -1417,7 +1418,7 @@
                         </div>
                         <div class="result center">
                             <img
-                                src="/imgs/hierarchy.png"
+                                src="/media/imgs/hierarchy.png"
                                 style="height: 800px; width: 232px"
                             />
                         </div>
@@ -1445,11 +1446,16 @@
         <title>About</head>
     </head>
     <body>
-        <img src="/imgs/vitascope.jpg" usemap="#image-map">
+        <img src="/media/imgs/vitascope.jpg" usemap="#image-map">
         <map name="image-map">
             <area 
             target="_blank"
-            alt="vitascope" 
+            alt='Motion picture poster for 
+            "Edisons greatest marvel--The 
+            Vitascope" show movie audience 
+            watching large screen with woman
+            dancing on screen and others in 
+            background watching.' 
             title="vitascope" 
             href="https://en.wikipedia.org/wiki/Vitascope"
             coords="461,122,577,95,578,346,459,294"
@@ -1461,14 +1467,14 @@
                         </div>
                         <div class="result center">
                             <img
-                                src="/imgs/vitascope.jpg"
+                                src="/media/imgs/vitascope.jpg"
                                 usemap="#image-map"
                             />
 
                             <map name="image-map">
                                 <area
                                     target="_blank"
-                                    alt="vitascope"
+                                    alt='Motion picture poster for "Edisons greatest marvel--The Vitascope" show movie audience watching large screen with woman dancing on screen and others in background watching.'
                                     title="vitascope"
                                     href="https://en.wikipedia.org/wiki/Vitascope"
                                     coords="461,122,577,95,578,346,459,294"
@@ -1578,7 +1584,7 @@
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 >comprehensive list of examples</a
-                            >. as mentioned earlier, we can have simple inputs
+                            >. As mentioned earlier, we can have simple inputs
                             like text, and checkboxes, but we can also have more
                             complex inputs that restrict what the user may
                             write. For example, below you will see an "email"
@@ -1757,6 +1763,315 @@
                                 thing.
                             </li>
                         </ul>
+                    </ul>
+                </ol>
+                <li class="section-numbers">
+                    <h1 id="4">Multimedia Presentation using HTML</h1>
+                </li>
+                <ol class="article-numbers">
+                    <li>
+                        <span class="key-term">
+                            Construct and analyze markup that displays images
+                        </span>
+                    </li>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <img 
+            src="/imgs/the-birthday-cake.jpg" 
+            alt="two kittens wearing dresses
+            at a table with a birthday cake."
+            width="320px"
+            height="245px"
+        />
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <img
+                                src="/imgs/the-birthday-cake.jpg"
+                                alt="two kittens wearing dresses at a table with a birthday cake."
+                                style="margin: 0px; width: 320px; height: 245px"
+                            />
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">img</span>: The "img" element
+                            allows us to add images to a web page.
+                        </li>
+                        <li>
+                            <span class="key-term">src</span>: The value in the
+                            "src" attribute is where we write the source for our
+                            image. While the source can be either a relative or
+                            an absolute link, it is best to always use absolute
+                            links. This way, we don't have to worry if another
+                            website is down or deletes the image.
+                        </li>
+                        <li>
+                            <span class="key-term">alt</span>: The "alt"
+                            attribute is for writing a text description that is
+                            capable of replacing the image. Not all browsers
+                            show images. Some browsers read text to people with
+                            visual impairments, others have images turned off
+                            for people with slow internet connections. For these
+                            reasons it is very important to always have a good
+                            description in the "alt" attribute.
+                        </li>
+                        <li>
+                            <span class="key-term">width and height</span>: the
+                            "width" and "height" attributes specify the
+                            dimensions of the images. There are many units that
+                            are supported, but "px", i.e. pixel is the most
+                            popular.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+    <html lang="en-US">
+        <head>
+            <title>The Ultimate CS Study Guide</title>
+        </head>
+        <body>
+            <picture>
+                <source 
+                    media="(min-width: 1500px)" 
+                    srcset="/imgs/july.jpg"
+                />
+                <source 
+                    media="(min-width: 1000px)"
+                    srcset="/media/imgs/may.jpg"
+                />
+                <img
+                    src="/media/imgs/may.jpg"
+                    alt="two cats"
+                />
+            </picture>
+        </body>
+    </html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <picture>
+                                <source
+                                    media="(min-width: 1500px)"
+                                    srcset="/imgs/july.jpg"
+                                />
+                                <source
+                                    media="(min-width: 1000px)"
+                                    srcset="/media/imgs/may.jpg"
+                                />
+                                <img src="/media/imgs/may.jpg" alt="two cats" />
+                            </picture>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">picture/source</span>: The
+                            "picture" element allows us to display a different
+                            image depending on the display. This is very useful
+                            for "responsive" design, which is the process of
+                            creating a website that adapts its layout for
+                            different sized screens (phones, tablets, desktops,
+                            etc). The "source" element nests inside of the
+                            "picture" element and describes the images that will
+                            be used in the spot on the page. The "media"
+                            attribute allows us to specify at what screen width
+                            the image should display, and the "srcset" attribute
+                            allows us to link the image that will be displayed.
+                        </li>
+                    </ul>
+                    <li class="article-numbers">
+                        <h2>
+                            Construct and analyze markup that plays video and
+                            audio
+                        </h2>
+                    </li>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+    <html lang="en-US">
+        <head>
+            <title>The Ultimate CS Study Guide</title>
+        </head>
+        <body>
+            <video autoplay controls muted>
+                <track 
+                    default 
+                    kind="captions"
+                    srclang="en"
+                    src="/media/vids/friday.vtt"
+                />
+                <source 
+                    src="/media/vids/friday.mp4"
+                    type="video/mp4"
+                />
+                <p>
+                    Sorry, your browser does 
+                    not support video playback
+                </p>
+            </video>
+        </body>
+    </html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <video autoplay controls muted>
+                                <track
+                                    default
+                                    kind="captions"
+                                    srclang="en"
+                                    src="/media/vids/friday.vtt"
+                                />
+                                <source
+                                    src="/media/vids/friday.mp4"
+                                    type="video/mp4"
+                                />
+                                <p>
+                                    Sorry, your browser does not support video
+                                    playback
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">video</span>: The "video"
+                            element is used to insert a video into a web page.
+                            Much like the "picture" element, "video" uses nested
+                            "source" elements to specify the video we'd like to
+                            use. We can also write some fallback text if the
+                            user's browser does not support videos.
+                        </li>
+                        <ul>
+                            <li>
+                                <span class="key-term">autoplay</span>: The
+                                "autoplay" attribute can be added to the "video"
+                                element's start tag if you'd like the video to
+                                play when the page loads. Note that "autoplay"
+                                does not have a value so we do not need to
+                                include the equal sign or quotation marks (="").
+                                This also applies to the next two attributes
+                                mentioned below.
+                            </li>
+                            <li>
+                                <span class="key-term">controls</span>: The
+                                "controls" attribute can be added to the "video"
+                                element's start tag if you'd like the user to
+                                see the play/pause button, volume slider, and
+                                seek bar. It is a good idea to always add this
+                                attribute as user's appreciate the ability to
+                                control the video.
+                            </li>
+                            <li>
+                                <span class="key-term">muted</span>: The "muted"
+                                attribute can be added to the "video" element's
+                                start tag if you'd like the video to start with
+                                muted volume. This is a good idea to add if you
+                                choose to include the "autoplay" attribute, as
+                                users find it annoying to have sound playing the
+                                moment a page loads.
+                            </li>
+                            <li>
+                                <span class="key-term">track</span>: The "track"
+                                element is used to add closed-caption text to
+                                the video. the "src" attribute must link to a
+                                .vtt file which is a text file that allows the
+                                captions to be programmed to show at the time in
+                                the video when they are appropriate.
+                            </li>
+                        </ul>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+        <html lang="en-US">
+            <head>
+                <title>The Ultimate CS Study Guide</title>
+            </head>
+            <body>
+                <audio controls>
+                    <source src="/media/aud/sax.mp3" type="audio/mp3">
+                </audio>
+            </body>
+        </html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <audio controls>
+                                <source
+                                    src="/media/aud/sax.mp3"
+                                    type="audio/mp3"
+                                />
+                            </audio>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">audio</span>: The "audio"
+                            element is used to insert a audio into a web page.
+                            Much like the "picture" element, "audio" uses nested
+                            "source" elements to specify the audio file we'd
+                            like to use. The "audio" element can include all of
+                            the same attributes and the "track" element as
+                            mentioned under the "video" element above.
+                        </li>
+                    </ul>
+                    <div class="example">
+                        <div class="snippet">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>The Ultimate CS Study Guide</title>
+    </head>
+    <body>
+        <iframe
+            title="example.com"
+            src="https://example.com"
+            width="400px"
+            height="300px"
+        ></iframe>
+    </body>
+</html></script>
+                        </div>
+                        <div
+                            class="result"
+                            style="background-color: white; color: black"
+                        >
+                            <iframe
+                                title="example.com"
+                                src="https://example.com"
+                                width="400px"
+                                height="300px"
+                            ></iframe>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <span class="key-term">iframe</span>: The "iframe"
+                            element allows us to embed another web page into our
+                            web page.
+                        </li>
                     </ul>
                 </ol>
             </ol>

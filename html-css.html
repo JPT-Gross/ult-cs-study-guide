@@ -25,7 +25,7 @@
                 <li><a href="#6">Accessibility</a></li>
             </ul>
         </nav>
-        <div id="main">
+        <main>
             <ol class="section-list">
                 <li class="section-numbers">
                     <h1 id="1">HTML Fundamentals</h1>
@@ -1876,7 +1876,11 @@
                                     media="(min-width: 1000px)"
                                     srcset="/media/imgs/may.jpg"
                                 />
-                                <img src="/media/imgs/may.jpg" alt="two cats" />
+                                <img
+                                    src="/media/imgs/may.jpg"
+                                    alt="two cats"
+                                    style="margin: 0px"
+                                />
                             </picture>
                         </div>
                     </div>
@@ -2087,12 +2091,109 @@
                     </li>
                     <ul>
                         <li>
-                            <span class="key-term">Positioning</span>
+                            <span class="key-term">position</span>: Positioning
+                            refers to the placement of elements on a page, and
+                            is done inside a CSS ruleset with the "position"
+                            property. By default, all elements have "static"
+                            position value which means they flow from top to
+                            bottom and left to right, just like in a book or
+                            magazine. Of course, there are many options to
+                            change the positioning of elements to design some
+                            very creative and beautiful web sites.
+                        </li>
+                        <ul>
+                            <li>
+                                <span class="key-term">relative</span>: If the
+                                "position" property is given the value of
+                                "relative", the element stays in within its
+                                normal flow on the page, but can be moved in
+                                relation to where it would have been.
+                            </li>
+                            <li>
+                                <span class="key-term">absolute</span>: If the
+                                "position" property is given the value of
+                                "absolute", the element is removed from the flow
+                                of the page and is positioned relative to its
+                                closest ancestor.
+                            </li>
+                            <li>
+                                <span class="key-term">static</span>: The
+                                default value for the "position" property is
+                                "static" and positions elements from top to
+                                bottom on the page.
+                            </li>
+                            <li>
+                                <span class="key-term">fixed</span>: If the
+                                "position" property is given the value of
+                                "fixed", the element is removed from the flow of
+                                the page and is positioned relative to viewport.
+                                This means that the element will stay exactly
+                                where it is, even if the user scrolls up and
+                                down the page.
+                            </li>
+                        </ul>
+                        <li>
+                            <span class="key-term">float</span>: The "float"
+                            property will remove an element from the static flow
+                            of the page and move the element to the left, with a
+                            value of "left", or right, with a value of "right".
+                        </li>
+                        <li>
+                            <span class="key-term">height/width</span>: The
+                            "height" and "width" properties set the size of
+                            elements. By default, these are set to auto and will
+                            grow or shrink to fit the content.
+                        </li>
+                        <li>
+                            <span class="key-term">max-width/min-width</span>:
+                            "height" and "width" will set a specific size, but
+                            if we'd like our elements to still grow and shrink,
+                            but stay within a minimum and maximum range, we can
+                            use the "min-width" and "max-width" properties.
+                        </li>
+                        <li>
+                            <span class="key-term">overflow</span> When we
+                            restrict the size of elements with "height",
+                            "width", "max-height", or "min-height", if the
+                            content becomes larger than the size of the element,
+                            it will "break" through the element. This looks
+                            terrible and must be avoided. The "overflow"
+                            property allows us to create a scroll-bar so the
+                            content stays within the element.
+                        </li>
+                        <li>
+                            <span class="key-term">text-align</span> The
+                            "text-align" property, much like on a word
+                            processor, allows us to align text to the left (the
+                            default setting), right, center, or it can be
+                            justified (equal space between each word).
+                        </li>
+                        <li>
+                            <span class="key-term">display</span> The "display"
+                            property allows us to change whether an element
+                            shows as "inline" or as "block". A "block" takes up
+                            the entire width of the viewport and ends with a
+                            line break so the next element goes under it, such
+                            as the "paragraph" element. An "inline" element is
+                            always the exact size to fit the content within and
+                            no larger. It does not end in a line break, so the
+                            next element will go to the right of it. "span" is
+                            an "inline" element.
+                        </li>
+                        <li>
+                            <span class="key-term">visibility</span>: The
+                            "visibility" element allows us to hide and show
+                            elements. Elements with their "visibility" set to
+                            hidden still take up space as if they where
+                            "visible" The user just cannot see them.
+                        </li>
+                        <li>
+                            <span class="key-term">The Box Model</span>
                         </li>
                     </ul>
                 </ol>
             </ol>
-        </div>
+        </main>
         <footer>
             <nav>
                 <ul>

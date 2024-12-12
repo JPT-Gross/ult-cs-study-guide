@@ -93,142 +93,164 @@
                             <h2>
                                 Construct markup that uses metadata elements
                             </h2>
-                        </li>
-                        <ul>
-                            <li>
-                                <span class="key-term">script/noscript</span>:
-                                script and noscript elements allow the use of
-                                programming code to be written into the
-                                document. While, technically the script element
-                                supports any language, most browsers only
-                                support JavaScript. This exam does not assess
-                                any knowledge of JavaScript so we'll only cover
-                                a simple example here. The alert function in
-                                JavaScript tells the browser to pop up an alert
-                                message, and this was written into the script
-                                element in the example below. The noscript
-                                element allows us to show a message if the
-                                user's browser does not support scripts or has
-                                scripts disabled. This is also demonstrated in
-                                the example below.
-                            </li>
-                            <div class="example">
-                                <div class="snippet">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><script>alert("Your browser supports JavaScript!");</scrіpt>
+
+                            <ul>
+                                <li>
+                                    <span class="key-term">script/noscript</span
+                                    >: script and noscript elements allow the
+                                    use of programming code to be written into
+                                    the document. While, technically the script
+                                    element supports any language, most browsers
+                                    only support JavaScript. This exam does not
+                                    assess any knowledge of JavaScript so we'll
+                                    only cover a simple example here. The alert
+                                    function in JavaScript tells the browser to
+                                    pop up an alert message, and this was
+                                    written into the script element in the
+                                    example below. The noscript element allows
+                                    us to show a message if the user's browser
+                                    does not support scripts or has scripts
+                                    disabled. This is also demonstrated in the
+                                    example below.
+                                </li>
+                                <div class="example">
+                                    <div class="snippet">
+                                        <!-- prettier-ignore -->
+                                        <script type="text/plain" class="language-html line-numbers"><script>alert("Your browser supports JavaScript!");</scrіpt>
 <noscript>Your browser does not support JavaScript.</noscript></script>
+                                    </div>
+                                    <div class="result center">
+                                        <img src="media/imgs/alert.png" />
+                                    </div>
                                 </div>
-                                <div class="result center">
-                                    <img src="media/imgs/alert.png" />
-                                </div>
-                            </div>
-                            <li>
-                                <span class="key-term">style</span>: the style
-                                element allows us to write styling rules into
-                                the document. The "style" element always goes
-                                inside the "head" element. These rules are
-                                written in a language called CSS that we will
-                                cover in more detail later. For now, review the
-                                simple example below.
-                            </li>
-                            <div class="example">
-                                <div class="snippet">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><head>
+                                <li>
+                                    <span class="key-term">style</span>: the
+                                    style element allows us to write styling
+                                    rules into the document. The "style" element
+                                    always goes inside the "head" element. These
+                                    rules are written in a language called CSS
+                                    that we will cover in more detail later. For
+                                    now, review the simple example below.
+                                </li>
+                                <div class="example">
+                                    <div class="snippet">
+                                        <!-- prettier-ignore -->
+                                        <script type="text/plain" class="language-html line-numbers"><head>
     <style>
         body {
             background-color: magenta;
         }
     </style>
 </head></script>
+                                    </div>
+                                    <div
+                                        class="result"
+                                        style="
+                                            background-color: magenta;
+                                            color: black;
+                                        "
+                                    >
+                                        <p>Hello, world!</p>
+                                    </div>
                                 </div>
-                                <div
-                                    class="result"
-                                    style="
-                                        background-color: magenta;
-                                        color: black;
-                                    "
-                                >
-                                    <p>Hello, world!</p>
-                                </div>
-                            </div>
-                            <li>
-                                <span class="key-term">meta</span>: "meta"
-                                elements allow us to define the metadata (data
-                                about data) for our document. The "meta" element
-                                always goes inside the "head" element. Review
-                                the example below, then a breakdown of common
-                                "meta" element attributes will follow. Notice
-                                that the "meta" elements are void elements and
-                                thus have a start tag, but no end tag.
-                            </li>
-                            <div class="example">
-                                <div class="snippet" style="border: hidden">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><head>
+                                <li>
+                                    <span class="key-term">meta</span>: "meta"
+                                    elements allow us to define the metadata
+                                    (data about data) for our document. The
+                                    "meta" element always goes inside the "head"
+                                    element. Review the example below, then a
+                                    breakdown of common "meta" element
+                                    attributes will follow. Notice that the
+                                    "meta" elements are void elements and thus
+                                    have a start tag, but no end tag.
+
+                                    <div class="example">
+                                        <div
+                                            class="snippet"
+                                            style="border: hidden"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><head>
     <meta charset="utf-8" />
     <meta name="keywords" content="HTML, CSS, study, guide" />
     <meta name="description" content="A free HTML/CSS Study Guide" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head></script>
-                                </div>
-                            </div>
-                            <ul>
-                                <li>
-                                    <span class="key-term">Encoding</span>: On
-                                    line two of the example above, you'll see a
-                                    "meta" element with an attribute name of
-                                    "charset" and an attribute value of "utf-8".
-                                    "charset" allows us to set what character
-                                    encoding standard we'd like to use for our
-                                    document. Don't worry if that sounds a
-                                    little complicated. utf-8 is the modern
-                                    encoding that most web pages use as it
-                                    supports nearly all of the languages and
-                                    special characters/symbols you would ever
-                                    need to display.
-                                </li>
-                                <li>
-                                    <span class="key-term">keyword</span>: On
-                                    line three of the example above, you'll see
-                                    a "meta" element with an attribute name of
-                                    "name" and a value of "keywords". This sets
-                                    this "meta" element up to describe which
-                                    keywords can be used to find this page using
-                                    a search engine such as Google, Bing, or
-                                    DuckDuckGo. Following the "name" attribute
-                                    is the "content" attribute. Inside of the
-                                    value for this attribute we can write a list
-                                    of keywords (seperated by commas), that can
-                                    help search engines connect our page with
-                                    users that search for those words.
-                                </li>
-                                <li>
-                                    <span class="key-term">description</span>:
-                                    On line four of the example above, you'll
-                                    see a "meta" element with an attribute name
-                                    of "name" and a value of "description". This
-                                    sets this "meta" element up to give search
-                                    engines a brief description of our page that
-                                    can be diplayed when someone searches for
-                                    our site. The description text is written in
-                                    the value area of the "content" attribute.
-                                </li>
-                                <li>
-                                    <span class="key-term">viewport</span>: On
-                                    line five of the example above, you'll see a
-                                    "meta" element with an attribute name of
-                                    "name" and a value of "viewport". This sets
-                                    this "meta" element up to tell the browser
-                                    how we'd like to configure the viewable area
-                                    of the page. Here, we set the "content"
-                                    attribute to "width=device-width,
-                                    initial-scale=1.0". That looks very complex,
-                                    but all it does is set the width of the web
-                                    page to the width of the browser.
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span class="key-term"
+                                                >Encoding</span
+                                            >: On line two of the example above,
+                                            you'll see a "meta" element with an
+                                            attribute name of "charset" and an
+                                            attribute value of "utf-8".
+                                            "charset" allows us to set what
+                                            character encoding standard we'd
+                                            like to use for our document. Don't
+                                            worry if that sounds a little
+                                            complicated. utf-8 is the modern
+                                            encoding that most web pages use as
+                                            it supports nearly all of the
+                                            languages and special
+                                            characters/symbols you would ever
+                                            need to display.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">keyword</span
+                                            >: On line three of the example
+                                            above, you'll see a "meta" element
+                                            with an attribute name of "name" and
+                                            a value of "keywords". This sets
+                                            this "meta" element up to describe
+                                            which keywords can be used to find
+                                            this page using a search engine such
+                                            as Google, Bing, or DuckDuckGo.
+                                            Following the "name" attribute is
+                                            the "content" attribute. Inside of
+                                            the value for this attribute we can
+                                            write a list of keywords (seperated
+                                            by commas), that can help search
+                                            engines connect our page with users
+                                            that search for those words.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >description</span
+                                            >: On line four of the example
+                                            above, you'll see a "meta" element
+                                            with an attribute name of "name" and
+                                            a value of "description". This sets
+                                            this "meta" element up to give
+                                            search engines a brief description
+                                            of our page that can be diplayed
+                                            when someone searches for our site.
+                                            The description text is written in
+                                            the value area of the "content"
+                                            attribute.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >viewport</span
+                                            >: On line five of the example
+                                            above, you'll see a "meta" element
+                                            with an attribute name of "name" and
+                                            a value of "viewport". This sets
+                                            this "meta" element up to tell the
+                                            browser how we'd like to configure
+                                            the viewable area of the page. Here,
+                                            we set the "content" attribute to
+                                            "width=device-width,
+                                            initial-scale=1.0". That looks very
+                                            complex, but all it does is set the
+                                            width of the web page to the width
+                                            of the browser.
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </ul>
+                        </li>
                         <li class="article-numbers">
                             <h2>Construct well-formed page markup</h2>
                         </li>

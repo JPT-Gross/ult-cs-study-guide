@@ -100,7 +100,7 @@ ol > li {
 }
 
 ol > li:before {
-    content: counters(item, '.') '. ';
+    content: counters(item, ".") ". ";
     display: table-cell;
     padding-right: 0.6em;
 }
@@ -110,7 +110,7 @@ li ol > li {
 }
 
 li ol > li:before {
-    content: counters(item, '.') ' ';
+    content: counters(item, ".") " ";
 }
 
 ol.li-ex {
@@ -167,11 +167,22 @@ nav li {
     font-size: 1.15em;
 }
 
+div.three {
+    border: 2px solid dimgray;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
 div.example {
     display: flex;
     border: 2px solid dimgray;
     border-radius: 4px;
     margin-bottom: 1em;
+}
+
+div.three > div.example {
+    border-style: none;
+    margin-bottom: 0;
 }
 
 div.snippet {

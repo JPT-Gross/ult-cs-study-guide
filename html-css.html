@@ -1381,40 +1381,46 @@
                                 </li>
                             </ul>
                         </li>
-                <li class="article-numbers">
-                    <h2>
-                        Construct and analyze markup that implements navigation
-                    </h2>
-                <ul>
-                    <li>
-                        <span class="key-term">Anchor</span>: The "anchor"
-                        element is used to create a hyperlink that can direct a
-                        user to a different web page or to a different spot on
-                        the same web page. The "HTML Reference" attribute with
-                        the attribute name of "href" contains the address for
-                        the hyperlink as its attribute value. The content of the
-                        "anchor" element should clearly indicate the destination
-                        of the hyperlink.
-                    </li>
-                    <li>
-                        <span class="key-term">target</span>: The "target"
-                        attribute is used in the "anchor" element to specify
-                        where the hyperlink will open. There are several valid
-                        values for this attribute, but the two this exam are
-                        concerned with are "_self" and "_blank". The default
-                        place for a hyperlink to open is in the current
-                        tab/window the user is currently in, this is "_self".
-                        Sometimes however, we woud like to keep the user on our
-                        page and have the hyperlink open in a new tab/window, in
-                        which case we use "_blank". Below is an example of the
-                        "anchor" element with the "target" attribute set to the
-                        "_blank" value.
-                    </li>
-                </ul>
-                <div class="example">
-                    <div class="snippet">
-                        <!-- prettier-ignore -->
-                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze markup that implements
+                                navigation
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">Anchor</span>: The
+                                    "anchor" element is used to create a
+                                    hyperlink that can direct a user to a
+                                    different web page or to a different spot on
+                                    the same web page. The "HTML Reference"
+                                    attribute with the attribute name of "href"
+                                    contains the address for the hyperlink as
+                                    its attribute value. The content of the
+                                    "anchor" element should clearly indicate the
+                                    destination of the hyperlink.
+                                </li>
+                                <li>
+                                    <span class="key-term">target</span>: The
+                                    "target" attribute is used in the "anchor"
+                                    element to specify where the hyperlink will
+                                    open. There are several valid values for
+                                    this attribute, but the two this exam are
+                                    concerned with are "_self" and "_blank". The
+                                    default place for a hyperlink to open is in
+                                    the current tab/window the user is currently
+                                    in, this is "_self". Sometimes however, we
+                                    woud like to keep the user on our page and
+                                    have the hyperlink open in a new tab/window,
+                                    in which case we use "_blank". Below is an
+                                    example of the "anchor" element with the
+                                    "target" attribute set to the "_blank"
+                                    value.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -1425,33 +1431,41 @@
         </a>
     </body>
 </html></script>
-                    </div>
-                    <div
-                        class="result"
-                        style="background-color: white; color: black"
-                    >
-                        <a href="https://example.com/" target="_blank">
-                            example.com
-                        </a>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <span class="key-term">Bookmarks</span>: bookmarks are
-                        hyperlinks that direct the user to a different location
-                        on the current document. This is very useful if the
-                        document is long (like this study-guide for example). To
-                        create a bookmark, first, give the element where you
-                        would like the hyperlink to direct to an ID with the
-                        "id" attribute. Second, create an "anchor" element and
-                        write the ID in as the value for the "href" attribute.
-                        See the example below.
-                    </li>
-                </ul>
-                <div class="example">
-                    <div class="snippet">
-                        <!-- prettier-ignore -->
-                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <a
+                                        href="https://example.com/"
+                                        target="_blank"
+                                    >
+                                        example.com
+                                    </a>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">Bookmarks</span>:
+                                    bookmarks are hyperlinks that direct the
+                                    user to a different location on the current
+                                    document. This is very useful if the
+                                    document is long (like this study-guide for
+                                    example). To create a bookmark, first, give
+                                    the element where you would like the
+                                    hyperlink to direct to an ID with the "id"
+                                    attribute. Second, create an "anchor"
+                                    element and write the ID in as the value for
+                                    the "href" attribute. See the example below.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -1472,88 +1486,105 @@
         <p id="jump">Jump</p>
     </body>
 </html></script>
-                    </div>
-                    <div
-                        class="result"
-                        style="background-color: white; color: black"
-                    >
-                        <a href="#jump"> Click to jump </a>
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <br />
-                        <p id="jump">Jump</p>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <span class="key-term">
-                            Relative vs. Absolute Links
-                        </span>
-                        : A hyperlink can have two general destinations. One,
-                        relative: a link that references a location based on its
-                        relation to the current document. Two, absolute: a link
-                        that references a specific URL address. A relative link
-                        will typically be the name of the file, such as
-                        "contact.html" or "index.html". An absolute link is a
-                        specific web address such as "https://www.example.com".
-                    </li>
-                    <li>
-                        <span class="key-term">
-                            Navigating Simple Folder Hierarchies
-                        </span>
-                        : Relative hyperlinks are very simple if all of the
-                        documents are in the same folder/directory, however,
-                        larger websites are often organized using many folders.
-                        Use the example below to note the four different ways
-                        links are written in the "href" attributes. The folder
-                        diagram on the right is a visual representation of the
-                        contents of the files that exist on this example
-                        website. The code on the left is for the "about.html"
-                        page in the "pages" folder.
-                    <ul>
-                        <li>
-                            On line 14, we see the simplest link as mentioned
-                            earlier. Because "contact.html" exists in the same
-                            folder, the link is simply written as its name.
-                        </li>
-                        <li>
-                            On line 11, we see that to go up one folder in the
-                            directory two dots and a forward slash (../) must be
-                            written before the name of the file. Because
-                            "index.html" exists in the folder above, the link
-                            must be written as "../index.html".
-                        </li>
-                        <li>
-                            On line 17, we see that to go down a folder we write
-                            the name of the folder below, then a forward slash.
-                            Because "license.html" is in a folder called
-                            "sub-pages", and that folder is in the same folder
-                            as the current page, we create the link as
-                            "sub-pages/license.html".
-                        </li>
-                        <li>
-                            On line 5, we see that to go up a folder then into a
-                            different folder we combine the two previous ideas.
-                            We write two dots to go up a folder, then write the
-                            name of the folder in the folder above that holds
-                            the file we are looking for, then the file name.
-                            Because "style.css" is in a folder above called
-                            "styles", we write the link as
-                            "../styles/style.css".
-                        </li>
-                    </ul>
-                </li>
-                </ul>
-                <div class="example">
-                    <div class="snippet">
-                        <!-- prettier-ignore -->
-                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <a href="#jump"> Click to jump </a>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <p id="jump">Jump</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">
+                                        Relative vs. Absolute Links
+                                    </span>
+                                    : A hyperlink can have two general
+                                    destinations. One, relative: a link that
+                                    references a location based on its relation
+                                    to the current document. Two, absolute: a
+                                    link that references a specific URL address.
+                                    A relative link will typically be the name
+                                    of the file, such as "contact.html" or
+                                    "index.html". An absolute link is a specific
+                                    web address such as
+                                    "https://www.example.com".
+                                </li>
+                                <li>
+                                    <span class="key-term">
+                                        Navigating Simple Folder Hierarchies
+                                    </span>
+                                    : Relative hyperlinks are very simple if all
+                                    of the documents are in the same
+                                    folder/directory, however, larger websites
+                                    are often organized using many folders. Use
+                                    the example below to note the four different
+                                    ways links are written in the "href"
+                                    attributes. The folder diagram on the right
+                                    is a visual representation of the contents
+                                    of the files that exist on this example
+                                    website. The code on the left is for the
+                                    "about.html" page in the "pages" folder.
+                                    <ul>
+                                        <li>
+                                            On line 14, we see the simplest link
+                                            as mentioned earlier. Because
+                                            "contact.html" exists in the same
+                                            folder, the link is simply written
+                                            as its name.
+                                        </li>
+                                        <li>
+                                            On line 11, we see that to go up one
+                                            folder in the directory two dots and
+                                            a forward slash (../) must be
+                                            written before the name of the file.
+                                            Because "index.html" exists in the
+                                            folder above, the link must be
+                                            written as "../index.html".
+                                        </li>
+                                        <li>
+                                            On line 17, we see that to go down a
+                                            folder we write the name of the
+                                            folder below, then a forward slash.
+                                            Because "license.html" is in a
+                                            folder called "sub-pages", and that
+                                            folder is in the same folder as the
+                                            current page, we create the link as
+                                            "sub-pages/license.html".
+                                        </li>
+                                        <li>
+                                            On line 5, we see that to go up a
+                                            folder then into a different folder
+                                            we combine the two previous ideas.
+                                            We write two dots to go up a folder,
+                                            then write the name of the folder in
+                                            the folder above that holds the file
+                                            we are looking for, then the file
+                                            name. Because "style.css" is in a
+                                            folder above called "styles", we
+                                            write the link as
+                                            "../styles/style.css".
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>About</head>
@@ -1575,31 +1606,34 @@
         </nav>
     </body>
 </html></script>
-                    </div>
-                    <div class="result center">
-                        <img
-                            src="media/imgs/hierarchy.png"
-                            style="height: 800px; width: 232px"
-                        />
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <span class="key-term">map, area</span>: The "map"
-                        element, along with the "area" element, allows for the
-                        creation of images that have spots on them that can be
-                        clickable hyperlinks. You'll see in the example below
-                        that the "map" and "area" elements can be quite complex.
-                        For the exam, all you need to remember is what these
-                        elements do and that the "area" element must be nested
-                        inside the "map" element. The movie screen is the
-                        clickable area of the image in the example.
-                    </li>
-                </ul>
-                <div class="example">
-                    <div class="snippet">
-                        <!-- prettier-ignore -->
-                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div class="result center">
+                                    <img
+                                        src="media/imgs/hierarchy.png"
+                                        style="height: 800px; width: 232px"
+                                    />
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">map, area</span>: The
+                                    "map" element, along with the "area"
+                                    element, allows for the creation of images
+                                    that have spots on them that can be
+                                    clickable hyperlinks. You'll see in the
+                                    example below that the "map" and "area"
+                                    elements can be quite complex. For the exam,
+                                    all you need to remember is what these
+                                    elements do and that the "area" element must
+                                    be nested inside the "map" element. The
+                                    movie screen is the clickable area of the
+                                    image in the example.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>About</head>
@@ -1623,58 +1657,62 @@
         </map>
     </body>
 </html></script>
-                    </div>
-                    <div class="result center">
-                        <img
-                            src="media/imgs/vitascope.jpg"
-                            usemap="#image-map"
-                        />
+                                </div>
+                                <div class="result center">
+                                    <img
+                                        src="media/imgs/vitascope.jpg"
+                                        usemap="#image-map"
+                                    />
 
-                        <map name="image-map">
-                            <area
-                                target="_blank"
-                                alt='Motion picture poster for "Edisons greatest marvel--The Vitascope" show movie audience watching large screen with woman dancing on screen and others in background watching.'
-                                title="vitascope"
-                                href="https://en.wikipedia.org/wiki/Vitascope"
-                                coords="461,122,577,95,578,346,459,294"
-                                shape="poly"
-                            />
-                        </map>
-                    </div>
-                </div>
-            </li>
-                <li class="article-numbers">
-                    <h2>
-                        Construct and analyze markup that uses form elements
-                    </h2>
-                <p style="margin-bottom: 1em">
-                    Forms are the primary method for getting user input on a web
-                    page. If you have ever made an account on a web page, you
-                    have interacted with a form. Forms have text boxes,
-                    drop-down menus, buttons, check-boxes and much more. Forms
-                    send their input to a database. This exam does not assess
-                    our knowledge about databases, so we will only cover the
-                    bare minimum about this process.
-                </p>
-                <ul>
-                    <li>
-                        <span class="key-term">Form Attributes</span>: In the
-                        "form" element we use two attributes, "action and
-                        "method". The
-                        <span class="key-term">"action"</span> attribute allows
-                        us to type a URL as its value. This URL is the page that
-                        processes the user input for the form. The
-                        <span class="key-term">"method"</span> attribute
-                        specifies how the user input will be sent. The example
-                        below shows a simple form. Note that this form will not
-                        work correctly because a database server is not running
-                        to recieve and process the input.
-                    </li>
-                </ul>
-                <div class="example">
-                    <div class="snippet">
-                        <!-- prettier-ignore -->
-                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                    <map name="image-map">
+                                        <area
+                                            target="_blank"
+                                            alt='Motion picture poster for "Edisons greatest marvel--The Vitascope" show movie audience watching large screen with woman dancing on screen and others in background watching.'
+                                            title="vitascope"
+                                            href="https://en.wikipedia.org/wiki/Vitascope"
+                                            coords="461,122,577,95,578,346,459,294"
+                                            shape="poly"
+                                        />
+                                    </map>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze markup that uses form
+                                elements
+                            </h2>
+                            <p style="margin-bottom: 1em">
+                                Forms are the primary method for getting user
+                                input on a web page. If you have ever made an
+                                account on a web page, you have interacted with
+                                a form. Forms have text boxes, drop-down menus,
+                                buttons, check-boxes and much more. Forms send
+                                their input to a database. This exam does not
+                                assess our knowledge about databases, so we will
+                                only cover the bare minimum about this process.
+                            </p>
+                            <ul>
+                                <li>
+                                    <span class="key-term">Form Attributes</span
+                                    >: In the "form" element we use two
+                                    attributes, "action and "method". The
+                                    <span class="key-term">"action"</span>
+                                    attribute allows us to type a URL as its
+                                    value. This URL is the page that processes
+                                    the user input for the form. The
+                                    <span class="key-term">"method"</span>
+                                    attribute specifies how the user input will
+                                    be sent. The example below shows a simple
+                                    form. Note that this form will not work
+                                    correctly because a database server is not
+                                    running to recieve and process the input.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -1691,61 +1729,81 @@
         </form>
     </body>
 </html></script>
-                    </div>
-                    <div
-                        class="result"
-                        style="background-color: white; color: black"
-                    >
-                        <form action="index.html" method="POST" target="_blank">
-                            <input type="radio" name="preference" id="yes" />
-                            <label for="yes">yes</label>
-                            <br />
-                            <input type="radio" name="preference" id="no" />
-                            <label for="no">no</label>
-                            <br />
-                            <input type="submit" value="submit" />
-                        </form>
-                    </div>
-                </div>
-                <ul>
-                    <li>
-                        <span class="key-term">Submission Methods</span>: in the
-                        example above you will see that the value for the
-                        "method" attribute was "POST". There are two main
-                        submission methods and they are "GET" and "POST".
-                        <span class="key-term">"GET"</span> is a request to
-                        retrieve information from the database server, such as
-                        search results or images. Note that with "GET" the data
-                        from the form will be shown in the URL.
-                        <span class="key-term">"POST"</span> is a request to
-                        modify information on the database server such as
-                        changing a password.
-                    </li>
-                    <li>
-                        <span class="key-term">
-                            Input Types and Restrictions
-                        </span>
-                        : as you can imagine, there are a lot of different ways
-                        we can collect input from users. We will only cover some
-                        of the basic ones here, but if you'd like, here is a
-                        more
-                        <a
-                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >comprehensive list of examples</a
-                        >. As mentioned earlier, we can have simple inputs like
-                        text, and checkboxes, but we can also have more complex
-                        inputs that restrict what the user may write. For
-                        example, below you will see an "email" and "password"
-                        input. The "email" input will only allow valid email
-                        addresses as input, and "password" will mask what the
-                        user types, typically with dots or stars so other people
-                        cannot see the input.
-                <div class="example">
-                    <div class="snippet">
-                        <!-- prettier-ignore -->
-                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <form
+                                        action="index.html"
+                                        method="POST"
+                                        target="_blank"
+                                    >
+                                        <input
+                                            type="radio"
+                                            name="preference"
+                                            id="yes"
+                                        />
+                                        <label for="yes">yes</label>
+                                        <br />
+                                        <input
+                                            type="radio"
+                                            name="preference"
+                                            id="no"
+                                        />
+                                        <label for="no">no</label>
+                                        <br />
+                                        <input type="submit" value="submit" />
+                                    </form>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term"
+                                        >Submission Methods</span
+                                    >: in the example above you will see that
+                                    the value for the "method" attribute was
+                                    "POST". There are two main submission
+                                    methods and they are "GET" and "POST".
+                                    <span class="key-term">"GET"</span> is a
+                                    request to retrieve information from the
+                                    database server, such as search results or
+                                    images. Note that with "GET" the data from
+                                    the form will be shown in the URL.
+                                    <span class="key-term">"POST"</span> is a
+                                    request to modify information on the
+                                    database server such as changing a password.
+                                </li>
+                                <li>
+                                    <span class="key-term">
+                                        Input Types and Restrictions
+                                    </span>
+                                    : as you can imagine, there are a lot of
+                                    different ways we can collect input from
+                                    users. We will only cover some of the basic
+                                    ones here, but if you'd like, here is a more
+                                    <a
+                                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        >comprehensive list of examples</a
+                                    >. As mentioned earlier, we can have simple
+                                    inputs like text, and checkboxes, but we can
+                                    also have more complex inputs that restrict
+                                    what the user may write. For example, below
+                                    you will see an "email" and "password"
+                                    input. The "email" input will only allow
+                                    valid email addresses as input, and
+                                    "password" will mask what the user types,
+                                    typically with dots or stars so other people
+                                    cannot see the input.
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -1774,148 +1832,221 @@
         </form>
     </body>
 </html></script>
-                    </div>
-                    <div
-                        class="result"
-                        style="background-color: white; color: black"
-                    >
-                        <form action="index.html" method="POST" target="_blank">
-                            <label for="username">Username: </label>
-                            <br />
-                            <input type="text" name="username" id="username" />
-                            <br />
-                            <label for="pass">Password: </label> <br />
-                            <input type="password" name="pass" id="pass" />
-                            <br />
-                            <label for="email">Email: </label> <br />
-                            <input type="email" name="email" id="email" />
-                            <br />
-                            <label for="timezone">Time Zone: </label>
-                            <br />
-                            <select name="timezone" id="timezone">
-                                <option value="eastern">Eastern</option>
-                                <option value="central">Central</option>
-                                <option value="mountain">Mountain</option>
-                                <option value="pacific">Pacific</option>
-                            </select>
-                            <br />
-                            <label for="bio">Bio:</label> <br />
-                            <textarea
-                                name="bio"
-                                id="bio"
-                                cols="30"
-                                rows="10"
-                            ></textarea>
-                            <br />
-                            <input
-                                type="submit"
-                                value="Submit"
-                                style="height: 30px"
-                            />
-                            <button type="reset">Reset</button>
-                        </form>
-                    </div>
-                </div>
-                <ul>
-                        <li>
-                            <span class="key-term">label</span>: the "label"
-                            element creates a caption for an input. All inputs
-                            should use the "label" element and not the
-                            "paragraph" element. The "label" element is
-                            important for accessibility, as assistive technology
-                            depends on these labels to help users to fill out
-                            forms. Also, the label can be clicked to select the
-                            input that is associated with it. This helps users
-                            to understand what data should go in which input if
-                            they are confused by the layout of the form. To
-                            associate a label with an input, make sure to write
-                            the same value in the "for" attribute in the "label"
-                            element as the "id" attribute in the "input"
-                            element.
+                                        </div>
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <form
+                                                action="index.html"
+                                                method="POST"
+                                                target="_blank"
+                                            >
+                                                <label for="username"
+                                                    >Username:
+                                                </label>
+                                                <br />
+                                                <input
+                                                    type="text"
+                                                    name="username"
+                                                    id="username"
+                                                />
+                                                <br />
+                                                <label for="pass"
+                                                    >Password:
+                                                </label>
+                                                <br />
+                                                <input
+                                                    type="password"
+                                                    name="pass"
+                                                    id="pass"
+                                                />
+                                                <br />
+                                                <label for="email"
+                                                    >Email:
+                                                </label>
+                                                <br />
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    id="email"
+                                                />
+                                                <br />
+                                                <label for="timezone"
+                                                    >Time Zone:
+                                                </label>
+                                                <br />
+                                                <select
+                                                    name="timezone"
+                                                    id="timezone"
+                                                >
+                                                    <option value="eastern">
+                                                        Eastern
+                                                    </option>
+                                                    <option value="central">
+                                                        Central
+                                                    </option>
+                                                    <option value="mountain">
+                                                        Mountain
+                                                    </option>
+                                                    <option value="pacific">
+                                                        Pacific
+                                                    </option>
+                                                </select>
+                                                <br />
+                                                <label for="bio">Bio:</label>
+                                                <br />
+                                                <textarea
+                                                    name="bio"
+                                                    id="bio"
+                                                    cols="30"
+                                                    rows="10"
+                                                ></textarea>
+                                                <br />
+                                                <input
+                                                    type="submit"
+                                                    value="Submit"
+                                                    style="height: 30px"
+                                                />
+                                                <button type="reset">
+                                                    Reset
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <span class="key-term">label</span>:
+                                            the "label" element creates a
+                                            caption for an input. All inputs
+                                            should use the "label" element and
+                                            not the "paragraph" element. The
+                                            "label" element is important for
+                                            accessibility, as assistive
+                                            technology depends on these labels
+                                            to help users to fill out forms.
+                                            Also, the label can be clicked to
+                                            select the input that is associated
+                                            with it. This helps users to
+                                            understand what data should go in
+                                            which input if they are confused by
+                                            the layout of the form. To associate
+                                            a label with an input, make sure to
+                                            write the same value in the "for"
+                                            attribute in the "label" element as
+                                            the "id" attribute in the "input"
+                                            element.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">text</span>:
+                                            When the "type" attribute has a
+                                            value of "text" in an "input"
+                                            element a single-line text-box will
+                                            appear. You can see this on line 9
+                                            of the example above. In the example
+                                            it is being used to take in a
+                                            Username from the user.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >password</span
+                                            >: When "password" is used as the
+                                            value, a text box is created just as
+                                            with "text", but any input into the
+                                            box is hidden to protect the user's
+                                            data. In the example above, this is
+                                            created on line 11.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">email</span>:
+                                            When "email" us used, a text box is
+                                            created, but when the form is
+                                            submitted the page will check if a
+                                            valid email address was entered. If
+                                            not, the form will not submit and
+                                            the user will be prompted to fix
+                                            their input. In the example above,
+                                            this is created on line 13.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">select</span
+                                            >: Unlike the previous input types,
+                                            "select" is its own element, not an
+                                            attribute value for the "input"
+                                            element. The "select" element
+                                            creates a drop-down box from which
+                                            the user can select from a list of
+                                            options. In the example above, the
+                                            "select" element is started on line
+                                            15, ended on line 20, and has the
+                                            user select from a list of
+                                            timezones.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">option</span
+                                            >: the "option" element nests inside
+                                            of the "select" element and is used
+                                            to create an item for the drop-down
+                                            box. In the example, the timezone
+                                            options are created on lines 16-19.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >textarea</span
+                                            >: The "textarea" element is like
+                                            the "input" element with the "type"
+                                            attribute set to "text", but with a
+                                            multi-line text box. the "textarea"
+                                            element has a "cols" attribute for
+                                            setting how many columns wide the
+                                            box will start with when the page
+                                            loads, as well as a "rows" attribute
+                                            for setting how many rows tall the
+                                            box will start with. The user can
+                                            resize the box by dragging the
+                                            bottom right corner. In the example
+                                            above, this is created on line 23.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">button</span
+                                            >: The "button" element creates a
+                                            button that the user can click to
+                                            initiate some action on the form. On
+                                            line 26 a button was created with
+                                            the "type" attribute set to a value
+                                            of "reset" which resets all of the
+                                            form input to their default values.
+                                            Notice that on line 25 there is an
+                                            "input" element with the "type"
+                                            attribute set to "submit". This also
+                                            create a button that submits the
+                                            form data. The "button" element
+                                            could also have been used here
+                                            instead to achive the same thing.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <span class="key-term">text</span>: When the "type"
-                            attribute has a value of "text" in an "input"
-                            element a single-line text-box will appear. You can
-                            see this on line 9 of the example above. In the
-                            example it is being used to take in a Username from
-                            the user.
-                        </li>
-                        <li>
-                            <span class="key-term">password</span>: When
-                            "password" is used as the value, a text box is
-                            created just as with "text", but any input into the
-                            box is hidden to protect the user's data. In the
-                            example above, this is created on line 11.
-                        </li>
-                        <li>
-                            <span class="key-term">email</span>: When "email" us
-                            used, a text box is created, but when the form is
-                            submitted the page will check if a valid email
-                            address was entered. If not, the form will not
-                            submit and the user will be prompted to fix their
-                            input. In the example above, this is created on line
-                            13.
-                        </li>
-                        <li>
-                            <span class="key-term">select</span>: Unlike the
-                            previous input types, "select" is its own element,
-                            not an attribute value for the "input" element. The
-                            "select" element creates a drop-down box from which
-                            the user can select from a list of options. In the
-                            example above, the "select" element is started on
-                            line 15, ended on line 20, and has the user select
-                            from a list of timezones.
-                        </li>
-                        <li>
-                            <span class="key-term">option</span>: the "option"
-                            element nests inside of the "select" element and is
-                            used to create an item for the drop-down box. In the
-                            example, the timezone options are created on lines
-                            16-19.
-                        </li>
-                        <li>
-                            <span class="key-term">textarea</span>: The
-                            "textarea" element is like the "input" element with
-                            the "type" attribute set to "text", but with a
-                            multi-line text box. the "textarea" element has a
-                            "cols" attribute for setting how many columns wide
-                            the box will start with when the page loads, as well
-                            as a "rows" attribute for setting how many rows tall
-                            the box will start with. The user can resize the box
-                            by dragging the bottom right corner. In the example
-                            above, this is created on line 23.
-                        </li>
-                        <li>
-                            <span class="key-term">button</span>: The "button"
-                            element creates a button that the user can click to
-                            initiate some action on the form. On line 26 a
-                            button was created with the "type" attribute set to
-                            a value of "reset" which resets all of the form
-                            input to their default values. Notice that on line
-                            25 there is an "input" element with the "type"
-                            attribute set to "submit". This also create a button
-                            that submits the form data. The "button" element
-                            could also have been used here instead to achive the
-                            same thing.
-                        </li>
-                    </ul>
-                </li>
-                </ul>
-            </li>
                     </ol>
-            </li>
-            <li class="section-numbers">
-                <h1 id="4">Multimedia Presentation using HTML</h1>
-                <ol class="article-list">
-                    <li class="article-numbers">
-                        <span class="key-term">
-                            <h2>Construct and analyze markup that displays images</h2>
-                        </span>
-                    <div class="example">
-                        <div class="snippet">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                </li>
+                <li class="section-numbers">
+                    <h1 id="4">Multimedia Presentation using HTML</h1>
+                    <ol class="article-list">
+                        <li class="article-numbers">
+                            <span class="key-term">
+                                <h2>
+                                    Construct and analyze markup that displays
+                                    images
+                                </h2>
+                            </span>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -1930,53 +2061,64 @@
         />
     </body>
 </html></script>
-                        </div>
-                        <div
-                            class="result"
-                            style="background-color: white; color: black"
-                        >
-                            <img
-                                src="media/imgs/the-birthday-cake.jpg"
-                                alt="two kittens wearing dresses at a table with a birthday cake."
-                                style="margin: 0px; width: 320px; height: 245px"
-                            />
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <span class="key-term">img</span>: The "img" element
-                            allows us to add images to a web page.
-                        </li>
-                        <li>
-                            <span class="key-term">src</span>: The value in the
-                            "src" attribute is where we write the source for our
-                            image. While the source can be either a relative or
-                            an absolute link, it is best to always use absolute
-                            links. This way, we don't have to worry if another
-                            website is down or deletes the image.
-                        </li>
-                        <li>
-                            <span class="key-term">alt</span>: The "alt"
-                            attribute is for writing a text description that is
-                            capable of replacing the image. Not all browsers
-                            show images. Some browsers read text to people with
-                            visual impairments, others have images turned off
-                            for people with slow internet connections. For these
-                            reasons it is very important to always have a good
-                            description in the "alt" attribute.
-                        </li>
-                        <li>
-                            <span class="key-term">width and height</span>: the
-                            "width" and "height" attributes specify the
-                            dimensions of the images. There are many units that
-                            are supported, but "px", i.e. pixel is the most
-                            popular.
-                        </li>
-                    </ul>
-                    <div class="example">
-                        <div class="snippet">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <img
+                                        src="media/imgs/the-birthday-cake.jpg"
+                                        alt="two kittens wearing dresses at a table with a birthday cake."
+                                        style="
+                                            margin: 0px;
+                                            width: 320px;
+                                            height: 245px;
+                                        "
+                                    />
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">img</span>: The "img"
+                                    element allows us to add images to a web
+                                    page.
+                                </li>
+                                <li>
+                                    <span class="key-term">src</span>: The value
+                                    in the "src" attribute is where we write the
+                                    source for our image. While the source can
+                                    be either a relative or an absolute link, it
+                                    is best to always use absolute links. This
+                                    way, we don't have to worry if another
+                                    website is down or deletes the image.
+                                </li>
+                                <li>
+                                    <span class="key-term">alt</span>: The "alt"
+                                    attribute is for writing a text description
+                                    that is capable of replacing the image. Not
+                                    all browsers show images. Some browsers read
+                                    text to people with visual impairments,
+                                    others have images turned off for people
+                                    with slow internet connections. For these
+                                    reasons it is very important to always have
+                                    a good description in the "alt" attribute.
+                                </li>
+                                <li>
+                                    <span class="key-term"
+                                        >width and height</span
+                                    >: the "width" and "height" attributes
+                                    specify the dimensions of the images. There
+                                    are many units that are supported, but "px",
+                                    i.e. pixel is the most popular.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -1998,54 +2140,60 @@
         </picture>
     </body>
 </html></script>
-                        </div>
-                        <div
-                            class="result"
-                            style="background-color: white; color: black"
-                        >
-                            <picture>
-                                <source
-                                    media="(min-width: 1500px)"
-                                    srcset="media/imgs/july.jpg"
-                                />
-                                <source
-                                    media="(min-width: 1000px)"
-                                    srcset="media/imgs/may.jpg"
-                                />
-                                <img
-                                    src="media/imgs/may.jpg"
-                                    alt="two cats"
-                                    style="margin: 0px"
-                                />
-                            </picture>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <span class="key-term">picture/source</span>: The
-                            "picture" element allows us to display a different
-                            image depending on the display. This is very useful
-                            for "responsive" design, which is the process of
-                            creating a website that adapts its layout for
-                            different sized screens (phones, tablets, desktops,
-                            etc). The "source" element nests inside of the
-                            "picture" element and describes the images that will
-                            be used in the spot on the page. The "media"
-                            attribute allows us to specify at what screen width
-                            the image should display, and the "srcset" attribute
-                            allows us to link the image that will be displayed.
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <picture>
+                                        <source
+                                            media="(min-width: 1500px)"
+                                            srcset="media/imgs/july.jpg"
+                                        />
+                                        <source
+                                            media="(min-width: 1000px)"
+                                            srcset="media/imgs/may.jpg"
+                                        />
+                                        <img
+                                            src="media/imgs/may.jpg"
+                                            alt="two cats"
+                                            style="margin: 0px"
+                                        />
+                                    </picture>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">picture/source</span
+                                    >: The "picture" element allows us to
+                                    display a different image depending on the
+                                    display. This is very useful for
+                                    "responsive" design, which is the process of
+                                    creating a website that adapts its layout
+                                    for different sized screens (phones,
+                                    tablets, desktops, etc). The "source"
+                                    element nests inside of the "picture"
+                                    element and describes the images that will
+                                    be used in the spot on the page. The "media"
+                                    attribute allows us to specify at what
+                                    screen width the image should display, and
+                                    the "srcset" attribute allows us to link the
+                                    image that will be displayed.
+                                </li>
+                            </ul>
                         </li>
-                    </ul>
-                </li>
-                    <li class="article-numbers">
-                        <h2>
-                            Construct and analyze markup that plays video and
-                            audio
-                        </h2>
-                    <div class="example">
-                        <div class="snippet">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze markup that plays video
+                                and audio
+                            </h2>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -2069,81 +2217,91 @@
         </video>
     </body>
 </html></script>
-                        </div>
-                        <div
-                            class="result"
-                            style="background-color: white; color: black"
-                        >
-                            <video autoplay controls muted>
-                                <track
-                                    default
-                                    kind="captions"
-                                    srclang="en"
-                                    src="media/vids/friday.vtt"
-                                />
-                                <source
-                                    src="media/vids/friday.mp4"
-                                    type="video/mp4"
-                                />
-                                <p>
-                                    Sorry, your browser does not support video
-                                    playback
-                                </p>
-                            </video>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <span class="key-term">video</span>: The "video"
-                            element is used to insert a video into a web page.
-                            Much like the "picture" element, "video" uses nested
-                            "source" elements to specify the video we'd like to
-                            use. We can also write some fallback text if the
-                            user's browser does not support videos.
-                        </li>
-                        <ul>
-                            <li>
-                                <span class="key-term">autoplay</span>: The
-                                "autoplay" attribute can be added to the "video"
-                                element's start tag if you'd like the video to
-                                play when the page loads. Note that "autoplay"
-                                does not have a value so we do not need to
-                                include the equal sign or quotation marks (="").
-                                This also applies to the next two attributes
-                                mentioned below.
-                            </li>
-                            <li>
-                                <span class="key-term">controls</span>: The
-                                "controls" attribute can be added to the "video"
-                                element's start tag if you'd like the user to
-                                see the play/pause button, volume slider, and
-                                seek bar. It is a good idea to always add this
-                                attribute as user's appreciate the ability to
-                                control the video.
-                            </li>
-                            <li>
-                                <span class="key-term">muted</span>: The "muted"
-                                attribute can be added to the "video" element's
-                                start tag if you'd like the video to start with
-                                muted volume. This is a good idea to add if you
-                                choose to include the "autoplay" attribute, as
-                                users find it annoying to have sound playing the
-                                moment a page loads.
-                            </li>
-                            <li>
-                                <span class="key-term">track</span>: The "track"
-                                element is used to add closed-caption text to
-                                the video. the "src" attribute must link to a
-                                .vtt file which is a text file that allows the
-                                captions to be programmed to show at the time in
-                                the video when they are appropriate.
-                            </li>
-                        </ul>
-                    </ul>
-                    <div class="example">
-                        <div class="snippet">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <video autoplay controls muted>
+                                        <track
+                                            default
+                                            kind="captions"
+                                            srclang="en"
+                                            src="media/vids/friday.vtt"
+                                        />
+                                        <source
+                                            src="media/vids/friday.mp4"
+                                            type="video/mp4"
+                                        />
+                                        <p>
+                                            Sorry, your browser does not support
+                                            video playback
+                                        </p>
+                                    </video>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">video</span>: The
+                                    "video" element is used to insert a video
+                                    into a web page. Much like the "picture"
+                                    element, "video" uses nested "source"
+                                    elements to specify the video we'd like to
+                                    use. We can also write some fallback text if
+                                    the user's browser does not support videos.
+                                </li>
+                                <ul>
+                                    <li>
+                                        <span class="key-term">autoplay</span>:
+                                        The "autoplay" attribute can be added to
+                                        the "video" element's start tag if you'd
+                                        like the video to play when the page
+                                        loads. Note that "autoplay" does not
+                                        have a value so we do not need to
+                                        include the equal sign or quotation
+                                        marks (=""). This also applies to the
+                                        next two attributes mentioned below.
+                                    </li>
+                                    <li>
+                                        <span class="key-term">controls</span>:
+                                        The "controls" attribute can be added to
+                                        the "video" element's start tag if you'd
+                                        like the user to see the play/pause
+                                        button, volume slider, and seek bar. It
+                                        is a good idea to always add this
+                                        attribute as user's appreciate the
+                                        ability to control the video.
+                                    </li>
+                                    <li>
+                                        <span class="key-term">muted</span>: The
+                                        "muted" attribute can be added to the
+                                        "video" element's start tag if you'd
+                                        like the video to start with muted
+                                        volume. This is a good idea to add if
+                                        you choose to include the "autoplay"
+                                        attribute, as users find it annoying to
+                                        have sound playing the moment a page
+                                        loads.
+                                    </li>
+                                    <li>
+                                        <span class="key-term">track</span>: The
+                                        "track" element is used to add
+                                        closed-caption text to the video. the
+                                        "src" attribute must link to a .vtt file
+                                        which is a text file that allows the
+                                        captions to be programmed to show at the
+                                        time in the video when they are
+                                        appropriate.
+                                    </li>
+                                </ul>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -2154,34 +2312,39 @@
         </audio>
     </body>
 </html></script>
-                        </div>
-                        <div
-                            class="result"
-                            style="background-color: white; color: black"
-                        >
-                            <audio controls>
-                                <source
-                                    src="media/aud/sax.mp3"
-                                    type="audio/mp3"
-                                />
-                            </audio>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <span class="key-term">audio</span>: The "audio"
-                            element is used to insert a audio into a web page.
-                            Much like the "picture" element, "audio" uses nested
-                            "source" elements to specify the audio file we'd
-                            like to use. The "audio" element can include all of
-                            the same attributes and the "track" element as
-                            mentioned under the "video" element above.
-                        </li>
-                    </ul>
-                    <div class="example">
-                        <div class="snippet">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <audio controls>
+                                        <source
+                                            src="media/aud/sax.mp3"
+                                            type="audio/mp3"
+                                        />
+                                    </audio>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">audio</span>: The
+                                    "audio" element is used to insert a audio
+                                    into a web page. Much like the "picture"
+                                    element, "audio" uses nested "source"
+                                    elements to specify the audio file we'd like
+                                    to use. The "audio" element can include all
+                                    of the same attributes and the "track"
+                                    element as mentioned under the "video"
+                                    element above.
+                                </li>
+                            </ul>
+                            <div class="example">
+                                <div class="snippet">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -2195,512 +2358,576 @@
         ></iframe>
     </body>
 </html></script>
-                        </div>
-                        <div
-                            class="result"
-                            style="background-color: white; color: black"
-                        >
-                            <iframe
-                                title="example.com"
-                                src="https://example.com"
-                                width="400px"
-                                height="300px"
-                            ></iframe>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>
-                            <span class="key-term">iframe</span>: The "iframe"
-                            element allows us to embed another web page into our
-                            web page.
-                        </li>
-                    </ul>
-                </li>
-                </ol>
-            </li>
-            <li class="section-numbers">
-                <h1 id="5">Webpage Styling using CSS</h1>
-                <ol>
-                    <li class="article-numbers">
-                        <h2>
-                            Construct and analyze styles that position content
-                        </h2>
-                    <ul>
-                        <li>
-                            <span class="key-term">position</span>: Positioning
-                            refers to the placement of elements on a page, and
-                            is done inside a CSS ruleset with the "position"
-                            property. By default, all elements have "static"
-                            position value which means they flow from top to
-                            bottom and left to right, just like in a book or
-                            magazine. Of course, there are many options to
-                            change the positioning of elements to design some
-                            very creative and beautiful web sites.
-                        <ul>
-                            <li>
-                                <span class="key-term">relative</span>: If the
-                                "position" property is given the value of
-                                "relative", the element stays in within its
-                                normal flow on the page, but can be moved in
-                                relation to where it would have been.
-                            </li>
-                            <li>
-                                <span class="key-term">absolute</span>: If the
-                                "position" property is given the value of
-                                "absolute", the element is removed from the flow
-                                of the page and is positioned relative to its
-                                closest ancestor.
-                            </li>
-                            <li>
-                                <span class="key-term">static</span>: The
-                                default value for the "position" property is
-                                "static" and positions elements from top to
-                                bottom on the page.
-                            </li>
-                            <li>
-                                <span class="key-term">fixed</span>: If the
-                                "position" property is given the value of
-                                "fixed", the element is removed from the flow of
-                                the page and is positioned relative to viewport.
-                                This means that the element will stay exactly
-                                where it is, even if the user scrolls up and
-                                down the page.
-                            </li>
-                        </ul>
-                    </li>
-                        <li>
-                            <span class="key-term">float</span>: The "float"
-                            property will remove an element from the static flow
-                            of the page and move the element to the left, with a
-                            value of "left", or right, with a value of "right".
-                        </li>
-                        <li>
-                            <span class="key-term">height/width</span>: The
-                            "height" and "width" properties set the size of
-                            elements. By default, these are set to auto and will
-                            grow or shrink to fit the content.
-                        </li>
-                        <li>
-                            <span class="key-term">max-width/min-width</span>:
-                            "height" and "width" will set a specific size, but
-                            if we'd like our elements to still grow and shrink,
-                            but stay within a minimum and maximum range, we can
-                            use the "min-width" and "max-width" properties.
-                        </li>
-                        <li>
-                            <span class="key-term">overflow</span> When we
-                            restrict the size of elements with "height",
-                            "width", "max-height", or "min-height", if the
-                            content becomes larger than the size of the element,
-                            it will "break" through the element. This looks
-                            terrible and must be avoided. The "overflow"
-                            property allows us to create a scroll-bar so the
-                            content stays within the element.
-                        </li>
-                        <li>
-                            <span class="key-term">text-align</span> The
-                            "text-align" property, much like on a word
-                            processor, allows us to align text to the left (the
-                            default setting), right, center, or it can be
-                            justified (equal space between each word).
-                        </li>
-                        <li>
-                            <span class="key-term">display</span> The "display"
-                            property allows us to change whether an element
-                            shows as "inline" or as "block". A "block" takes up
-                            the entire width of the viewport and ends with a
-                            line break so the next element goes under it, such
-                            as the "paragraph" element. An "inline" element is
-                            always the exact size to fit the content within and
-                            no larger. It does not end in a line break, so the
-                            next element will go to the right of it. "span" is
-                            an "inline" element.
-                        </li>
-                        <li>
-                            <span class="key-term">visibility</span>: The
-                            "visibility" element allows us to hide and show
-                            elements. Elements with their "visibility" set to
-                            hidden still take up space as if they where
-                            "visible" The user just cannot see them.
-                        </li>
-                        <li>
-                            <span class="key-term">The Box Model</span>: The Box
-                            Model refers to how each element shows on a page.
-                            Every element is a rectangle or "box" that has four
-                            components: margin, border, padding, content.
-                        <ul>
-                            <li>
-                                <span class="key-term">margin</span>: The
-                                "margin" property of an element describes how
-                                much space exists around the element between its
-                                border, and the margin of surrounding elements.
-                            </li>
-                            <li>
-                                <span class="key-term">border</span>: The
-                                "border" property of an element describes how
-                                much space exists between the element's padding
-                                and its margin. This border can be styled to be
-                                a different color, shape, etc.
-                            </li>
-                            <li>
-                                <span class="key-term">padding</span>: The
-                                "padding" property of an element describes how
-                                much space exists between the an elements border
-                                and its content.
-                            </li>
-                            <li>
-                                <span class="key-term">Content</span>: An
-                                element's content does not exist as a CSS
-                                property, but simply refers to what the element
-                                is displaying. Content is typically text,
-                                images, pictures, video, or audio.
-                            </li>
-                        </ul>
-                    </li>
-                    </ul>
-                </li>
-                    <li class="article-numbers">
-                        <h2>Construct and analyze styles that format text</h2>
-                    <ul>
-                        <li>
-                            <span class="key-term">font-family</span>: The
-                            "font-family" property allows us to create a list of
-                            fonts that we would like to display on the page. The
-                            browser will try to load the first font in the list,
-                            if it cannot load that font, it will try the next
-                            one.
-                        </li>
-                        <li>
-                            <span class="key-term">color</span>: The "color"
-                            property sets the color of the text. The color can
-                            be set using red, blue, green (RGB) color codes,
-                            hexadecimal (HEX) color codes, or with simple color
-                            names such as "red", "purple", or "orange".
-                        </li>
-                        <li>
-                            <span class="key-term">font-style</span>: The
-                            "font-style" property allows us to set the font to
-                            display as italic.
-                        </li>
-                        <li>
-                            <span class="key-term">font-weight</span>: The
-                            "font-weight" property allows us to set the font to
-                            display as bold.
-                        </li>
-                        <li>
-                            <span class="key-term">text-decoration</span>
-                            The "text-decoration" property allows us to
-                            underline text.
-                        </li>
-                        <li>
-                            <span class="key-term">font-variant</span>: The
-                            "font-variant" property
-                        </li>
-                        <li>
-                            <span class="key-term">text-indent</span> The
-                            "text-indent" property allows us to indent the first
-                            line of a paragraph. A style popular with MLA
-                            formated essays.
-                        </li>
-                        <li>
-                            <span class="key-term">line-height</span>: The
-                            "line-height" property allows us to set the spacing
-                            between lines of text in an element.
-                        </li>
-                        <li>
-                            <span class="key-term">word-wrap</span>: The
-                            "word-wrap" property allows us to break words that
-                            usually would not be broken, and put them on a new
-                            line if they are larger than the parent element they
-                            are inside of.
-                        </li>
-                        <li>
-                            <span class="key-term">letter-spacing</span> The
-                            "letter-spacing" property allows us to set the
-                            spacing between letters in an element.
-                        </li>
-                    </ul>
-                </li>
-                    <li class="article-numbers">
-                        <h2>
-                            Construct and analyze styles that format backgrounds
-                            and borders
-                        </h2>
-                    <ul>
-                        <li>
-                            <span class="key-term">border-color</span>: The
-                            "border-color" property allows us to change the
-                            color of an element's border. Note that the border's
-                            style must be changed first, as its default style
-                            value is "none" which hides the border.
-                        </li>
-                        <li>
-                            <span class="key-term">border-style</span> The
-                            "border-style" property allows us to change the type
-                            of border for an element. Borders can be solid,
-                            dashed, dotted, etc.
-                        </li>
-                        <li>
-                            <span class="key-term">border-width</span>: The
-                            "border-width" property allows us to change the
-                            thickness of the border for an element.
-                        </li>
-                        <li>
-                            <span class="key-term">background</span>: The
-                            "background" property allows us to change what shows
-                            inside the border area of an element, and can be set
-                            to a color or it can be a picture.
-                        </li>
-                        <li>
-                            <span class="key-term">Colors</span>: Earlier we
-                            discussed the different ways we can specify colors
-                            in CSS. Below are a few more details regarding color
-                            in CSS.
-                        </li>
-                    </ul>
-                </li>
-                    <li class="article-numbers">
-                        <h2>
-                            Construct and analyze styles that create a simple
-                            responsive layout
-                        </h2>
-                    <ul>
-                        <li>
-                            <span class="key-term">Units</span>: Like colors,
-                            there are many ways to specify how large something
-                            is on a page. Units are broken into two categories:
-                            absolute and relative. Absolute units never change
-                            as they are what they are, such as "inches", where
-                            relative units are based on the size of something
-                            else, such as "%". A few of the more popular units
-                            are explained below.
-                        </li>
-                        <li>
-                            <span class="key-term">viewport</span>: "viewport"
-                            is not a CSS property, but instead a value for the
-                            "meta" element's "name" attribute. The important
-                            thing to remember is that the code in the example
-                            changes the width of the our pages to fit the width
-                            of the user's screen. This is useful because users
-                            may view our page on their phones, tables, laptops,
-                            or desktops, and these all have very different
-                            widths.
-                        </li>
-                        <li>
-                            <span class="key-term">
-                                Media Query and Break Points</span
-                            >: Media queries allow us to choose different style
-                            rulesets for different states of the user's device.
-                            For example, we can detect if a phone is in protrait
-                            mode, then make a row of pictures display as a
-                            column instead. These different media query rules
-                            are called "<span class="key-term">breakpoints</span
-                            >" as they break our rulesets into chunks based on
-                            the user's device.
-                        </li>
-                        <li>
-                            <span class="key-term">Grids</span>: One modern CSS
-                            feature that makes laying out web pages easier is
-                            "grids". Grids act as a table, but instead of
-                            holding data, they hold elements such as divs that
-                            can be organized into neat rows and columns. This
-                            removes the frustration of having to align
-                            everything by constantly adjusting the margin and
-                            padding for every element. These grids can be
-                            reorganized very easily using the media queries
-                            mentioned earlier to make the page look good across
-                            many devices. There are many ways to configure the
-                            grid system, but for this exam you only need to know
-                            its definition, functionality, and basic syntax
-                            shown in the example above.
-                        </li>
-                    </ul>
-                </li>
-                </ol>
-            </li>
-            <li class="section-numbers">
-                <h1 id="6">Accessibility, Readability, and Testing</h1>
-
-                <ol>
-                    <li class="article-numbers">
-                        <h2>
-                            Construct well-formed HTML and CSS markup that
-                            conforms to industry best practices
-                        </h2>
-                    </li>
-                    <ul>
-                        <li>
-                            <span class="key-term">
-                                Reusing rules and rule sets </span
-                            >: As mentioned previously, CSS rules and rulesets
-                            can be reused throughout a page, and across multiple
-                            pages in a website using an external stylesheet.
-                            This is the preferred method for many reasons. Doing
-                            it this way makes writing the same styles easier,
-                            faster and more consistent as we don't have to write
-                            the same thing multiple times.
-                        </li>
-                        <li>
-                            <span class="key-term"> Commenting </span>: Comments
-                            are text written into the code that are ignored by
-                            the browser. This allows us to write messages in the
-                            code to ourselves and other programmers. It also
-                            allows us to test multiple versions of an element or
-                            ruleset. To do this, we can write the code for the
-                            multiple versions and turn the ones we do not want
-                            to show into comments. Then we can switch the
-                            comments to try out the other versions.
-                        </li>
-                        <li>
-                            <span class="key-term"> Web-Safe Fonts </span>: Many
-                            web pages use custom fonts that require the browser
-                            to download when the page loads. However not every
-                            browser can download fonts and some user. turn this
-                            feature off. Therefore, it is important to always
-                            add a web-safe font to the "font-family" property in
-                            your CSS. The most common web-safe fonts are listed
-                            below.
-                            <ul style="margin-top: 1em">
-                                <li>Arial (sans-serif)</li>
-                                <li>Times New Roman (serif)</li>
-                                <li>Courier New (monospace)</li>
+                                </div>
+                                <div
+                                    class="result"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                    "
+                                >
+                                    <iframe
+                                        title="example.com"
+                                        src="https://example.com"
+                                        width="400px"
+                                        height="300px"
+                                    ></iframe>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <span class="key-term">iframe</span>: The
+                                    "iframe" element allows us to embed another
+                                    web page into our web page.
+                                </li>
                             </ul>
                         </li>
-                        <li>
-                            <span class="key-term">
-                                Cross-Platform Usability </span
-                            >: Because different browsers interpret HTML and CSS
-                            slightly differently, it is very important to test
-                            your web pages on as many different browsers and
-                            devices as possible.
+                    </ol>
+                </li>
+                <li class="section-numbers">
+                    <h1 id="5">Webpage Styling using CSS</h1>
+                    <ol>
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze styles that position
+                                content
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">position</span>:
+                                    Positioning refers to the placement of
+                                    elements on a page, and is done inside a CSS
+                                    ruleset with the "position" property. By
+                                    default, all elements have "static" position
+                                    value which means they flow from top to
+                                    bottom and left to right, just like in a
+                                    book or magazine. Of course, there are many
+                                    options to change the positioning of
+                                    elements to design some very creative and
+                                    beautiful web sites.
+                                    <ul>
+                                        <li>
+                                            <span class="key-term"
+                                                >relative</span
+                                            >: If the "position" property is
+                                            given the value of "relative", the
+                                            element stays in within its normal
+                                            flow on the page, but can be moved
+                                            in relation to where it would have
+                                            been.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >absolute</span
+                                            >: If the "position" property is
+                                            given the value of "absolute", the
+                                            element is removed from the flow of
+                                            the page and is positioned relative
+                                            to its closest ancestor.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">static</span
+                                            >: The default value for the
+                                            "position" property is "static" and
+                                            positions elements from top to
+                                            bottom on the page.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">fixed</span>:
+                                            If the "position" property is given
+                                            the value of "fixed", the element is
+                                            removed from the flow of the page
+                                            and is positioned relative to
+                                            viewport. This means that the
+                                            element will stay exactly where it
+                                            is, even if the user scrolls up and
+                                            down the page.
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="key-term">float</span>: The
+                                    "float" property will remove an element from
+                                    the static flow of the page and move the
+                                    element to the left, with a value of "left",
+                                    or right, with a value of "right".
+                                </li>
+                                <li>
+                                    <span class="key-term">height/width</span>:
+                                    The "height" and "width" properties set the
+                                    size of elements. By default, these are set
+                                    to auto and will grow or shrink to fit the
+                                    content.
+                                </li>
+                                <li>
+                                    <span class="key-term"
+                                        >max-width/min-width</span
+                                    >: "height" and "width" will set a specific
+                                    size, but if we'd like our elements to still
+                                    grow and shrink, but stay within a minimum
+                                    and maximum range, we can use the
+                                    "min-width" and "max-width" properties.
+                                </li>
+                                <li>
+                                    <span class="key-term">overflow</span> When
+                                    we restrict the size of elements with
+                                    "height", "width", "max-height", or
+                                    "min-height", if the content becomes larger
+                                    than the size of the element, it will
+                                    "break" through the element. This looks
+                                    terrible and must be avoided. The "overflow"
+                                    property allows us to create a scroll-bar so
+                                    the content stays within the element.
+                                </li>
+                                <li>
+                                    <span class="key-term">text-align</span> The
+                                    "text-align" property, much like on a word
+                                    processor, allows us to align text to the
+                                    left (the default setting), right, center,
+                                    or it can be justified (equal space between
+                                    each word).
+                                </li>
+                                <li>
+                                    <span class="key-term">display</span> The
+                                    "display" property allows us to change
+                                    whether an element shows as "inline" or as
+                                    "block". A "block" takes up the entire width
+                                    of the viewport and ends with a line break
+                                    so the next element goes under it, such as
+                                    the "paragraph" element. An "inline" element
+                                    is always the exact size to fit the content
+                                    within and no larger. It does not end in a
+                                    line break, so the next element will go to
+                                    the right of it. "span" is an "inline"
+                                    element.
+                                </li>
+                                <li>
+                                    <span class="key-term">visibility</span>:
+                                    The "visibility" element allows us to hide
+                                    and show elements. Elements with their
+                                    "visibility" set to hidden still take up
+                                    space as if they where "visible" The user
+                                    just cannot see them.
+                                </li>
+                                <li>
+                                    <span class="key-term">The Box Model</span>:
+                                    The Box Model refers to how each element
+                                    shows on a page. Every element is a
+                                    rectangle or "box" that has four components:
+                                    margin, border, padding, content.
+                                    <ul>
+                                        <li>
+                                            <span class="key-term">margin</span
+                                            >: The "margin" property of an
+                                            element describes how much space
+                                            exists around the element between
+                                            its border, and the margin of
+                                            surrounding elements.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">border</span
+                                            >: The "border" property of an
+                                            element describes how much space
+                                            exists between the element's padding
+                                            and its margin. This border can be
+                                            styled to be a different color,
+                                            shape, etc.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">padding</span
+                                            >: The "padding" property of an
+                                            element describes how much space
+                                            exists between the an elements
+                                            border and its content.
+                                        </li>
+                                        <li>
+                                            <span class="key-term">Content</span
+                                            >: An element's content does not
+                                            exist as a CSS property, but simply
+                                            refers to what the element is
+                                            displaying. Content is typically
+                                            text, images, pictures, video, or
+                                            audio.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <span class="key-term"
-                                >Separation of Structure (HTML) and Style
-                                (CSS)</span
-                            >: While CSS can be written inline and internal, it
-                            is always best practice to write external
-                            stylesheets. This makes the HTML code cleaner
-                            because the CSS is written in a different file. It
-                            also makes the styling more consistent as one
-                            ruleset can be applied to multiple elements,
-                            mentioned earlier.
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze styles that format text
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">font-family</span>:
+                                    The "font-family" property allows us to
+                                    create a list of fonts that we would like to
+                                    display on the page. The browser will try to
+                                    load the first font in the list, if it
+                                    cannot load that font, it will try the next
+                                    one.
+                                </li>
+                                <li>
+                                    <span class="key-term">color</span>: The
+                                    "color" property sets the color of the text.
+                                    The color can be set using red, blue, green
+                                    (RGB) color codes, hexadecimal (HEX) color
+                                    codes, or with simple color names such as
+                                    "red", "purple", or "orange".
+                                </li>
+                                <li>
+                                    <span class="key-term">font-style</span>:
+                                    The "font-style" property allows us to set
+                                    the font to display as italic.
+                                </li>
+                                <li>
+                                    <span class="key-term">font-weight</span>:
+                                    The "font-weight" property allows us to set
+                                    the font to display as bold.
+                                </li>
+                                <li>
+                                    <span class="key-term"
+                                        >text-decoration</span
+                                    >
+                                    The "text-decoration" property allows us to
+                                    underline text.
+                                </li>
+                                <li>
+                                    <span class="key-term">font-variant</span>:
+                                    The "font-variant" property
+                                </li>
+                                <li>
+                                    <span class="key-term">text-indent</span>
+                                    The "text-indent" property allows us to
+                                    indent the first line of a paragraph. A
+                                    style popular with MLA formated essays.
+                                </li>
+                                <li>
+                                    <span class="key-term">line-height</span>:
+                                    The "line-height" property allows us to set
+                                    the spacing between lines of text in an
+                                    element.
+                                </li>
+                                <li>
+                                    <span class="key-term">word-wrap</span>: The
+                                    "word-wrap" property allows us to break
+                                    words that usually would not be broken, and
+                                    put them on a new line if they are larger
+                                    than the parent element they are inside of.
+                                </li>
+                                <li>
+                                    <span class="key-term">letter-spacing</span>
+                                    The "letter-spacing" property allows us to
+                                    set the spacing between letters in an
+                                    element.
+                                </li>
+                            </ul>
                         </li>
-                    </ul>
-                    <li class="article-numbers">
-                        <h2>
-                            Apply accessibility principles and evaluate content
-                            accessibility
-                        </h2>
-                        <ul>
-                            <li>
-                                <span class="key-term">Text Alternatives</span>:
-                                Remember to always write descriptive text in the
-                                "alt" attribute for visual and audio content as
-                                this helps people with vision and hearing
-                                disabilities.
-                            </li>
-                            <li>
-                                <span class="key-term">Color Contrast</span>:
-                                Remember to have contrasting colors on a web
-                                page any time two elements are next to or on top
-                                of one another. For example, the background
-                                color and text color should contrast or it will
-                                be difficult to read the text. A bright yellow
-                                text would be hard to read on a white
-                                background, while dark-green text would be more
-                                legible.
-                            </li>
-                            <li>
-                                <span class="key-term"
-                                    >Legibility of Typography</span
-                                >: Some fonts, particularly handwritten or
-                                "script" fonts, can be difficult to read for
-                                many users. When choosing a legible font, check
-                                that lowercase l, uppercase I, and the number 1
-                                look different (lI1), as well as lowercase o,
-                                uppercase O, and zero 0 (oO0). Attention should
-                                also be payed to line and character spacing.
-                                Text can be difficult to read if it is too close
-                                or far away from other text.
-                            </li>
-                            <li>
-                                <span class="key-term">Tab Order</span>: Some
-                                disabilities make it difficult to use a mouse.
-                                This can make it hard to navigate links and
-                                forms. For this reason it is important to make
-                                sure the order that elements are selected when
-                                pressing the "TAB" key makes sense. The
-                                "tab-index" attribute can be added to any
-                                element to manually set the tab order. Elements
-                                should be in tab order from left-to-right, then
-                                top-to-bottom, just as we read text in a book.
-                            </li>
-                            <li>
-                                <span class="key-term">Text Hierarchy</span>:
-                                Web pages should always be layed out in a
-                                logical order. While the heading elements "h1" -
-                                "h6", make text bigger and bolder they should
-                                not be used soley for this purpose. Heading
-                                elements represent a page's hierarchy. This
-                                means that if we use an "h1" in the "header" to
-                                represent a title for the whole page, we should
-                                never use "h1" for any other content, as nothing
-                                on the page would have the same hierarchy as the
-                                page's main title. However, if a page has
-                                multiple blog articles, and each article has
-                                their title nested inside of an "h2", this is
-                                perfectly acceptable, as each blog article's
-                                title has the same logical hierarchy.
-                            </li>
-                            <li>
-                                <span class="key-term">Translation</span>: Many
-                                modern browsers have the ability to translate
-                                text inside of a web page. While there is an
-                                attribute that can be applied to the "meta"
-                                element to disable translations, we should avoid
-                                using it as language translation is a very
-                                helpful accessibility feature for people who
-                                cannot read the language that our page was
-                                written in.
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="article-numbers">
-                        <h2>
-                            Evaluate the structural integrity of HTML and CSS
-                            markup
-                        </h2>
-                    </li>
-                    <ul>
-                        <li>
-                            <span class="key-term">Syntax Errors</span>: Syntax
-                            errors are mistakes in the code that prevent it from
-                            running correctly. The most common HTML syntax error
-                            is forgetting to add end tags. The most common CSS
-                            syntax errors are forgetting the curly brackets "{}"
-                            in a ruleset, and mixing up the colon ":" and
-                            semicolon ";".
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze styles that format
+                                backgrounds and borders
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">border-color</span>:
+                                    The "border-color" property allows us to
+                                    change the color of an element's border.
+                                    Note that the border's style must be changed
+                                    first, as its default style value is "none"
+                                    which hides the border.
+                                </li>
+                                <li>
+                                    <span class="key-term">border-style</span>
+                                    The "border-style" property allows us to
+                                    change the type of border for an element.
+                                    Borders can be solid, dashed, dotted, etc.
+                                </li>
+                                <li>
+                                    <span class="key-term">border-width</span>:
+                                    The "border-width" property allows us to
+                                    change the thickness of the border for an
+                                    element.
+                                </li>
+                                <li>
+                                    <span class="key-term">background</span>:
+                                    The "background" property allows us to
+                                    change what shows inside the border area of
+                                    an element, and can be set to a color or it
+                                    can be a picture.
+                                </li>
+                                <li>
+                                    <span class="key-term">Colors</span>:
+                                    Earlier we discussed the different ways we
+                                    can specify colors in CSS. Below are a few
+                                    more details regarding color in CSS.
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <span class="key-term">Tag Mismatch</span>: Another
-                            common error in HTML is to mismatch tags. Elements
-                            should have their start and end tags organized like
-                            a sandwich. If a "span" element is nested inside a
-                            "p" element, the order of the tags should be
-                            &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;.
+                        <li class="article-numbers">
+                            <h2>
+                                Construct and analyze styles that create a
+                                simple responsive layout
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">Units</span>: Like
+                                    colors, there are many ways to specify how
+                                    large something is on a page. Units are
+                                    broken into two categories: absolute and
+                                    relative. Absolute units never change as
+                                    they are what they are, such as "inches",
+                                    where relative units are based on the size
+                                    of something else, such as "%". A few of the
+                                    more popular units are explained below.
+                                </li>
+                                <li>
+                                    <span class="key-term">viewport</span>:
+                                    "viewport" is not a CSS property, but
+                                    instead a value for the "meta" element's
+                                    "name" attribute. The important thing to
+                                    remember is that the code in the example
+                                    changes the width of the our pages to fit
+                                    the width of the user's screen. This is
+                                    useful because users may view our page on
+                                    their phones, tables, laptops, or desktops,
+                                    and these all have very different widths.
+                                </li>
+                                <li>
+                                    <span class="key-term">
+                                        Media Query and Break Points</span
+                                    >: Media queries allow us to choose
+                                    different style rulesets for different
+                                    states of the user's device. For example, we
+                                    can detect if a phone is in protrait mode,
+                                    then make a row of pictures display as a
+                                    column instead. These different media query
+                                    rules are called "<span class="key-term"
+                                        >breakpoints</span
+                                    >" as they break our rulesets into chunks
+                                    based on the user's device.
+                                </li>
+                                <li>
+                                    <span class="key-term">Grids</span>: One
+                                    modern CSS feature that makes laying out web
+                                    pages easier is "grids". Grids act as a
+                                    table, but instead of holding data, they
+                                    hold elements such as divs that can be
+                                    organized into neat rows and columns. This
+                                    removes the frustration of having to align
+                                    everything by constantly adjusting the
+                                    margin and padding for every element. These
+                                    grids can be reorganized very easily using
+                                    the media queries mentioned earlier to make
+                                    the page look good across many devices.
+                                    There are many ways to configure the grid
+                                    system, but for this exam you only need to
+                                    know its definition, functionality, and
+                                    basic syntax shown in the example above.
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <span class="key-term">Cascading Issues</span>:
-                            Another common CSS issue is cascading issues. This
-                            is when one element is being styled by multiple
-                            rulesets. Having a good understanding of CSS
-                            precedence (mentioned in domain 2.1) can help to
-                            troubleshoot these issues.
+                    </ol>
+                </li>
+                <li class="section-numbers">
+                    <h1 id="6">Accessibility, Readability, and Testing</h1>
+                    <ol>
+                        <li class="article-numbers">
+                            <h2>
+                                Construct well-formed HTML and CSS markup that
+                                conforms to industry best practices
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">
+                                        Reusing rules and rule sets </span
+                                    >: As mentioned previously, CSS rules and
+                                    rulesets can be reused throughout a page,
+                                    and across multiple pages in a website using
+                                    an external stylesheet. This is the
+                                    preferred method for many reasons. Doing it
+                                    this way makes writing the same styles
+                                    easier, faster and more consistent as we
+                                    don't have to write the same thing multiple
+                                    times.
+                                </li>
+                                <li>
+                                    <span class="key-term"> Commenting </span>:
+                                    Comments are text written into the code that
+                                    are ignored by the browser. This allows us
+                                    to write messages in the code to ourselves
+                                    and other programmers. It also allows us to
+                                    test multiple versions of an element or
+                                    ruleset. To do this, we can write the code
+                                    for the multiple versions and turn the ones
+                                    we do not want to show into comments. Then
+                                    we can switch the comments to try out the
+                                    other versions.
+                                </li>
+                                <li>
+                                    <span class="key-term">
+                                        Web-Safe Fonts </span
+                                    >: Many web pages use custom fonts that
+                                    require the browser to download when the
+                                    page loads. However not every browser can
+                                    download fonts and some user. turn this
+                                    feature off. Therefore, it is important to
+                                    always add a web-safe font to the
+                                    "font-family" property in your CSS. The most
+                                    common web-safe fonts are listed below.
+                                    <ul style="margin-top: 1em">
+                                        <li>Arial (sans-serif)</li>
+                                        <li>Times New Roman (serif)</li>
+                                        <li>Courier New (monospace)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="key-term">
+                                        Cross-Platform Usability </span
+                                    >: Because different browsers interpret HTML
+                                    and CSS slightly differently, it is very
+                                    important to test your web pages on as many
+                                    different browsers and devices as possible.
+                                </li>
+                                <li>
+                                    <span class="key-term"
+                                        >Separation of Structure (HTML) and
+                                        Style (CSS)</span
+                                    >: While CSS can be written inline and
+                                    internal, it is always best practice to
+                                    write external stylesheets. This makes the
+                                    HTML code cleaner because the CSS is written
+                                    in a different file. It also makes the
+                                    styling more consistent as one ruleset can
+                                    be applied to multiple elements, mentioned
+                                    earlier.
+                                </li>
+                            </ul>
                         </li>
-                    </ul>
-                </ol>
-            </li>
+                        <li class="article-numbers">
+                            <h2>
+                                Apply accessibility principles and evaluate
+                                content accessibility
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term"
+                                        >Text Alternatives</span
+                                    >: Remember to always write descriptive text
+                                    in the "alt" attribute for visual and audio
+                                    content as this helps people with vision and
+                                    hearing disabilities.
+                                </li>
+                                <li>
+                                    <span class="key-term">Color Contrast</span
+                                    >: Remember to have contrasting colors on a
+                                    web page any time two elements are next to
+                                    or on top of one another. For example, the
+                                    background color and text color should
+                                    contrast or it will be difficult to read the
+                                    text. A bright yellow text would be hard to
+                                    read on a white background, while dark-green
+                                    text would be more legible.
+                                </li>
+                                <li>
+                                    <span class="key-term"
+                                        >Legibility of Typography</span
+                                    >: Some fonts, particularly handwritten or
+                                    "script" fonts, can be difficult to read for
+                                    many users. When choosing a legible font,
+                                    check that lowercase l, uppercase I, and the
+                                    number 1 look different (lI1), as well as
+                                    lowercase o, uppercase O, and zero 0 (oO0).
+                                    Attention should also be payed to line and
+                                    character spacing. Text can be difficult to
+                                    read if it is too close or far away from
+                                    other text.
+                                </li>
+                                <li>
+                                    <span class="key-term">Tab Order</span>:
+                                    Some disabilities make it difficult to use a
+                                    mouse. This can make it hard to navigate
+                                    links and forms. For this reason it is
+                                    important to make sure the order that
+                                    elements are selected when pressing the
+                                    "TAB" key makes sense. The "tab-index"
+                                    attribute can be added to any element to
+                                    manually set the tab order. Elements should
+                                    be in tab order from left-to-right, then
+                                    top-to-bottom, just as we read text in a
+                                    book.
+                                </li>
+                                <li>
+                                    <span class="key-term">Text Hierarchy</span
+                                    >: Web pages should always be layed out in a
+                                    logical order. While the heading elements
+                                    "h1" - "h6", make text bigger and bolder
+                                    they should not be used soley for this
+                                    purpose. Heading elements represent a page's
+                                    hierarchy. This means that if we use an "h1"
+                                    in the "header" to represent a title for the
+                                    whole page, we should never use "h1" for any
+                                    other content, as nothing on the page would
+                                    have the same hierarchy as the page's main
+                                    title. However, if a page has multiple blog
+                                    articles, and each article has their title
+                                    nested inside of an "h2", this is perfectly
+                                    acceptable, as each blog article's title has
+                                    the same logical hierarchy.
+                                </li>
+                                <li>
+                                    <span class="key-term">Translation</span>:
+                                    Many modern browsers have the ability to
+                                    translate text inside of a web page. While
+                                    there is an attribute that can be applied to
+                                    the "meta" element to disable translations,
+                                    we should avoid using it as language
+                                    translation is a very helpful accessibility
+                                    feature for people who cannot read the
+                                    language that our page was written in.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="article-numbers">
+                            <h2>
+                                Evaluate the structural integrity of HTML and
+                                CSS markup
+                            </h2>
+                            <ul>
+                                <li>
+                                    <span class="key-term">Syntax Errors</span>:
+                                    Syntax errors are mistakes in the code that
+                                    prevent it from running correctly. The most
+                                    common HTML syntax error is forgetting to
+                                    add end tags. The most common CSS syntax
+                                    errors are forgetting the curly brackets
+                                    "{}" in a ruleset, and mixing up the colon
+                                    ":" and semicolon ";".
+                                </li>
+                                <li>
+                                    <span class="key-term">Tag Mismatch</span>:
+                                    Another common error in HTML is to mismatch
+                                    tags. Elements should have their start and
+                                    end tags organized like a sandwich. If a
+                                    "span" element is nested inside a "p"
+                                    element, the order of the tags should be
+                                    &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;.
+                                </li>
+                                <li>
+                                    <span class="key-term"
+                                        >Cascading Issues</span
+                                    >: Another common CSS issue is cascading
+                                    issues. This is when one element is being
+                                    styled by multiple rulesets. Having a good
+                                    understanding of CSS precedence (mentioned
+                                    in domain 2.1) can help to troubleshoot
+                                    these issues.
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
         </main>
         <footer>
             <nav>

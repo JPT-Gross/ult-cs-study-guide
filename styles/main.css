@@ -180,6 +180,15 @@ div.example {
     margin-bottom: 1em;
 }
 
+div.vert {
+    flex-direction: column;
+}
+
+div.vert > div.snippet {
+    border-right: none;
+    border-bottom: 2px solid dimgray;
+}
+
 div.three > div.example {
     border-style: none;
     margin-bottom: 0;

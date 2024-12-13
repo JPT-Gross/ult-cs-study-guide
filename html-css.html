@@ -2423,6 +2423,12 @@
         <div class="rect1">
             <p>Relative</p>
         </div>
+        <div class="rect2">
+            <p>Absolute</p>
+        </div>
+        <div class="rect3">
+            <p>Static</p>
+        </div>
     </body>
 </html></script>
                                             </div>
@@ -2434,7 +2440,19 @@
                                                 <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     position: relative;
-    left: 5px;
+    left: 50px;
+}
+
+div.rect2 {
+    background-color: magenta;
+    position: absolute;
+    left: 500px;
+}
+
+div.rect3 {
+    background-color: yellow;
+    position: static;
+    left: 50px;
 }</script>
                                             </div>
                                         </div>
@@ -2459,6 +2477,24 @@
                                                 >
                                                     <p>Relative</p>
                                                 </div>
+
+                                                <div
+                                                    style="
+                                                        background-color: magenta;
+                                                        position: absolute;
+                                                        left: 500px;
+                                                    "
+                                                >
+                                                    <p>Absolute</p>
+                                                </div>
+
+                                                <div
+                                                    style="
+                                                        background-color: yellow;
+                                                    "
+                                                >
+                                                    <p>Static</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -2471,7 +2507,11 @@
                                             element stays in within its normal
                                             flow on the page, but can be moved
                                             in relation to where it would have
-                                            been.
+                                            been. Notice in the example above
+                                            that the cyan div where it would
+                                            normally be, but moved slightly to
+                                            the right. Also, the elements below
+                                            it flow as expected.
                                         </li>
                                         <li>
                                             <span class="key-term"
@@ -2480,14 +2520,31 @@
                                             given the value of "absolute", the
                                             element is removed from the flow of
                                             the page and is positioned relative
-                                            to its closest ancestor.
+                                            to its closest ancestor. Notice in
+                                            the example above that the magenta
+                                            div is where it would be normally,
+                                            but moved slightly to the right. We
+                                            needed to specify a much larger
+                                            value (500px instead of 50px) than
+                                            the div above because it is being
+                                            moved relative to the left side of
+                                            the page. Also, the element below
+                                            was moved up because positioning
+                                            "absolute" removed the div from the
+                                            normal flow of the page.
                                         </li>
                                         <li>
                                             <span class="key-term">static</span
                                             >: The default value for the
                                             "position" property is "static" and
                                             positions elements from top to
-                                            bottom on the page.
+                                            bottom on the page. Notice in the
+                                            example above that despite specifing
+                                            a 50px gap on the left of the yellow
+                                            div, it did not move from where it
+                                            would normally be. Elements that are
+                                            "static" cannot be moved in this
+                                            way.
                                         </li>
                                         <li>
                                             <span class="key-term">fixed</span>:
@@ -2502,19 +2559,197 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>Float left</p>
+    </div>
+    <div class="rect2">
+        <p>Float right</p>
+    </div>
+    <div class="rect3">
+        <p>No float</p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {
+background-color: cyan;
+float: left
+}
+
+div.rect2 {
+background-color: magenta;
+float: right;
+}
+
+div.rect3 {
+background-color: yellow;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                                overflow-x: hidden;
+                                            "
+                                        >
+                                            <div
+                                                style="
+                                                    background-color: cyan;
+                                                    float: left;
+                                                "
+                                            >
+                                                <p>Float left</p>
+                                            </div>
+
+                                            <div
+                                                style="
+                                                    background-color: magenta;
+                                                    float: right;
+                                                "
+                                            >
+                                                <p>Float right</p>
+                                            </div>
+
+                                            <div
+                                                style="background-color: yellow"
+                                            >
+                                                <p>No float</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">float</span>: The
                                     "float" property will remove an element from
                                     the static flow of the page and move the
                                     element to the left, with a value of "left",
-                                    or right, with a value of "right".
+                                    or right, with a value of "right". Notice in
+                                    the example above how floating the cyan div
+                                    to the left and the magenta div to the right
+                                    affected the yellow div. It was placed in
+                                    the center, and now all of the divs are at
+                                    the top of the page instead of each one
+                                    going below the next.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>Small</p>
+    </div>
+    <div class="rect2">
+        <p>Medium</p>
+    </div>
+    <div class="rect3">
+        <p>Large</p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {
+background-color: cyan;
+height: 50px;
+width: 100px;
+}
+
+div.rect2 {
+background-color: magenta;
+height: 150px;
+width: 300px;
+}
+
+div.rect3 {
+background-color: yellow;
+height: 200px;
+width: 400px;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                                overflow-x: hidden;
+                                            "
+                                        >
+                                            <div
+                                                style="
+                                                    background-color: cyan;
+                                                    height: 50px;
+                                                    width: 100px;
+                                                "
+                                            >
+                                                <p>small</p>
+                                            </div>
+
+                                            <div
+                                                style="
+                                                    background-color: magenta;
+                                                    height: 150px;
+                                                    width: 300px;
+                                                "
+                                            >
+                                                <p>Medium</p>
+                                            </div>
+
+                                            <div
+                                                style="
+                                                    background-color: yellow;
+                                                    height: 200px;
+                                                    width: 400px;
+                                                "
+                                            >
+                                                <p>Large</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">height/width</span>:
                                     The "height" and "width" properties set the
                                     size of elements. By default, these are set
                                     to auto and will grow or shrink to fit the
-                                    content.
+                                    content. Notice the example above.
                                 </li>
                                 <li>
                                     <span class="key-term"

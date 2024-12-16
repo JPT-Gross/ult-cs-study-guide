@@ -2446,7 +2446,7 @@
 div.rect2 {
     background-color: magenta;
     position: absolute;
-    left: 500px;
+    left: 50%;
 }
 
 div.rect3 {
@@ -2477,12 +2477,11 @@ div.rect3 {
                                                 >
                                                     <p>Relative</p>
                                                 </div>
-
                                                 <div
                                                     style="
                                                         background-color: magenta;
                                                         position: absolute;
-                                                        left: 500px;
+                                                        left: 50%;
                                                     "
                                                 >
                                                     <p>Absolute</p>
@@ -2522,16 +2521,17 @@ div.rect3 {
                                             the page and is positioned relative
                                             to its closest ancestor. Notice in
                                             the example above that the magenta
-                                            div is where it would be normally,
-                                            but moved slightly to the right. We
-                                            needed to specify a much larger
-                                            value (500px instead of 50px) than
-                                            the div above because it is being
-                                            moved relative to the left side of
-                                            the page. Also, the element below
+                                            div is roughly where it would be
+                                            normally, but but is centered in the
+                                            preview box, because we chose a
+                                            value of 50% of the width of the
+                                            preview box. Also, the element below
                                             was moved up because positioning
                                             "absolute" removed the div from the
-                                            normal flow of the page.
+                                            normal flow of the page, so now it
+                                            looks as if the magenta element is
+                                            stacked on top of the yellow
+                                            element.
                                         </li>
                                         <li>
                                             <span class="key-term">static</span
@@ -2751,6 +2751,100 @@ width: 400px;
                                     to auto and will grow or shrink to fit the
                                     content. Notice the example above.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <textarea name="" id="" cols="80" rows="10">
+        </textarea>
+    </div>
+    <div class="rect2">
+        <p>
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nobis excepturi omnis
+            sint explicabo quisquam et rerum, molestiae
+            temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut
+            consectetur! Excepturi!
+        </p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {
+    float: left;
+}
+
+div.rect2 {
+    background-color: cyan;
+    height: 6em;
+    min-width: 400px;
+    max-width: 900px;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                                overflow-x: hidden;
+                                            "
+                                        >
+                                            <div
+                                                class="rect1"
+                                                style="float: left"
+                                            >
+                                                <textarea
+                                                    name=""
+                                                    id=""
+                                                    cols="50"
+                                                    rows="10"
+                                                >
+                                                </textarea>
+                                            </div>
+                                            <div
+                                                class="rect2"
+                                                style="
+                                                    background-color: cyan;
+                                                    height: 6em;
+                                                    min-width: 400px;
+                                                    max-width: 900px;
+                                                    overflow-y: hidden;
+                                                "
+                                            >
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term"
                                         >max-width/min-width</span
@@ -2759,7 +2853,134 @@ width: 400px;
                                     grow and shrink, but stay within a minimum
                                     and maximum range, we can use the
                                     "min-width" and "max-width" properties.
+                                    Notice in the example above that if you
+                                    grow/shrink the "text-area" element, the
+                                    cyan element will grow and shrink to fit in
+                                    the space to the right, but it wont get any
+                                    larger than 900 pixels. Also, if the
+                                    "text-area" gets soo wide that the cyan
+                                    element becomes less than 400 pixels, it
+                                    will jump down below the "text-area" element
+                                    as it cannot become that small.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>
+            Overflow Left On Default:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect2">
+        <p>
+            Overflow Set To Auto:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {background-color: cyan;
+    float: left;
+    width: 15em;
+    height: 5em;
+}
+
+div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 15em;
+    height: 5em;
+    overflow: auto;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                                height: 20em;
+                                            "
+                                        >
+                                            <div
+                                                class="rect1"
+                                                style="
+                                                    background-color: cyan;
+                                                    width: 15em;
+                                                    height: 5em;
+                                                    float: left;
+                                                "
+                                            >
+                                                <p>
+                                                    Overflow Left On Default:
+                                                    <br />
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect2"
+                                                style="
+                                                    background-color: magenta;
+                                                    float: left;
+                                                    width: 15em;
+                                                    height: 5em;
+                                                    overflow: auto;
+                                                "
+                                            >
+                                                <p>
+                                                    Overflow Set To Auto:
+                                                    <br />
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">overflow</span> When
                                     we restrict the size of elements with
@@ -2769,38 +2990,485 @@ width: 400px;
                                     "break" through the element. This looks
                                     terrible and must be avoided. The "overflow"
                                     property allows us to create a scroll-bar so
-                                    the content stays within the element.
+                                    the content stays within the element. Notice
+                                    in the example above, both the cyan and
+                                    magenta elements were given specific
+                                    dimensions, but the magenta element has its
+                                    "overflow" property set to "auto", while
+                                    cyan's was left as the default value. This
+                                    causes the text in the cyan element to
+                                    overflow through the bottom, while the
+                                    magenta element gets a scroll-bar.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>
+            Text Align: Default:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect2">
+        <p>
+            Text Align: Center:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect3">
+        <p>
+            Text Align: Right:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect4">
+        <p>
+            Text Align: Justify:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {background-color: cyan;
+    float: left;
+    width: 25%;
+}
+
+div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+div.rect3 {
+    background-color: yellow;
+    float: left;
+    width: 25%;
+    text-align: right;
+}
+
+div.rect4 {
+    background-color: orange;
+    float: left;
+    width: 25%;
+    text-align: justify;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <div
+                                                class="rect1"
+                                                style="
+                                                    background-color: cyan;
+                                                    padding: 0.5em;
+                                                    float: left;
+                                                    width: 25%;
+                                                "
+                                            >
+                                                <p>
+                                                    Text Align: Default:
+                                                    <br />
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect2"
+                                                style="
+                                                    background-color: magenta;
+                                                    padding: 0.5em;
+                                                    float: left;
+                                                    width: 25%;
+                                                    text-align: center;
+                                                "
+                                            >
+                                                <p>
+                                                    Text Align: Center:
+                                                    <br />
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect3"
+                                                style="
+                                                    background-color: yellow;
+                                                    padding: 0.5em;
+                                                    float: left;
+                                                    width: 25%;
+                                                    text-align: right;
+                                                "
+                                            >
+                                                <p>
+                                                    Text Align: Right:
+                                                    <br />
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect4"
+                                                style="
+                                                    background-color: orange;
+                                                    padding: 0.5em;
+                                                    float: left;
+                                                    width: 25%;
+                                                    text-align: justify;
+                                                "
+                                            >
+                                                <p>
+                                                    Text Align: Justify:
+                                                    <br />
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">text-align</span> The
                                     "text-align" property, much like on a word
                                     processor, allows us to align text to the
                                     left (the default setting), right, center,
                                     or it can be justified (equal space between
-                                    each word).
+                                    each word). Notice in the example above how
+                                    each element has a different "text-align"
+                                    value and the affect it has on the text
+                                    inside.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>
+            This cyan element is displayed as a "block" element. This
+            <span class="line1" style="background-color: pink;">
+                pink "span" element displays as "inline".
+            </span>.
+            You cannot see the magenta element below because its
+            "display" is "none".
+        </p>
+    </div>
+    <div class="rect2">
+        <p>You can't see this text.</p>
+    </div>
+    <div class="rect3">
+        <p>
+            This is another "block" element that has moved
+            up to fill the space of the element with
+            "display" set to "none".
+        </p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {background-color: cyan;
+    display: block;
+}
+
+div.rect2 {
+    background-color: magenta;
+    display: none;
+}
+
+div.rect3 {
+    background-color: yellow;
+}
+
+span.line1 {
+    background-color: pink;
+    display: inline;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <div
+                                                class="rect1"
+                                                style="
+                                                    background-color: cyan;
+                                                    padding: 0.5em;
+                                                "
+                                            >
+                                                <p>
+                                                    This cyan element is
+                                                    displayed as a "block"
+                                                    element. This
+                                                    <span
+                                                        class="line1"
+                                                        style="
+                                                            background-color: pink;
+                                                        "
+                                                        >pink "span" element
+                                                        displays as
+                                                        "inline"</span
+                                                    >. You cannot see the
+                                                    magenta element below
+                                                    because its "display" is
+                                                    "none".
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect2"
+                                                style="
+                                                    background-color: magenta;
+                                                    padding: 0.5em;
+                                                    display: none;
+                                                "
+                                            >
+                                                <p>You can't see this text.</p>
+                                            </div>
+                                            <div
+                                                class="rect3"
+                                                style="
+                                                    background-color: yellow;
+                                                    padding: 0.5em;
+                                                "
+                                            >
+                                                <p>
+                                                    This is another "block"
+                                                    element that has moved up to
+                                                    fill the space of the
+                                                    element with "display" set
+                                                    to "none".
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">display</span> The
                                     "display" property allows us to change
                                     whether an element shows as "inline" or as
                                     "block". A "block" takes up the entire width
-                                    of the viewport and ends with a line break
+                                    of its ancestor and ends with a line break
                                     so the next element goes under it, such as
                                     the "paragraph" element. An "inline" element
                                     is always the exact size to fit the content
                                     within and no larger. It does not end in a
                                     line break, so the next element will go to
                                     the right of it. "span" is an "inline"
-                                    element.
+                                    element. "display" can also be set to "none"
+                                    effectively removing the element from the
+                                    page. Notice in the example above, the cyan
+                                    and yellow elements have the "display" set
+                                    to "block" and the pink element has its
+                                    "display" set to "inline". Also notice how
+                                    the magenta element has been removed because
+                                    its "display" is set to "none" and how this
+                                    is different from how it is hidden in the
+                                    example below.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>
+            This element is above an invisible element.
+        </p>
+    </div>
+    <div class="rect2">
+        <p>You can't see this text.</p>
+    </div>
+    <div class="rect3">
+        <p>
+            This element is below an invisible element.
+        </p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {background-color: cyan;
+}
+
+div.rect2 {
+    background-color: magenta;
+    visibility: hidden;
+}
+
+div.rect3 {
+    background-color: yellow;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <div
+                                                class="rect1"
+                                                style="
+                                                    background-color: cyan;
+                                                    padding: 0.5em;
+                                                "
+                                            >
+                                                <p>
+                                                    This element is above an
+                                                    invisible element.
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect2"
+                                                style="
+                                                    background-color: magenta;
+                                                    padding: 0.5em;
+                                                    visibility: hidden;
+                                                "
+                                            >
+                                                <p>You can't see this text.</p>
+                                            </div>
+                                            <div
+                                                class="rect3"
+                                                style="
+                                                    background-color: yellow;
+                                                    padding: 0.5em;
+                                                "
+                                            >
+                                                <p>
+                                                    This element is below an
+                                                    invisible element.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">visibility</span>:
                                     The "visibility" element allows us to hide
                                     and show elements. Elements with their
                                     "visibility" set to hidden still take up
                                     space as if they where "visible" The user
-                                    just cannot see them.
+                                    just cannot see them, where "display: none;"
+                                    will hide the element and delete the space
+                                    it was taking up on the page.
                                 </li>
+                                <aside style="margin-bottom: 1em">
+                                    <figure>
+                                        <img
+                                            src="media/imgs/css-box-model.png"
+                                            alt="The CSS Box Model"
+                                        />
+                                        <figcaption>
+                                            Figure 5.1-a: The CSS Box Model
+                                        </figcaption>
+                                    </figure>
+                                </aside>
                                 <li>
                                     <span class="key-term">The Box Model</span>:
                                     The Box Model refers to how each element

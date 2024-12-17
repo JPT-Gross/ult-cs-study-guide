@@ -3929,6 +3929,199 @@ div.rect4 {
                                 Construct and analyze styles that format
                                 backgrounds and borders
                             </h2>
+                            <div class="three">
+                                <div class="example">
+                                    <div class="snippet">
+                                        <!-- prettier-ignore -->
+                                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>The Ultimate CS Study Guide</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="rect1">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nobis excepturi omnis sint explicabo quisquam et
+        rerum, molestiae temporibus fuga est ea architecto quia
+        nihil laboriosam dicta recusandae ut consectetur!
+        Excepturi!
+    </p>
+</div>
+<div class="rect2">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nobis excepturi omnis sint explicabo quisquam et
+        rerum, molestiae temporibus fuga est ea architecto quia
+        nihil laboriosam dicta recusandae ut consectetur!
+        Excepturi!
+    </p>
+</div>
+<div class="rect3">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nobis excepturi omnis sint explicabo quisquam et
+        rerum, molestiae temporibus fuga est ea architecto quia
+        nihil laboriosam dicta recusandae ut consectetur!
+        Excepturi!
+    </p>
+</div>
+<div class="rect4">
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Nobis excepturi omnis sint explicabo quisquam et
+        rerum, molestiae temporibus fuga est ea architecto quia
+        nihil laboriosam dicta recusandae ut consectetur!
+        Excepturi!
+    </p>
+</div>
+</body>
+</html></script>
+                                    </div>
+                                    <div
+                                        class="snippet"
+                                        style="border-right: none"
+                                    >
+                                        <!-- prettier-ignore -->
+                                        <script type="text/plain" class="language-css line-numbers">div.rect1 {
+    float: left;
+    width: 25%;
+    border-color: rgb(255, 0, 0);
+    border-style: solid;
+    border-width: 0.25em;
+    background-color: cyan;
+}
+
+div.rect2 {
+    float: left;
+    width: 25%;
+    border-color: rgb(0, 0, 255);
+    border-style: dashed;
+    border-width: 0.50em;
+    background-color: magenta;
+}
+
+div.rect3 {
+    float: left;
+    width: 25%;
+    border-color: #00FF00;
+    border-style: dotted;
+    border-width: 0.75em;
+    background-color: yellow;
+}
+
+div.rect4 {
+    float: left;
+    width: 25%;
+    border-color: #000000
+    border-style: inset;
+    border-width: 1em;
+    background-color: orange;
+}</script>
+                                    </div>
+                                </div>
+                                <div class="example" style="border-top: none">
+                                    <div
+                                        class="result"
+                                        style="
+                                            background-color: white;
+                                            color: black;
+                                        "
+                                    >
+                                        <div
+                                            class="rect1"
+                                            style="
+                                                background-color: cyan;
+                                                padding: 0.5em;
+                                                float: left;
+                                                width: 24%;
+                                                margin: 2px;
+                                                border: 0.25em solid
+                                                    rgb(255, 0, 0);
+                                            "
+                                        >
+                                            <p>
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Nobis excepturi omnis sint
+                                                explicabo quisquam et rerum,
+                                                molestiae temporibus fuga est ea
+                                                architecto quia nihil laboriosam
+                                                dicta recusandae ut consectetur!
+                                                Excepturi!
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="rect2"
+                                            style="
+                                                background-color: magenta;
+                                                padding: 0.5em;
+                                                float: left;
+                                                width: 24%;
+                                                margin: 2px;
+                                                border: 0.5em dashed
+                                                    rgb(0, 0, 255);
+                                            "
+                                        >
+                                            <p>
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Nobis excepturi omnis sint
+                                                explicabo quisquam et rerum,
+                                                molestiae temporibus fuga est ea
+                                                architecto quia nihil laboriosam
+                                                dicta recusandae ut consectetur!
+                                                Excepturi!
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="rect3"
+                                            style="
+                                                background-color: yellow;
+                                                padding: 0.5em;
+                                                float: left;
+                                                width: 24%;
+                                                margin: 2px;
+                                                border: 0.75em dotted #00ff00;
+                                            "
+                                        >
+                                            <p>
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Nobis excepturi omnis sint
+                                                explicabo quisquam et rerum,
+                                                molestiae temporibus fuga est ea
+                                                architecto quia nihil laboriosam
+                                                dicta recusandae ut consectetur!
+                                                Excepturi!
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="rect4"
+                                            style="
+                                                background-color: orange;
+                                                padding: 0.5em;
+                                                float: left;
+                                                width: 24%;
+                                                margin: 2px;
+                                                border: 1em inset #000000;
+                                            "
+                                        >
+                                            <p>
+                                                Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Nobis excepturi omnis sint
+                                                explicabo quisquam et rerum,
+                                                molestiae temporibus fuga est ea
+                                                architecto quia nihil laboriosam
+                                                dicta recusandae ut consectetur!
+                                                Excepturi!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <ul>
                                 <li>
                                     <span class="key-term">border-color</span>:
@@ -3962,6 +4155,70 @@ div.rect4 {
                                     Earlier we discussed the different ways we
                                     can specify colors in CSS. Below are a few
                                     more details regarding color in CSS.
+                                    <ul>
+                                        <li>
+                                            <span class="key-term"
+                                                >Named Colors</span
+                                            >: Most of the code examples in this
+                                            study guide have used color names.
+                                            The good thing about color names is
+                                            they are very easy to rememeber and
+                                            write, but the downside is they are
+                                            very limited as there are only about
+                                            160 of them. Here is a
+                                            <a
+                                                href="http://developer.mozilla.org/en-US/docs/Web/CSS/named-color#value"
+                                                target="_blank"
+                                                >full list of HTML color
+                                                names</a
+                                            >.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >Red, Green, Blue (RGB)
+                                                Codes</span
+                                            >: RGB codes are a series of three
+                                            numbers that mix together to a
+                                            color. The first number represents
+                                            how much red the color contains, the
+                                            second represents green, and the
+                                            third one is for blue. The numbers
+                                            go from 0 to 255, where the lower
+                                            the number is the less of that color
+                                            will be mixed in. For example,
+                                            yellow would be a mix of red and
+                                            green and would be written like this
+                                            "rgb(255, 255, 0)" With just these
+                                            three colors and values, we can make
+                                            over 16 million colors. Many more
+                                            than with the color names.
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >Hexadecimal (HEX) Codes</span
+                                            >: HEX codes are a hexadecimal (base
+                                            16) representation of RGB codes.
+                                            Like RGB codes, HEX codes use a mix
+                                            of red, green, and blue to make
+                                            colors, but instead of values
+                                            between 0 and 255, they use the
+                                            hexadecimal values between 00 and
+                                            ff. All HEX color codes start with
+                                            the hash-tag symbol (#). Using this
+                                            syntax, the yellow we made using RGB
+                                            would look like "#FFFF00" in HEX.
+                                            This may seem confusing if this is
+                                            your first time reading hexadecimal
+                                            numbers. There will be a hexadecimal
+                                            guide on this website in the future,
+                                            but for now you can read
+                                            <a
+                                                href="http://www.w3schools.com/colors/colors_hexadecimal.asp"
+                                                target="_blank"
+                                                >this guide</a
+                                            >.
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
                         </li>

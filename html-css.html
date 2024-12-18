@@ -771,7 +771,7 @@
                                     Selectors in a ruleset are used to specify
                                     the part of the document you'd like to
                                     style. Refer to the example code above for
-                                    the explinations below.
+                                    the explanations below.
                                     <ul>
                                         <li>
                                             <span class="key-term">Element</span
@@ -1389,7 +1389,7 @@
                             <ul>
                                 <li>
                                     <span class="key-term">Anchor</span>: The
-                                    "anchor" element is used to create a
+                                    anchor "a" element is used to create a
                                     hyperlink that can direct a user to a
                                     different web page or to a different spot on
                                     the same web page. The "HTML Reference"
@@ -1534,7 +1534,7 @@
                                     ways links are written in the "href"
                                     attributes. The folder diagram on the right
                                     is a visual representation of the contents
-                                    of the files that exist on this example
+                                    of the folders that exist on this example
                                     website. The code on the left is for the
                                     "about.html" page in the "pages" folder.
                                     <ul>
@@ -1642,12 +1642,7 @@
         <map name="image-map">
             <area 
             target="_blank"
-            alt='Motion picture poster for 
-            "Edisons greatest marvel--The 
-            Vitascope" show movie audience 
-            watching large screen with woman
-            dancing on screen and others in 
-            background watching.' 
+            alt='Motion picture poster for "Edisons greatest marvel--The Vitascope".'
             title="vitascope" 
             href="https://en.wikipedia.org/wiki/Vitascope"
             coords="461,122,577,95,578,346,459,294"
@@ -4132,7 +4127,7 @@ div.rect4 {
                                     which hides the border.
                                 </li>
                                 <li>
-                                    <span class="key-term">border-style</span>
+                                    <span class="key-term">border-style</span>:
                                     The "border-style" property allows us to
                                     change the type of border for an element.
                                     Borders can be solid, dashed, dotted, etc.
@@ -4233,11 +4228,93 @@ div.rect4 {
                                     colors, there are many ways to specify how
                                     large something is on a page. Units are
                                     broken into two categories: absolute and
-                                    relative. Absolute units never change as
-                                    they are what they are, such as "inches",
-                                    where relative units are based on the size
-                                    of something else, such as "%". A few of the
-                                    more popular units are explained below.
+                                    relative.
+                                    <span class="key-term">Absolute</span> units
+                                    never change as they are what they are, such
+                                    as "inches", where relative units are based
+                                    on the size of something else, such as "%".
+                                    <span class="key-term">Relative</span>
+                                    units are the preferred units to work with
+                                    in HTML/CSS because they allow us to create
+                                    pages that look good on devices both large
+                                    and small. A few of the more popular units
+                                    are explained below.
+                                    <ul>
+                                        <li>
+                                            <span class="key-term"
+                                                >Absolute</span
+                                            >
+                                            <ul>
+                                                <li>
+                                                    <span class="key-term"
+                                                        >px</span
+                                                    >: Pixels (px) are units
+                                                    that describe the tiny
+                                                    squares of light that make
+                                                    up a screen. Because screens
+                                                    can have many different
+                                                    pixel configurations, this
+                                                    can be a difficult unit to
+                                                    work with for aligning
+                                                    content.
+                                                </li>
+                                                <li>
+                                                    <span class="key-term"
+                                                        >pts</span
+                                                    >: Points (pt) are
+                                                    technically defined as being
+                                                    1/72 of an inch, but what is
+                                                    important to remember is
+                                                    that it is similar to its
+                                                    usage in a word processor
+                                                    for working with fonts (12pt
+                                                    font, 14pt font, etc).
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span class="key-term"
+                                                >Relative</span
+                                            >
+                                            <ul>
+                                                <li>
+                                                    <span class="key-term"
+                                                        >em</span
+                                                    >: Em quadrat (em) is a unit
+                                                    that is relative to the
+                                                    default size of the font
+                                                    being used. So, a font that
+                                                    has its "font-size" set to
+                                                    "2em" will display as two
+                                                    times larger than fonts at
+                                                    "1em".
+                                                </li>
+                                                <li>
+                                                    <span class="key-term"
+                                                        >vw/vh</span
+                                                    >: Viewport width (vw), and
+                                                    viewport height (vh) are
+                                                    units realtive to 1% of the
+                                                    width and height of the
+                                                    current viewport. This is
+                                                    useful for making elements
+                                                    grow or shrink with the
+                                                    browser window they are
+                                                    using.
+                                                </li>
+                                                <li>
+                                                    <span class="key-term"
+                                                        >%</span
+                                                    >: Percent (%) is a unit
+                                                    that is relative to the size
+                                                    of the parent element. This
+                                                    is useful for sizing and
+                                                    positioning elements that
+                                                    are nested inside of a div.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <span class="key-term">viewport</span>:
@@ -4245,12 +4322,18 @@ div.rect4 {
                                     instead a value for the "meta" element's
                                     "name" attribute. The important thing to
                                     remember is that the code in the example
-                                    changes the width of the our pages to fit
-                                    the width of the user's screen. This is
-                                    useful because users may view our page on
-                                    their phones, tables, laptops, or desktops,
-                                    and these all have very different widths.
+                                    changes the width of our pages to fit the
+                                    width of the user's screen. This is useful
+                                    because users may view our page on their
+                                    phones, tables, laptops, or desktops, and
+                                    these all have very different widths.
                                 </li>
+                                <div class="example">
+                                    <div class="snippet" style="border: hidden">
+                                        <!-- prettier-ignore -->
+                                        <script type="text/plain" class="language-html line-numbers"><meta name="viewport" content="width=device-width, initial-scale=1.0" /></script>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">
                                         Media Query and Break Points</span

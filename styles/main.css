@@ -100,7 +100,7 @@ ol > li {
 }
 
 ol > li:before {
-    content: counters(item, ".") ". ";
+    content: counters(item, '.') '. ';
     display: table-cell;
     padding-right: 0.6em;
 }
@@ -110,7 +110,7 @@ li ol > li {
 }
 
 li ol > li:before {
-    content: counters(item, ".") " ";
+    content: counters(item, '.') ' ';
 }
 
 ol.li-ex {
@@ -230,4 +230,54 @@ div.result > table,
 th,
 td {
     border: 2px solid gray;
+}
+
+div.rect1,
+div.rect2,
+div.rect3,
+div.rect4 {
+    float: left;
+}
+
+@media only screen and (max-width: 1000px) {
+    div.rect1,
+    div.rect2,
+    div.rect3,
+    div.rect4 {
+        float: none;
+    }
+}
+
+div.grid-header {
+    grid-area: header;
+}
+div.grid-nav {
+    grid-area: nav;
+}
+div.grid-article1 {
+    grid-area: article1;
+}
+div.grid-article2 {
+    grid-area: article2;
+}
+div.grid-footer {
+    grid-area: footer;
+}
+
+div.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header'
+        'nav article1 article2'
+        'nav footer footer';
+    gap: 1em;
+    background-color: orange;
+    padding: 1em;
+}
+
+div.grid-container > div {
+    background-color: green;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 1.5em;
 }

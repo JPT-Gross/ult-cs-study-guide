@@ -4346,8 +4346,210 @@ div.rect4 {
                                     rules are called "<span class="key-term"
                                         >breakpoints</span
                                     >" as they break our rulesets into chunks
-                                    based on the user's device.
+                                    based on the user's device. Notice the
+                                    example below. The CSS code in the top-right
+                                    window shows the four "rect" divs as having
+                                    colored backgrounds, 25% width, and they
+                                    have their "float" property set to "left"
+                                    making them display in a row. If you look at
+                                    lines 25-29, however we see that if the
+                                    screen becomes 1000px wide or less their
+                                    "float" property is set to "none", making
+                                    them display in a column. This is perfect
+                                    for making layouts that look good on both
+                                    portait monitors and landscape phones. Try
+                                    adjusting your browser window to see the
+                                    effect.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="rect1">
+        <p>
+            Text Align: Default:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect2">
+        <p>
+            Text Align: Center:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect3">
+        <p>
+            Text Align: Right:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+    <div class="rect4">
+        <p>
+            Text Align: Justify:
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Nobis excepturi omnis sint explicabo quisquam et
+            rerum, molestiae temporibus fuga est ea architecto quia
+            nihil laboriosam dicta recusandae ut consectetur!
+            Excepturi!
+        </p>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.rect1 {
+    background-color: cyan;
+    float: left;
+    width: 25%;
+}
+
+div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 25%;
+}
+
+div.rect3 {
+    background-color: yellow;
+    float: left;
+    width: 25%;
+}
+
+div.rect4 {
+    background-color: orange;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 1000px) {
+    div.rect1, div.rect2, div.rect3, div.rect4 {
+        float: none;
+    }
+}
+</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <div
+                                                class="rect1"
+                                                style="
+                                                    background-color: cyan;
+                                                    padding: 0.5em;
+                                                    width: 25%;
+                                                "
+                                            >
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect2"
+                                                style="
+                                                    background-color: magenta;
+                                                    padding: 0.5em;
+                                                    width: 25%;
+                                                "
+                                            >
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect3"
+                                                style="
+                                                    background-color: yellow;
+                                                    padding: 0.5em;
+                                                    width: 25%;
+                                                "
+                                            >
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                            <div
+                                                class="rect4"
+                                                style="
+                                                    background-color: orange;
+                                                    padding: 0.5em;
+                                                    width: 25%;
+                                                "
+                                            >
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur adipisicing
+                                                    elit. Nobis excepturi omnis
+                                                    sint explicabo quisquam et
+                                                    rerum, molestiae temporibus
+                                                    fuga est ea architecto quia
+                                                    nihil laboriosam dicta
+                                                    recusandae ut consectetur!
+                                                    Excepturi!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term">Grids</span>: One
                                     modern CSS feature that makes laying out web
@@ -4364,8 +4566,89 @@ div.rect4 {
                                     There are many ways to configure the grid
                                     system, but for this exam you only need to
                                     know its definition, functionality, and
-                                    basic syntax shown in the example above.
+                                    basic syntax shown in the example below.
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-header">Header</div>
+        <div class="grid-nav">Nav</div>
+        <div class="grid-article1">Article 1</div>
+        <div class="grid-article2">Article 2</div>
+        <div class="grid-footer">Footer</div>
+    </div>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">div.grid-header { grid-area: header; }
+div.grid-nav { grid-area: nav; }
+div.grid-article1 { grid-area: article1; }
+div.grid-article2 { grid-area: article2; }
+div.grid-footer { grid-area: footer; }
+
+div.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'nav article1 article2'
+    'nav article1 article2'
+    'nav footer footer';
+    gap: 1em;
+    background-color: orange;
+    padding: 1em;
+}
+
+div.grid-container > div {
+    background-color: green;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 1.5em;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <div class="grid-container">
+                                                <div class="grid-header">
+                                                    Header
+                                                </div>
+                                                <div class="grid-nav">Nav</div>
+                                                <div class="grid-article1">
+                                                    Article 1
+                                                </div>
+                                                <div class="grid-article2">
+                                                    Article 2
+                                                </div>
+                                                <div class="grid-footer">
+                                                    Footer
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </li>
                     </ol>

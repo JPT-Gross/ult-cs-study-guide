@@ -4678,23 +4678,110 @@ div.grid-container > div {
                                 <li>
                                     <span class="key-term">Commenting</span>:
                                     Comments are text written into the code that
-                                    are ignored by the browser. This allows us
-                                    to write messages in the code to ourselves
-                                    and other programmers. It also allows us to
-                                    test multiple versions of an element or
-                                    ruleset. To do this, we can write the code
-                                    for the multiple versions and turn the ones
-                                    we do not want to show into comments. Then
-                                    we can switch the comments to try out the
-                                    other versions.
+                                    is ignored by the browser. This allows us to
+                                    write messages in the code to ourselves and
+                                    other programmers. It also allows us to test
+                                    multiple versions of an element or ruleset.
+                                    To do this, we can write the code for the
+                                    multiple versions and turn the ones we do
+                                    not want to show into comments. Then we can
+                                    switch the comments to try out the other
+                                    versions. As we can see in the example
+                                    below, an HTML comment starts with "&lt;!--"
+                                    and ends with "--&gt;". Anything between
+                                    these two series of characters will be
+                                    ignored by the browser. A CSS comment starts
+                                    with "/*" and ends with "*/".
                                 </li>
+                                <div class="three">
+                                    <div class="example">
+                                        <div class="snippet">
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>The Ultimate CS Study Guide</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <!--
+        This is an example of using a comment
+        to leave a message to other programmers.
+        Below you can see an example of
+        of using a comment to hide an element.
+    -->
+    <p class="hello">Hello</p>
+    <!-- <p class="hello">World</p> -->
+    <p class="foo">Foo</p>
+    <p class="foo">Bar</p>
+</body>
+</html></script>
+                                        </div>
+                                        <div
+                                            class="snippet"
+                                            style="border-right: none"
+                                        >
+                                            <!-- prettier-ignore -->
+                                            <script type="text/plain" class="language-css line-numbers">/*
+    This is an example of using a comment
+    to leave a message to other programmers.
+    Below you can see an example of
+    of using a comment to hide an element.
+*/
+
+p.hello {
+    color: magenta;
+    text-decoration: underline;
+}
+
+/*
+p.hello {
+    color: cyan;
+    font-weight: bold;
+}
+*/
+
+p.foo {
+    color: green;
+}</script>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="example"
+                                        style="border-top: none"
+                                    >
+                                        <div
+                                            class="result"
+                                            style="
+                                                background-color: white;
+                                                color: black;
+                                            "
+                                        >
+                                            <p
+                                                class="hello"
+                                                style="
+                                                    color: magenta;
+                                                    text-decoration: underline;
+                                                "
+                                            >
+                                                Hello
+                                            </p>
+                                            <p class="foo" style="color: green">
+                                                Foo
+                                            </p>
+                                            <p class="foo" style="color: green">
+                                                Bar
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <li>
                                     <span class="key-term"> Web-Safe Fonts</span
-                                    >: Many web pages use custom fonts that
-                                    require the browser to download when the
-                                    page loads. However not every browser can
-                                    download fonts and some user. turn this
-                                    feature off. Therefore, it is important to
+                                    >: Many web pages use custom fonts which
+                                    must be downloaded when the page loads.
+                                    However not every browser can download fonts
+                                    and some users turn this feature off to save
+                                    bandwidth. Therefore, it is important to
                                     always add a web-safe font to the
                                     "font-family" property in your CSS. The most
                                     common web-safe fonts are listed below.
@@ -4761,7 +4848,7 @@ div.grid-container > div {
                                     check that lowercase l, uppercase I, and the
                                     number 1 look different (lI1), as well as
                                     lowercase o, uppercase O, and zero 0 (oO0).
-                                    Attention should also be payed to line and
+                                    Attention should also be paid to line and
                                     character spacing. Text can be difficult to
                                     read if it is too close or far away from
                                     other text.

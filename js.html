@@ -1,27 +1,142 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <title>The Ultimate CS Study Guide</title>
-        <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
-        <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>UCSG | JavaScript</title>
+        <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link rel="stylesheet" type="text/css" href="styles/tooltip.css" />
+        <link rel="stylesheet" type="text/css" href="styles/prism.css" />
     </head>
+
     <body>
         <header>
             <h1 id="top">
                 <a href="index.html">The Ultimate CS Study Guide</a>
             </h1>
+            <h2 id="test-name">JavaScript</h2>
         </header>
         <nav>
             <ul>
-                <li><a href="#1">HTML Fundamentals</a></li>
-                <li><a href="#2">CSS Fundamentals</a></li>
-                <li><a href="#3">Document Structure</a></li>
-                <li><a href="#4">Multimedia</a></li>
-                <li><a href="#5">Styling with CSS</a></li>
-                <li><a href="#6">Accessibility</a></li>
+                <li>
+                    <a href="#1-operators-methods-keywords"
+                        >Operators, Methods, and Keywords</a
+                    >
+                </li>
+                <li>
+                    <a href="#2-variables-data-types-functions"
+                        >Variables, Data Types, and Functions</a
+                    >
+                </li>
+                <li><a href="#3-decisions-loops">Decisions and Loops</a></li>
+                <li>
+                    <a href="#4-document-object-model">Document Object Model</a>
+                </li>
+                <li><a href="#5-html-forms">HTML Forms</a></li>
             </ul>
         </nav>
+        <main>
+            <ol class="domain-list">
+                <li class="domain-numbers">
+                    <h3
+                        class="tooltip"
+                        id="1-javaScript-operators-methods-keywords"
+                    >
+                        <a
+                            href="#1-operators-methods-keywords"
+                            class="jump"
+                            onclick="copyhref(event)"
+                            onmouseleave="revertSymbol(event)"
+                            >JavaScript Operators, Methods, and Keywords
+                            <span class="tooltiptext">&#x1f4cb;</span></a
+                        >
+                    </h3>
+                    <p>
+                        <span class="key-term">JavaScript</span>: JavaScript
+                        is...
+                    </p>
+                    <ol class="subdomain-list">
+                        <li class="subdomain-numbers">
+                            <h4
+                                class="tooltip"
+                                id="1-1-complete-debug-code-that-uses-assignment-arithmetic-operators"
+                            >
+                                <a
+                                    class="jump"
+                                    href="#1-1-complete-debug-code-that-uses-assignment-arithmetic-operators"
+                                    onclick="copyhref(event)"
+                                    onmouseleave="revertSymbol(event)"
+                                    >Complete and debug code that uses
+                                    assignment and arithmetic operators
+                                    <span class="tooltiptext"
+                                        >&#x1f4cb;</span
+                                    ></a
+                                >
+                            </h4>
 
+                            <ul>
+                                <li>
+                                    <span class="key-term">Assignment</span>:
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+
+                <li class="domain-numbers">
+                    <h3 class="tooltip" id="2-variables-data-types-functions">
+                        <a
+                            href="#2-variables-data-types-functions"
+                            class="jump"
+                            onclick="copyhref(event)"
+                            onmouseleave="revertSymbol(event)"
+                            >Variables, Data Types, and Functions
+                            <span class="tooltiptext">&#x1f4cb;</span></a
+                        >
+                    </h3>
+                </li>
+
+                <li class="domain-numbers">
+                    <h3 class="tooltip" id="3-decisions-loops">
+                        <a
+                            href="#3-decisions-loops"
+                            class="jump"
+                            onclick="copyhref(event)"
+                            onmouseleave="revertSymbol(event)"
+                            >Decisions and Loops
+                            <span class="tooltiptext">&#x1f4cb;</span></a
+                        >
+                    </h3>
+                </li>
+
+                <li class="domain-numbers">
+                    <h3 class="tooltip" id="4-document-object-model">
+                        <a
+                            href="#4-document-object-model"
+                            class="jump"
+                            onclick="copyhref(event)"
+                            onmouseleave="revertSymbol(event)"
+                            >Document Object Model
+                            <span class="tooltiptext">&#x1f4cb;</span></a
+                        >
+                    </h3>
+                </li>
+
+                <li class="domain-numbers">
+                    <h3 class="tooltip" id="5-html-forms">
+                        <a
+                            href="#5-html-forms"
+                            class="jump"
+                            onclick="copyhref(event)"
+                            onmouseleave="revertSymbol(event)"
+                            >HTML Forms
+                            <span class="tooltiptext">&#x1f4cb;</span></a
+                        >
+                    </h3>
+                </li>
+            </ol>
+        </main>
         <footer>
             <nav>
                 <ul>
@@ -29,5 +144,7 @@
                 </ul>
             </nav>
         </footer>
+        <script src="src/copylink.js"></script>
+        <script src="src/prism.js"></script>
     </body>
 </html>

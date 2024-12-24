@@ -17,8 +17,13 @@ body {
     margin: 0 15% 0 15%;
 }
 
-header h1 {
+header {
     padding-top: 1em;
+}
+
+#top,
+#test-name {
+    font-size: 3em;
 }
 
 #top {
@@ -26,7 +31,7 @@ header h1 {
 }
 
 #test-name {
-    text-align: right;
+    float: right;
 }
 
 header a:link {
@@ -38,6 +43,7 @@ header a:visited {
 }
 
 nav {
+    clear: both;
     border-top: 1px solid dimgray;
     border-bottom: 1px solid dimgray;
     margin: 0.5em 0.5em;
@@ -77,12 +83,12 @@ nav li:not(:last-child) {
 }
 
 li.section-numbers::before,
-h1 {
+h3 {
     font-size: 2rem;
 }
 
 li.article-numbers::before,
-h2 {
+h4 {
     font-size: 1.5rem;
 }
 
@@ -100,7 +106,7 @@ ol > li {
 }
 
 ol > li:before {
-    content: counters(item, '.') '. ';
+    content: counters(item, ".") ". ";
     display: table-cell;
     padding-right: 0.6em;
 }
@@ -110,7 +116,7 @@ li ol > li {
 }
 
 li ol > li:before {
-    content: counters(item, '.') ' ';
+    content: counters(item, ".") " ";
 }
 
 ol.li-ex {
@@ -267,9 +273,9 @@ div.grid-footer {
 div.grid-container {
     display: grid;
     grid-template-areas:
-        'header header header'
-        'nav article1 article2'
-        'nav footer footer';
+        "header header header"
+        "nav article1 article2"
+        "nav footer footer";
     gap: 1em;
     background-color: orange;
     padding: 1em;

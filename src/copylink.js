@@ -10,8 +10,6 @@ function copyhref(evt) {
                 evt.target.firstElementChild.innerHTML = "&#x2705;";
             },
             () => {
-                let id = evt.target.getAttribute("id");
-                let childSpan = id + " span.tooltiptext";
                 document.querySelectorAll(childSpan)[0].innerHTML = "&#x274C;";
             }
         );

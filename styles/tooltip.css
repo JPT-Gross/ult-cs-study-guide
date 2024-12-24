@@ -1,0 +1,14 @@
+.tooltip {
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

@@ -82,6 +82,11 @@ nav li:not(:last-child) {
     border-right: 1px solid dimgray;
 }
 
+a.jump {
+    color: white;
+    text-decoration: none;
+}
+
 li.section-numbers::before,
 h3 {
     font-size: 2rem;

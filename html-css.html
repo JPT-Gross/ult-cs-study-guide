@@ -1,30 +1,63 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-bs-theme="dark">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <title>UCSG | HTML/CSS</title>
-        <link rel="stylesheet" type="text/css" href="styles/reset.css" />
-        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="styles/bootstrap/bootstrap.css"
+        />
         <link rel="stylesheet" type="text/css" href="styles/tooltip.css" />
         <link rel="stylesheet" type="text/css" href="styles/prism.css" />
     </head>
 
     <body>
         <header>
-            <h1 id="top">
-                <a href="index.html">The Ultimate CS Study Guide</a>
-            </h1>
-            <h2 id="test-name">HTML/CSS</h2>
+            <div class="container pt-2">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 id="top">
+                            <a href="index.html">The Ultimate CS Study Guide</a>
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="text-end" id="test-name">HTML/CSS</h2>
+                    </div>
+                </div>
+            </div>
         </header>
-        <nav>
-            <ul>
-                <li><a href="#1-html-fundamentals">HTML Fundamentals</a></li>
-                <li><a href="#2-css-fundamentals">CSS Fundamentals</a></li>
-                <li><a href="#3-document-structure">Document Structure</a></li>
-                <li><a href="#4-multimedia">Multimedia</a></li>
-                <li><a href="#5-styling-with-css">Styling with CSS</a></li>
-                <li><a href="#6-accessibility">Accessibility</a></li>
+        <nav class="navbar navbar-expand-lg justify-content-center mb-2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#1-html-fundamentals"
+                        >HTML Fundamentals</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#2-css-fundamentals"
+                        >CSS Fundamentals</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#3-document-structure"
+                        >Document Structure</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#4-multimedia">Multimedia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#5-styling-with-css"
+                        >Styling with CSS</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#6-accessibility"
+                        >Accessibility</a
+                    >
+                </li>
             </ul>
         </nav>
         <main>

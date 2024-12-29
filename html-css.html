@@ -581,9 +581,9 @@
                         <span class="text-info">external</span>. Let's take a
                         look at the example below where all three techniques are
                         used and then break them down one by one.
-                        <div class="three">
-                            <div class="example">
-                                <div class="snippet">
+                        <div class="container my-2">
+                            <div class="row border">
+                                <div class="col-lg-7 border bg-body-tertiary">
                                     <!-- prettier-ignore -->
                                     <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
@@ -607,16 +607,16 @@
     </body>
 </html></script>
                                 </div>
-                                <div class="snippet" style="border-right: none">
+                                <div class="col-lg-5 border bg-body-tertiary">
                                     <!-- prettier-ignore -->
                                     <script type="text/plain" class="language-css line-numbers">body {
     color: blue;
 }</script>
                                 </div>
                             </div>
-                            <div class="example" style="border-top: none">
+                            <div class="row border">
                                 <div
-                                    class="result"
+                                    class="col-lg-12 border"
                                     style="background-color: white"
                                 >
                                     <h1 style="color: blue">Heading 1</h1>
@@ -632,6 +632,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <ul>
                             <li>
                                 <span class="text-info">Inline</span>: On line
@@ -687,7 +688,7 @@
                         href="#2-2-construct-and-analyze-rule-sets"
                         onclick="copyhref(event)"
                         onmouseleave="revertSymbol(event)"
-                        >Construct and analyze rule sets
+                        >2.2 Construct and analyze rule sets
                         <span class="tooltiptext">&#x1F517;</span></a
                     >
                 </h4>
@@ -700,10 +701,11 @@
                         example below, between lines 5 and 19, for properly
                         written CSS.
                     </li>
-                    <div class="example">
-                        <div class="snippet">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-6 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -749,22 +751,28 @@
         </div>
     </body>
 </html></script>
-                        </div>
-                        <div
-                            class="result hover"
-                            style="background-color: white; color: black"
-                        >
-                            <p style="color: green">Regular text.</p>
-                            <p style="background-color: red; color: yellow">
-                                Alert text.
-                            </p>
-                            <p style="transform: rotate(180deg); color: green">
-                                Upside down text.
-                            </p>
-                            <a href="">Hover over me!</a>
-                            <p style="color: magenta">
-                                Text descendant of a div.
-                            </p>
+                            </div>
+                            <div
+                                class="col-lg-6 border"
+                                style="background-color: white; color: black"
+                            >
+                                <p style="color: green">Regular text.</p>
+                                <p style="background-color: red; color: yellow">
+                                    Alert text.
+                                </p>
+                                <p
+                                    style="
+                                        transform: rotate(180deg);
+                                        color: green;
+                                    "
+                                >
+                                    Upside down text.
+                                </p>
+                                <a href="">Hover over me!</a>
+                                <p style="color: magenta">
+                                    Text descendant of a div.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <li>

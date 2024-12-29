@@ -1,14 +1,14 @@
-.tooltip {
+.copylink {
     display: inline-block;
 }
 
-.tooltip .tooltiptext {
+.copylink .tooltiptext {
     visibility: hidden;
 }
 
-.tooltip .tooltiptext::after {
+.copylink .tooltiptext::after {
     content: "";
 }
-.tooltip:hover .tooltiptext {
+.copylink:hover .tooltiptext {
     visibility: visible;
 }

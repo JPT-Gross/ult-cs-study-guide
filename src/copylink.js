@@ -16,5 +16,5 @@ function copyhref(evt) {
 }
 
 function revertSymbol(evt) {
-    evt.target.firstElementChild.innerHTML = "&#x1f4cb;";
+    evt.target.firstElementChild.innerHTML = "&#x1F517;";
 }

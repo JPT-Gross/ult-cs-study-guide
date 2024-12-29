@@ -2318,39 +2318,34 @@
                         <span class="tooltiptext">&#x1F517;</span></a
                     >
                 </h3>
-                <ol>
-                    <h4
-                        class="copylink display-5"
-                        id="5-1-construct-and-analyze-styles-that-position-content"
+                <h4
+                    class="copylink display-5"
+                    id="5-1-construct-and-analyze-styles-that-position-content"
+                >
+                    <a
+                        href="#5-1-construct-and-analyze-styles-that-position-content"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >5.1 Construct and analyze styles that position content
+                        <span class="tooltiptext">&#x1F517;</span></a
                     >
-                        <a
-                            href="#5-1-construct-and-analyze-styles-that-position-content"
-                            class="link-light link-underline-opacity-0"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >5.1 Construct and analyze styles that position
-                            content
-                            <span class="tooltiptext">&#x1F517;</span></a
-                        >
-                    </h4>
-                    <ul>
-                        <li>
-                            <span class="text-info">position</span>: Positioning
-                            refers to the placement of elements on a page, and
-                            is done inside a CSS ruleset with the "position"
-                            property. By default, all elements have "static"
-                            position value which means they flow from top to
-                            bottom and left to right, just like in a book or
-                            magazine. Of course, there are many options to
-                            change the positioning of elements to design some
-                            very creative and beautiful web sites.
-                            <div class="container my-2">
-                                <div class="row border">
-                                    <div
-                                        class="col-lg-7 border bg-body-tertiary"
-                                    >
-                                        <!-- prettier-ignore -->
-                                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                </h4>
+                <ul>
+                    <li>
+                        <span class="text-info">position</span>: Positioning
+                        refers to the placement of elements on a page, and is
+                        done inside a CSS ruleset with the "position" property.
+                        By default, all elements have "static" position value
+                        which means they flow from top to bottom and left to
+                        right, just like in a book or magazine. Of course, there
+                        are many options to change the positioning of elements
+                        to design some very creative and beautiful web sites.
+                        <div class="container my-2">
+                            <div class="row border">
+                                <div class="col-lg-7 border bg-body-tertiary">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
     <head>
         <title>The Ultimate CS Study Guide</title>
@@ -2368,12 +2363,10 @@
         </div>
     </body>
 </html></script>
-                                    </div>
-                                    <div
-                                        class="col-lg-5 border bg-body-tertiary"
-                                    >
-                                        <!-- prettier-ignore -->
-                                        <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                                </div>
+                                <div class="col-lg-5 border bg-body-tertiary">
+                                    <!-- prettier-ignore -->
+                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     position: relative;
     left: 50px;
@@ -2390,98 +2383,106 @@ div.rect3 {
     position: static;
     left: 50px;
 }</script>
-                                    </div>
                                 </div>
-                                <div class="row border">
+                            </div>
+                            <div class="row border">
+                                <div
+                                    class="col-lg-12 border"
+                                    style="
+                                        background-color: white;
+                                        color: black;
+                                        overflow-x: hidden;
+                                    "
+                                >
                                     <div
-                                        class="col-lg-12 border"
                                         style="
-                                            background-color: white;
-                                            color: black;
-                                            overflow-x: hidden;
+                                            background-color: cyan;
+                                            position: relative;
+                                            left: 50px;
                                         "
                                     >
-                                        <div
-                                            style="
-                                                background-color: cyan;
-                                                position: relative;
-                                                left: 50px;
-                                            "
-                                        >
-                                            <p>Relative</p>
-                                        </div>
-                                        <div
-                                            style="
-                                                background-color: magenta;
-                                                position: absolute;
-                                                left: 50%;
-                                            "
-                                        >
-                                            <p>Absolute</p>
-                                        </div>
+                                        <p>Relative</p>
+                                    </div>
+                                    <div
+                                        style="
+                                            background-color: magenta;
+                                            position: absolute;
+                                            left: 50%;
+                                        "
+                                    >
+                                        <p>Absolute</p>
+                                    </div>
 
-                                        <div style="background-color: yellow">
-                                            <p>Static</p>
-                                        </div>
+                                    <div style="background-color: yellow">
+                                        <p>Static</p>
                                     </div>
                                 </div>
                             </div>
-                            <ul>
-                                <li>
-                                    <span class="text-info">relative</span>: If
-                                    the "position" property is given the value
-                                    of "relative", the element stays in within
-                                    its normal flow on the page, but can be
-                                    moved in relation to where it would have
-                                    been. Notice in the example above that the
-                                    cyan div where it would normally be, but
-                                    moved slightly to the right. Also, the
-                                    elements below it flow as expected.
-                                </li>
-                                <li>
-                                    <span class="text-info">absolute</span>: If
-                                    the "position" property is given the value
-                                    of "absolute", the element is removed from
-                                    the flow of the page and is positioned
-                                    relative to its closest ancestor. Notice in
-                                    the example above that the magenta div is
-                                    roughly where it would be normally, but is
-                                    centered in the preview box, because we
-                                    chose a value of 50% of the width of the
-                                    preview box. Also, the element below was
-                                    moved up because positioning "absolute"
-                                    removed the div from the normal flow of the
-                                    page, so now it looks as if the magenta
-                                    element is stacked on top of the yellow
-                                    element.
-                                </li>
-                                <li>
-                                    <span class="text-info">static</span>: The
-                                    default value for the "position" property is
-                                    "static" and positions elements from top to
-                                    bottom on the page. Notice in the example
-                                    above that despite specifying a 50px gap on
-                                    the left of the yellow div, it did not move
-                                    from where it would normally be. Elements
-                                    that are "static" cannot be moved in this
-                                    way.
-                                </li>
-                                <li>
-                                    <span class="text-info">fixed</span>: If the
-                                    "position" property is given the value of
-                                    "fixed", the element is removed from the
-                                    flow of the page and is positioned relative
-                                    to viewport. This means that the element
-                                    will stay exactly where it is, even if the
-                                    user scrolls up and down the page.
-                                </li>
-                            </ul>
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                        </div>
+                        <ul>
+                            <li>
+                                <span class="text-info">relative</span>: If the
+                                "position" property is given the value of
+                                "relative", the element stays in within its
+                                normal flow on the page, but can be moved in
+                                relation to where it would have been. Notice in
+                                the example above that the cyan div where it
+                                would normally be, but moved slightly to the
+                                right. Also, the elements below it flow as
+                                expected.
+                            </li>
+                            <li>
+                                <span class="text-info">absolute</span>: If the
+                                "position" property is given the value of
+                                "absolute", the element is removed from the flow
+                                of the page and is positioned relative to its
+                                closest ancestor. Notice in the example above
+                                that the magenta div is roughly where it would
+                                be normally, but is centered in the preview box,
+                                because we chose a value of 50% of the width of
+                                the preview box. Also, the element below was
+                                moved up because positioning "absolute" removed
+                                the div from the normal flow of the page, so now
+                                it looks as if the magenta element is stacked on
+                                top of the yellow element.
+                            </li>
+                            <li>
+                                <span class="text-info">static</span>: The
+                                default value for the "position" property is
+                                "static" and positions elements from top to
+                                bottom on the page. Notice in the example above
+                                that despite specifying a 50px gap on the left
+                                of the yellow div, it did not move from where it
+                                would normally be. Elements that are "static"
+                                cannot be moved in this way.
+                            </li>
+                            <li>
+                                <span class="text-info">fixed</span>: If the
+                                "position" property is given the value of
+                                "fixed", the element is removed from the flow of
+                                the page and is positioned relative to viewport.
+                                This means that the element will stay exactly
+                                where it is, even if the user scrolls up and
+                                down the page.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="text-info">float</span>: The "float"
+                        property will remove an element from the static flow of
+                        the page and move the element to the left, with a value
+                        of "left", or right, with a value of "right". Notice in
+                        the example below how floating the cyan div to the left
+                        and the magenta div to the right affects the yellow div.
+                        It was placed in the center, and now all of the divs are
+                        at the top of the page instead of each one going below
+                        the next.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -2499,10 +2500,10 @@ div.rect3 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     float: left
 }
@@ -2515,57 +2516,50 @@ div.rect2 {
 div.rect3 {
     background-color: yellow;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="
+                                    background-color: white;
+                                    color: black;
+                                    overflow-x: hidden;
+                                "
+                            >
                                 <div
-                                    class="col-lg-12 border"
+                                    style="background-color: cyan; float: left"
+                                >
+                                    <p>Float left</p>
+                                </div>
+
+                                <div
                                     style="
-                                        background-color: white;
-                                        color: black;
-                                        overflow-x: hidden;
+                                        background-color: magenta;
+                                        float: right;
                                     "
                                 >
-                                    <div
-                                        style="
-                                            background-color: cyan;
-                                            float: left;
-                                        "
-                                    >
-                                        <p>Float left</p>
-                                    </div>
+                                    <p>Float right</p>
+                                </div>
 
-                                    <div
-                                        style="
-                                            background-color: magenta;
-                                            float: right;
-                                        "
-                                    >
-                                        <p>Float right</p>
-                                    </div>
-
-                                    <div style="background-color: yellow">
-                                        <p>No float</p>
-                                    </div>
+                                <div style="background-color: yellow">
+                                    <p>No float</p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">float</span>: The "float"
-                            property will remove an element from the static flow
-                            of the page and move the element to the left, with a
-                            value of "left", or right, with a value of "right".
-                            Notice in the example above how floating the cyan
-                            div to the left and the magenta div to the right
-                            affected the yellow div. It was placed in the
-                            center, and now all of the divs are at the top of
-                            the page instead of each one going below the next.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">height/width</span>: The
+                        "height" and "width" properties set the size of
+                        elements. By default, these are set to auto and will
+                        grow or shrink to fit the content. Notice the example
+                        below.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -2583,10 +2577,10 @@ div.rect3 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     height: 50px;
     width: 100px;
@@ -2603,61 +2597,68 @@ div.rect3 {
     height: 200px;
     width: 400px;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="
+                                    background-color: white;
+                                    color: black;
+                                    overflow-x: hidden;
+                                "
+                            >
                                 <div
-                                    class="col-lg-12 border"
                                     style="
-                                        background-color: white;
-                                        color: black;
-                                        overflow-x: hidden;
+                                        background-color: cyan;
+                                        height: 50px;
+                                        width: 100px;
                                     "
                                 >
-                                    <div
-                                        style="
-                                            background-color: cyan;
-                                            height: 50px;
-                                            width: 100px;
-                                        "
-                                    >
-                                        <p>small</p>
-                                    </div>
+                                    <p>small</p>
+                                </div>
 
-                                    <div
-                                        style="
-                                            background-color: magenta;
-                                            height: 150px;
-                                            width: 300px;
-                                        "
-                                    >
-                                        <p>Medium</p>
-                                    </div>
+                                <div
+                                    style="
+                                        background-color: magenta;
+                                        height: 150px;
+                                        width: 300px;
+                                    "
+                                >
+                                    <p>Medium</p>
+                                </div>
 
-                                    <div
-                                        style="
-                                            background-color: yellow;
-                                            height: 200px;
-                                            width: 400px;
-                                        "
-                                    >
-                                        <p>Large</p>
-                                    </div>
+                                <div
+                                    style="
+                                        background-color: yellow;
+                                        height: 200px;
+                                        width: 400px;
+                                    "
+                                >
+                                    <p>Large</p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">height/width</span>: The
-                            "height" and "width" properties set the size of
-                            elements. By default, these are set to auto and will
-                            grow or shrink to fit the content. Notice the
-                            example above.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">max-width/min-width</span>:
+                        "height" and "width" will set a specific size, but if
+                        we'd like our elements to still grow and shrink, but
+                        stay within a minimum and maximum range, we can use the
+                        "min-width" and "max-width" properties. Notice in the
+                        example below that if you grow/shrink the "text-area"
+                        element, the cyan element will grow and shrink to fit in
+                        the space to the right, but it wont get any larger than
+                        900 pixels. Also, if the "text-area" gets so wide that
+                        the cyan element becomes less than 400 pixels, it will
+                        jump down below the "text-area" element as it cannot
+                        become that small.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -2680,10 +2681,10 @@ div.rect3 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     float: left;
 }
 
@@ -2693,69 +2694,67 @@ div.rect2 {
     min-width: 400px;
     max-width: 900px;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="
+                                    background-color: white;
+                                    color: black;
+                                    overflow-x: hidden;
+                                "
+                            >
+                                <div class="rect1" style="float: left">
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        cols="50"
+                                        rows="10"
+                                    ></textarea>
+                                </div>
                                 <div
-                                    class="col-lg-12 border"
+                                    class="rect2"
                                     style="
-                                        background-color: white;
-                                        color: black;
-                                        overflow-x: hidden;
+                                        background-color: cyan;
+                                        height: 6em;
+                                        min-width: 400px;
+                                        max-width: 900px;
+                                        overflow-y: hidden;
                                     "
                                 >
-                                    <div class="rect1" style="float: left">
-                                        <textarea
-                                            name=""
-                                            id=""
-                                            cols="50"
-                                            rows="10"
-                                        ></textarea>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: cyan;
-                                            height: 6em;
-                                            min-width: 400px;
-                                            max-width: 900px;
-                                            overflow-y: hidden;
-                                        "
-                                    >
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">max-width/min-width</span>:
-                            "height" and "width" will set a specific size, but
-                            if we'd like our elements to still grow and shrink,
-                            but stay within a minimum and maximum range, we can
-                            use the "min-width" and "max-width" properties.
-                            Notice in the example above that if you grow/shrink
-                            the "text-area" element, the cyan element will grow
-                            and shrink to fit in the space to the right, but it
-                            wont get any larger than 900 pixels. Also, if the
-                            "text-area" gets so wide that the cyan element
-                            becomes less than 400 pixels, it will jump down
-                            below the "text-area" element as it cannot become
-                            that small.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">overflow</span>: When we
+                        restrict the size of elements with "height", "width",
+                        "max-height", or "min-height", if the content becomes
+                        larger than the size of the element, it will "break"
+                        through the element. This looks terrible and must be
+                        avoided. The "overflow" property allows us to create a
+                        scroll-bar so the content stays within the element.
+                        Notice in the example below, both the cyan and magenta
+                        elements were given specific dimensions, but the magenta
+                        element has its "overflow" property set to "auto", while
+                        cyan's was left as the default value. This causes the
+                        text in the cyan element to overflow through the bottom,
+                        while the magenta element gets a scroll-bar.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -2786,10 +2785,10 @@ div.rect2 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     float: left;
     width: 15em;
@@ -2803,87 +2802,75 @@ div.rect2 {
     height: 5em;
     overflow: auto;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="
+                                    background-color: white;
+                                    color: black;
+                                    height: 20em;
+                                "
+                            >
                                 <div
-                                    class="col-lg-12 border"
+                                    class="rect1"
                                     style="
-                                        background-color: white;
-                                        color: black;
-                                        height: 20em;
+                                        background-color: cyan;
+                                        width: 15em;
+                                        height: 5em;
+                                        float: left;
                                     "
                                 >
-                                    <div
-                                        class="rect1"
-                                        style="
-                                            background-color: cyan;
-                                            width: 15em;
-                                            height: 5em;
-                                            float: left;
-                                        "
-                                    >
-                                        <p>
-                                            Overflow Left On Default:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: magenta;
-                                            float: left;
-                                            width: 15em;
-                                            height: 5em;
-                                            overflow: auto;
-                                        "
-                                    >
-                                        <p>
-                                            Overflow Set To Auto:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
+                                    <p>
+                                        Overflow Left On Default:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect2"
+                                    style="
+                                        background-color: magenta;
+                                        float: left;
+                                        width: 15em;
+                                        height: 5em;
+                                        overflow: auto;
+                                    "
+                                >
+                                    <p>
+                                        Overflow Set To Auto:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">overflow</span>: When we
-                            restrict the size of elements with "height",
-                            "width", "max-height", or "min-height", if the
-                            content becomes larger than the size of the element,
-                            it will "break" through the element. This looks
-                            terrible and must be avoided. The "overflow"
-                            property allows us to create a scroll-bar so the
-                            content stays within the element. Notice in the
-                            example above, both the cyan and magenta elements
-                            were given specific dimensions, but the magenta
-                            element has its "overflow" property set to "auto",
-                            while cyan's was left as the default value. This
-                            causes the text in the cyan element to overflow
-                            through the bottom, while the magenta element gets a
-                            scroll-bar.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">text-align</span>: The
+                        "text-align" property, much like on a word processor,
+                        allows us to align text to the left (the default
+                        setting), right, center, or it can be justified (equal
+                        space between each word). Notice in the example below
+                        how each element has a different "text-align" value and
+                        the affect it has on the text inside.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -2936,10 +2923,10 @@ div.rect2 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     float: left;
     width: 25%;
@@ -2965,125 +2952,122 @@ div.rect4 {
     width: 25%;
     text-align: justify;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="background-color: white; color: black"
+                            >
                                 <div
-                                    class="col-lg-12 border"
+                                    class="rect1"
                                     style="
-                                        background-color: white;
-                                        color: black;
+                                        background-color: cyan;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
                                     "
                                 >
-                                    <div
-                                        class="rect1"
-                                        style="
-                                            background-color: cyan;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                        "
-                                    >
-                                        <p>
-                                            Text Align: Default:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: magenta;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            text-align: center;
-                                        "
-                                    >
-                                        <p>
-                                            Text Align: Center:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect3"
-                                        style="
-                                            background-color: yellow;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            text-align: right;
-                                        "
-                                    >
-                                        <p>
-                                            Text Align: Right:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect4"
-                                        style="
-                                            background-color: orange;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            text-align: justify;
-                                        "
-                                    >
-                                        <p>
-                                            Text Align: Justify:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
+                                    <p>
+                                        Text Align: Default:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect2"
+                                    style="
+                                        background-color: magenta;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        text-align: center;
+                                    "
+                                >
+                                    <p>
+                                        Text Align: Center:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect3"
+                                    style="
+                                        background-color: yellow;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        text-align: right;
+                                    "
+                                >
+                                    <p>
+                                        Text Align: Right:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect4"
+                                    style="
+                                        background-color: orange;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        text-align: justify;
+                                    "
+                                >
+                                    <p>
+                                        Text Align: Justify:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">text-align</span>: The
-                            "text-align" property, much like on a word
-                            processor, allows us to align text to the left (the
-                            default setting), right, center, or it can be
-                            justified (equal space between each word). Notice in
-                            the example above how each element has a different
-                            "text-align" value and the affect it has on the text
-                            inside.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">display</span>: The "display"
+                        property allows us to change whether an element shows as
+                        "inline" or as "block". A "block" takes up the entire
+                        width of its ancestor and ends with a line break so the
+                        next element goes under it, such as the "paragraph"
+                        element. An "inline" element is always the exact size to
+                        fit the content within and no larger. It does not end in
+                        a line break, so the next element will go to the right
+                        of it. "span" is an "inline" element. "display" can also
+                        be set to "none" effectively removing the element from
+                        the page. Notice in the example below, the cyan and
+                        yellow elements have the "display" set to "block" and
+                        the pink element has its "display" set to "inline". Also
+                        notice how the magenta element has been removed because
+                        its "display" is set to "none" and how this is different
+                        from how it is hidden in the next example.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -3112,10 +3096,10 @@ div.rect4 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     display: block;
 }
@@ -3133,88 +3117,72 @@ span.line1 {
     background-color: pink;
     display: inline;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="background-color: white; color: black"
+                            >
                                 <div
-                                    class="col-lg-12 border"
+                                    class="rect1"
                                     style="
-                                        background-color: white;
-                                        color: black;
+                                        background-color: cyan;
+                                        padding: 0.5em;
                                     "
                                 >
-                                    <div
-                                        class="rect1"
-                                        style="
-                                            background-color: cyan;
-                                            padding: 0.5em;
-                                        "
-                                    >
-                                        <p>
-                                            This cyan element is displayed as a
-                                            "block" element. This
-                                            <span
-                                                class="line1"
-                                                style="background-color: pink"
-                                                >pink "span" element displays as
-                                                "inline"</span
-                                            >. You cannot see the magenta
-                                            element below because its "display"
-                                            is "none".
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: magenta;
-                                            padding: 0.5em;
-                                            display: none;
-                                        "
-                                    >
-                                        <p>You can't see this text.</p>
-                                    </div>
-                                    <div
-                                        class="rect3"
-                                        style="
-                                            background-color: yellow;
-                                            padding: 0.5em;
-                                        "
-                                    >
-                                        <p>
-                                            This is another "block" element that
-                                            has moved up to fill the space of
-                                            the element with "display" set to
-                                            "none".
-                                        </p>
-                                    </div>
+                                    <p>
+                                        This cyan element is displayed as a
+                                        "block" element. This
+                                        <span
+                                            class="line1"
+                                            style="background-color: pink"
+                                            >pink "span" element displays as
+                                            "inline"</span
+                                        >. You cannot see the magenta element
+                                        below because its "display" is "none".
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect2"
+                                    style="
+                                        background-color: magenta;
+                                        padding: 0.5em;
+                                        display: none;
+                                    "
+                                >
+                                    <p>You can't see this text.</p>
+                                </div>
+                                <div
+                                    class="rect3"
+                                    style="
+                                        background-color: yellow;
+                                        padding: 0.5em;
+                                    "
+                                >
+                                    <p>
+                                        This is another "block" element that has
+                                        moved up to fill the space of the
+                                        element with "display" set to "none".
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">display</span>: The
-                            "display" property allows us to change whether an
-                            element shows as "inline" or as "block". A "block"
-                            takes up the entire width of its ancestor and ends
-                            with a line break so the next element goes under it,
-                            such as the "paragraph" element. An "inline" element
-                            is always the exact size to fit the content within
-                            and no larger. It does not end in a line break, so
-                            the next element will go to the right of it. "span"
-                            is an "inline" element. "display" can also be set to
-                            "none" effectively removing the element from the
-                            page. Notice in the example above, the cyan and
-                            yellow elements have the "display" set to "block"
-                            and the pink element has its "display" set to
-                            "inline". Also notice how the magenta element has
-                            been removed because its "display" is set to "none"
-                            and how this is different from how it is hidden in
-                            the example below.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">visibility</span>: The
+                        "visibility" element allows us to hide and show
+                        elements. Elements with their "visibility" set to hidden
+                        still take up space as if they where "visible" The user
+                        just cannot see them, where "display: none;" will hide
+                        the element and delete the space it was taking up on the
+                        page.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -3236,10 +3204,10 @@ span.line1 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
 }
 
@@ -3251,65 +3219,58 @@ div.rect2 {
 div.rect3 {
     background-color: yellow;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="background-color: white; color: black"
+                            >
                                 <div
-                                    class="col-lg-12 border"
+                                    class="rect1"
                                     style="
-                                        background-color: white;
-                                        color: black;
+                                        background-color: cyan;
+                                        padding: 0.5em;
+                                        float: none;
                                     "
                                 >
-                                    <div
-                                        class="rect1"
-                                        style="
-                                            background-color: cyan;
-                                            padding: 0.5em;
-                                            float: none;
-                                        "
-                                    >
-                                        <p>
-                                            This element is above an invisible
-                                            element.
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: magenta;
-                                            padding: 0.5em;
-                                            visibility: hidden;
-                                            float: none;
-                                        "
-                                    >
-                                        <p>You can't see this text.</p>
-                                    </div>
-                                    <div
-                                        class="rect3"
-                                        style="
-                                            background-color: yellow;
-                                            padding: 0.5em;
-                                            float: none;
-                                        "
-                                    >
-                                        <p>
-                                            This element is below an invisible
-                                            element.
-                                        </p>
-                                    </div>
+                                    <p>
+                                        This element is above an invisible
+                                        element.
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect2"
+                                    style="
+                                        background-color: magenta;
+                                        padding: 0.5em;
+                                        visibility: hidden;
+                                        float: none;
+                                    "
+                                >
+                                    <p>You can't see this text.</p>
+                                </div>
+                                <div
+                                    class="rect3"
+                                    style="
+                                        background-color: yellow;
+                                        padding: 0.5em;
+                                        float: none;
+                                    "
+                                >
+                                    <p>
+                                        This element is below an invisible
+                                        element.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">visibility</span>: The
-                            "visibility" element allows us to hide and show
-                            elements. Elements with their "visibility" set to
-                            hidden still take up space as if they where
-                            "visible" The user just cannot see them, where
-                            "display: none;" will hide the element and delete
-                            the space it was taking up on the page.
-                        </li>
+                    </div>
+                    <li>
+                        <span class="text-info">The Box Model</span>: The Box
+                        Model refers to how each element shows on a page. Every
+                        element is a rectangle or "box" that has four
+                        components: margin, border, padding, content.
                         <aside class="d-flex justify-content-center">
                             <figure class="figure">
                                 <img
@@ -3322,62 +3283,57 @@ div.rect3 {
                                 </figcaption>
                             </figure>
                         </aside>
-                        <li>
-                            <span class="text-info">The Box Model</span>: The
-                            Box Model refers to how each element shows on a
-                            page. Every element is a rectangle or "box" that has
-                            four components: margin, border, padding, content.
-                            <ul>
-                                <li>
-                                    <span class="text-info">margin</span>: The
-                                    "margin" property of an element describes
-                                    how much space exists around the element
-                                    between its border, and the margin of
-                                    surrounding elements.
-                                </li>
-                                <li>
-                                    <span class="text-info">border</span>: The
-                                    "border" property of an element describes
-                                    how much space exists between the element's
-                                    padding and its margin. This border can be
-                                    styled to be a different color, shape, etc.
-                                </li>
-                                <li>
-                                    <span class="text-info">padding</span>: The
-                                    "padding" property of an element describes
-                                    how much space exists between the an
-                                    elements border and its content.
-                                </li>
-                                <li>
-                                    <span class="text-info">Content</span>: An
-                                    element's content does not exist as a CSS
-                                    property, but simply refers to what the
-                                    element is displaying. Content is typically
-                                    text, images, pictures, video, or audio.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
 
-                    <h4
-                        class="copylink display-5"
-                        id="5-2-construct-and-analyze-styles-that-format-text"
+                        <ul>
+                            <li>
+                                <span class="text-info">margin</span>: The
+                                "margin" property of an element describes how
+                                much space exists around the element between its
+                                border, and the margin of surrounding elements.
+                            </li>
+                            <li>
+                                <span class="text-info">border</span>: The
+                                "border" property of an element describes how
+                                much space exists between the element's padding
+                                and its margin. This border can be styled to be
+                                a different color, shape, etc.
+                            </li>
+                            <li>
+                                <span class="text-info">padding</span>: The
+                                "padding" property of an element describes how
+                                much space exists between the an elements border
+                                and its content.
+                            </li>
+                            <li>
+                                <span class="text-info">Content</span>: An
+                                element's content does not exist as a CSS
+                                property, but simply refers to what the element
+                                is displaying. Content is typically text,
+                                images, pictures, video, or audio.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4
+                    class="copylink display-5"
+                    id="5-2-construct-and-analyze-styles-that-format-text"
+                >
+                    <a
+                        href="#5-2-construct-and-analyze-styles-that-format-text"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >5.2 Construct and analyze styles that format text
+                        <span class="tooltiptext">&#x1F517;</span></a
                     >
-                        <a
-                            href="#5-2-construct-and-analyze-styles-that-format-text"
-                            class="link-light link-underline-opacity-0"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >5.2 Construct and analyze styles that format text
-                            <span class="tooltiptext">&#x1F517;</span></a
-                        >
-                    </h4>
-                    <ul>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                </h4>
+                <ul>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -3390,10 +3346,10 @@ div.rect3 {
     <p class="sen4">The quick brown fox jumps overthe lazy dog</p>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">p.sen1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">p.sen1 {
     font-family: 'Times New Roman', Times, serif;
     color: forestgreen;
     font-size: 1em;
@@ -3414,124 +3370,113 @@ p.sen4 {
     font-variant: small-caps;
     font-size: 4em;
 }</script>
-                                </div>
-                            </div>
-                            <div class="row border">
-                                <div
-                                    class="col-lg-12 border"
-                                    style="
-                                        background-color: white;
-                                        color: black;
-                                    "
-                                >
-                                    <p
-                                        class="sen1"
-                                        style="
-                                            font-family: 'Times New Roman',
-                                                Times, serif;
-                                            color: forestgreen;
-                                            font-size: 1em;
-                                        "
-                                    >
-                                        The quick brown fox jumps over the lazy
-                                        dog
-                                    </p>
-                                    <p
-                                        class="sen2"
-                                        style="
-                                            text-decoration: underline;
-                                            font-weight: bold;
-                                            font-size: 2em;
-                                        "
-                                    >
-                                        The quick brown fox jumps over the lazy
-                                        dog
-                                    </p>
-                                    <p
-                                        class="sen3"
-                                        style="
-                                            font-style: italic;
-                                            font-size: 3em;
-                                        "
-                                    >
-                                        The quick brown fox jumps over the lazy
-                                        dog
-                                    </p>
-                                    <p
-                                        class="sen4"
-                                        style="
-                                            font-variant: small-caps;
-                                            font-size: 4em;
-                                        "
-                                    >
-                                        The quick brown fox jumps over the lazy
-                                        dog
-                                    </p>
-                                </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">font-family</span>: The
-                            "font-family" property allows us to create a list of
-                            fonts that we would like to display on the page. The
-                            browser will try to load the first font in the list,
-                            if it cannot load that font, it will try the next
-                            one. Notice in the example above how the first
-                            sentence has the first value in "font-family" set to
-                            "Times New Roman".
-                        </li>
-                        <li>
-                            <span class="text-info">color</span>: The "color"
-                            property sets the color of the text. The color can
-                            be set using red, blue, green (RGB) color codes,
-                            hexadecimal (HEX) color codes, or with simple color
-                            names such as "red", "purple", or "orange". Notice
-                            in the example above how the first sentence has its
-                            color set to "forestgreen".
-                        </li>
-                        <li>
-                            <span class="text-info">font-style</span>: The
-                            "font-style" property allows us to set the font to
-                            display as italic. Notice in the example above how
-                            the third sentence has its "font-style" set to
-                            "italic".
-                        </li>
-                        <li>
-                            <span class="text-info">font-size</span>: The
-                            "font-size" property allows us to set the size of
-                            the font. There are many units for font sizes, but
-                            the most popular are pixels (px), points (pt), and
-                            em quadrat (em). We will go into more detail about
-                            units later. Notice in the example above how each
-                            sentence is larger than the last because of the use
-                            of the "font-size" property.
-                        </li>
-                        <li>
-                            <span class="text-info">font-weight</span>: The
-                            "font-weight" property allows us to set the font to
-                            display as bold. Notice in the example above how the
-                            second sentence has its "font-weight" set to "bold".
-                        </li>
-                        <li>
-                            <span class="text-info">text-decoration</span>
-                            The "text-decoration" property allows us to
-                            underline or overline text. Notice in the example
-                            above how the second sentence has its
-                            "text-decoration" set to "underline".
-                        </li>
-                        <li>
-                            <span class="text-info">font-variant</span>: The
-                            "font-variant" property allows us to set text to
-                            "small-caps". This makes all of the text uppercase,
-                            but makes lowercase letters smaller than uppercase
-                            ones. Notice that in the example above the fourth
-                            sentence has its "font-variant" set to "small-caps".
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12 border"
+                                style="background-color: white; color: black"
+                            >
+                                <p
+                                    class="sen1"
+                                    style="
+                                        font-family: 'Times New Roman', Times,
+                                            serif;
+                                        color: forestgreen;
+                                        font-size: 1em;
+                                    "
+                                >
+                                    The quick brown fox jumps over the lazy dog
+                                </p>
+                                <p
+                                    class="sen2"
+                                    style="
+                                        text-decoration: underline;
+                                        font-weight: bold;
+                                        font-size: 2em;
+                                    "
+                                >
+                                    The quick brown fox jumps over the lazy dog
+                                </p>
+                                <p
+                                    class="sen3"
+                                    style="font-style: italic; font-size: 3em"
+                                >
+                                    The quick brown fox jumps over the lazy dog
+                                </p>
+                                <p
+                                    class="sen4"
+                                    style="
+                                        font-variant: small-caps;
+                                        font-size: 4em;
+                                    "
+                                >
+                                    The quick brown fox jumps over the lazy dog
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <li>
+                        <span class="text-info">font-family</span>: The
+                        "font-family" property allows us to create a list of
+                        fonts that we would like to display on the page. The
+                        browser will try to load the first font in the list, if
+                        it cannot load that font, it will try the next one.
+                        Notice in the example above how the first sentence has
+                        the first value in "font-family" set to "Times New
+                        Roman".
+                    </li>
+                    <li>
+                        <span class="text-info">color</span>: The "color"
+                        property sets the color of the text. The color can be
+                        set using red, blue, green (RGB) color codes,
+                        hexadecimal (HEX) color codes, or with simple color
+                        names such as "red", "purple", or "orange". Notice in
+                        the example above how the first sentence has its color
+                        set to "forestgreen".
+                    </li>
+                    <li>
+                        <span class="text-info">font-style</span>: The
+                        "font-style" property allows us to set the font to
+                        display as italic. Notice in the example above how the
+                        third sentence has its "font-style" set to "italic".
+                    </li>
+                    <li>
+                        <span class="text-info">font-size</span>: The
+                        "font-size" property allows us to set the size of the
+                        font. There are many units for font sizes, but the most
+                        popular are pixels (px), points (pt), and em quadrat
+                        (em). We will go into more detail about units later.
+                        Notice in the example above how each sentence is larger
+                        than the last because of the use of the "font-size"
+                        property.
+                    </li>
+                    <li>
+                        <span class="text-info">font-weight</span>: The
+                        "font-weight" property allows us to set the font to
+                        display as bold. Notice in the example above how the
+                        second sentence has its "font-weight" set to "bold".
+                    </li>
+                    <li>
+                        <span class="text-info">text-decoration</span>
+                        The "text-decoration" property allows us to underline or
+                        overline text. Notice in the example above how the
+                        second sentence has its "text-decoration" set to
+                        "underline".
+                    </li>
+                    <li>
+                        <span class="text-info">font-variant</span>: The
+                        "font-variant" property allows us to set text to
+                        "small-caps". This makes all of the text uppercase, but
+                        makes lowercase letters smaller than uppercase ones.
+                        Notice that in the example above the fourth sentence has
+                        its "font-variant" set to "small-caps".
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -3585,10 +3530,10 @@ p.sen4 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     float: left;
     width: 25%;
@@ -3615,160 +3560,150 @@ div.rect4 {
     width: 25%;
     letter-spacing: 0.5em;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12"
+                                style="background-color: white; color: black"
+                            >
                                 <div
-                                    class="col-lg-12"
+                                    class="rect1"
                                     style="
-                                        background-color: white;
-                                        color: black;
+                                        background-color: cyan;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        text-indent: 1em;
                                     "
                                 >
-                                    <div
-                                        class="rect1"
-                                        style="
-                                            background-color: cyan;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            text-indent: 1em;
-                                        "
-                                    >
-                                        <p>Text Indent:</p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit.
-                                        </p>
-                                        <p>
-                                            Nobis excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: magenta;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            line-height: 2em;
-                                        "
-                                    >
-                                        <p>
-                                            Line Height:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect3"
-                                        style="
-                                            background-color: yellow;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            word-wrap: break-word;
-                                        "
-                                    >
-                                        <p>
-                                            Word Wrap:
-                                            <br />
-                                            Here is a
-                                            reeeeeeeeeeeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalllllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-                                            long word.
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect4"
-                                        style="
-                                            background-color: orange;
-                                            padding: 0.5em;
-                                            float: left;
-                                            width: 25%;
-                                            letter-spacing: 0.5em;
-                                        "
-                                    >
-                                        <p>
-                                            Letter Spacing:
-                                            <br />
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
+                                    <p>Text Indent:</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit.
+                                    </p>
+                                    <p>
+                                        Nobis excepturi omnis sint explicabo
+                                        quisquam et rerum, molestiae temporibus
+                                        fuga est ea architecto quia nihil
+                                        laboriosam dicta recusandae ut
+                                        consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect2"
+                                    style="
+                                        background-color: magenta;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        line-height: 2em;
+                                    "
+                                >
+                                    <p>
+                                        Line Height:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect3"
+                                    style="
+                                        background-color: yellow;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        word-wrap: break-word;
+                                    "
+                                >
+                                    <p>
+                                        Word Wrap:
+                                        <br />
+                                        Here is a
+                                        reeeeeeeeeeeeeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalllllllllllllllllllllllllllllllllyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+                                        long word.
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect4"
+                                    style="
+                                        background-color: orange;
+                                        padding: 0.5em;
+                                        float: left;
+                                        width: 25%;
+                                        letter-spacing: 0.5em;
+                                    "
+                                >
+                                    <p>
+                                        Letter Spacing:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">text-indent</span>: The
-                            "text-indent" property allows us to indent the first
-                            line of a paragraph. A style popular with MLA
-                            formatted essays. Notice how the cyan element above
-                            has a "text-indent".
-                        </li>
-                        <li>
-                            <span class="text-info">line-height</span>: The
-                            "line-height" property allows us to set the spacing
-                            between lines of text in an element. Notice how the
-                            magenta element has its "line-height" changed to
-                            "2em".
-                        </li>
-                        <li>
-                            <span class="text-info">word-wrap</span>: The
-                            "word-wrap" property allows us to break words that
-                            usually would not be broken, and put them on a new
-                            line if they are larger than the parent element they
-                            are inside of. Notice that the yellow element has
-                            "word-wrap" set to "break-word". Normally the really
-                            long word that is in the element would break
-                            through, but this setting has prevented that.
-                        </li>
-                        <li>
-                            <span class="text-info">letter-spacing</span>: The
-                            "letter-spacing" property allows us to set the
-                            spacing between letters in an element. Notice that
-                            the orange element has its "letter-spacing" set to
-                            "0.5em" and the letters are much further apart as a
-                            result.
-                        </li>
-                    </ul>
+                    </div>
+                    <li>
+                        <span class="text-info">text-indent</span>: The
+                        "text-indent" property allows us to indent the first
+                        line of a paragraph. A style popular with MLA formatted
+                        essays. Notice how the cyan element above has a
+                        "text-indent".
+                    </li>
+                    <li>
+                        <span class="text-info">line-height</span>: The
+                        "line-height" property allows us to set the spacing
+                        between lines of text in an element. Notice how the
+                        magenta element has its "line-height" changed to "2em".
+                    </li>
+                    <li>
+                        <span class="text-info">word-wrap</span>: The
+                        "word-wrap" property allows us to break words that
+                        usually would not be broken, and put them on a new line
+                        if they are larger than the parent element they are
+                        inside of. Notice that the yellow element has
+                        "word-wrap" set to "break-word". Normally the really
+                        long word that is in the element would break through,
+                        but this setting has prevented that.
+                    </li>
+                    <li>
+                        <span class="text-info">letter-spacing</span>: The
+                        "letter-spacing" property allows us to set the spacing
+                        between letters in an element. Notice that the orange
+                        element has its "letter-spacing" set to "0.5em" and the
+                        letters are much further apart as a result.
+                    </li>
+                </ul>
 
-                    <h4
-                        class="copylink display-5"
-                        id="5-3-construct-and-analyze-styles-that-format-backgrounds-and-borders"
+                <h4
+                    class="copylink display-5"
+                    id="5-3-construct-and-analyze-styles-that-format-backgrounds-and-borders"
+                >
+                    <a
+                        href="#5-3-construct-and-analyze-styles-that-format-backgrounds-and-borders"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >5.3 Construct and analyze styles that format
+                        backgrounds and borders
+                        <span class="tooltiptext">&#x1F517;</span></a
                     >
-                        <a
-                            href="#5-3-construct-and-analyze-styles-that-format-backgrounds-and-borders"
-                            class="link-light link-underline-opacity-0"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >5.3 Construct and analyze styles that format
-                            backgrounds and borders
-                            <span class="tooltiptext">&#x1F517;</span></a
-                        >
-                    </h4>
-                    <div class="container my-2">
-                        <div class="row border">
-                            <div class="col-lg-7 border bg-body-tertiary">
-                                <!-- prettier-ignore -->
-                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                </h4>
+                <div class="container my-2">
+                    <div class="row border">
+                        <div class="col-lg-7 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
 <title>The Ultimate CS Study Guide</title>
@@ -3813,10 +3748,10 @@ div.rect4 {
 </div>
 </body>
 </html></script>
-                            </div>
-                            <div class="col-lg-5 border bg-body-tertiary">
-                                <!-- prettier-ignore -->
-                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                        </div>
+                        <div class="col-lg-5 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-css line-numbers">div.rect1 {
     float: left;
     width: 25%;
     border-color: rgb(255, 0, 0);
@@ -3851,313 +3786,308 @@ div.rect4 {
     border-width: 1em;
     background-color: orange;
 }</script>
-                            </div>
                         </div>
-                        <div class="row border">
+                    </div>
+                    <div class="row border">
+                        <div
+                            class="col-lg-12"
+                            style="background-color: white; color: black"
+                        >
                             <div
-                                class="col-lg-12"
-                                style="background-color: white; color: black"
+                                class="rect1"
+                                style="
+                                    background-color: cyan;
+                                    padding: 0.5em;
+                                    float: left;
+                                    width: 24%;
+                                    margin: 2px;
+                                    border: 0.25em solid rgb(255, 0, 0);
+                                "
                             >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 24%;
-                                        margin: 2px;
-                                        border: 0.25em solid rgb(255, 0, 0);
-                                    "
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Nobis excepturi omnis
-                                        sint explicabo quisquam et rerum,
-                                        molestiae temporibus fuga est ea
-                                        architecto quia nihil laboriosam dicta
-                                        recusandae ut consectetur! Excepturi!
-                                    </p>
-                                </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 24%;
-                                        margin: 2px;
-                                        border: 0.5em dashed rgb(0, 0, 255);
-                                    "
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Nobis excepturi omnis
-                                        sint explicabo quisquam et rerum,
-                                        molestiae temporibus fuga est ea
-                                        architecto quia nihil laboriosam dicta
-                                        recusandae ut consectetur! Excepturi!
-                                    </p>
-                                </div>
-                                <div
-                                    class="rect3"
-                                    style="
-                                        background-color: yellow;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 24%;
-                                        margin: 2px;
-                                        border: 0.75em dotted #00ff00;
-                                    "
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Nobis excepturi omnis
-                                        sint explicabo quisquam et rerum,
-                                        molestiae temporibus fuga est ea
-                                        architecto quia nihil laboriosam dicta
-                                        recusandae ut consectetur! Excepturi!
-                                    </p>
-                                </div>
-                                <div
-                                    class="rect4"
-                                    style="
-                                        background-color: orange;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 24%;
-                                        margin: 2px;
-                                        border: 1em inset #000000;
-                                    "
-                                >
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Nobis excepturi omnis
-                                        sint explicabo quisquam et rerum,
-                                        molestiae temporibus fuga est ea
-                                        architecto quia nihil laboriosam dicta
-                                        recusandae ut consectetur! Excepturi!
-                                    </p>
-                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nobis excepturi omnis sint
+                                    explicabo quisquam et rerum, molestiae
+                                    temporibus fuga est ea architecto quia nihil
+                                    laboriosam dicta recusandae ut consectetur!
+                                    Excepturi!
+                                </p>
+                            </div>
+                            <div
+                                class="rect2"
+                                style="
+                                    background-color: magenta;
+                                    padding: 0.5em;
+                                    float: left;
+                                    width: 24%;
+                                    margin: 2px;
+                                    border: 0.5em dashed rgb(0, 0, 255);
+                                "
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nobis excepturi omnis sint
+                                    explicabo quisquam et rerum, molestiae
+                                    temporibus fuga est ea architecto quia nihil
+                                    laboriosam dicta recusandae ut consectetur!
+                                    Excepturi!
+                                </p>
+                            </div>
+                            <div
+                                class="rect3"
+                                style="
+                                    background-color: yellow;
+                                    padding: 0.5em;
+                                    float: left;
+                                    width: 24%;
+                                    margin: 2px;
+                                    border: 0.75em dotted #00ff00;
+                                "
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nobis excepturi omnis sint
+                                    explicabo quisquam et rerum, molestiae
+                                    temporibus fuga est ea architecto quia nihil
+                                    laboriosam dicta recusandae ut consectetur!
+                                    Excepturi!
+                                </p>
+                            </div>
+                            <div
+                                class="rect4"
+                                style="
+                                    background-color: orange;
+                                    padding: 0.5em;
+                                    float: left;
+                                    width: 24%;
+                                    margin: 2px;
+                                    border: 1em inset #000000;
+                                "
+                            >
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Nobis excepturi omnis sint
+                                    explicabo quisquam et rerum, molestiae
+                                    temporibus fuga est ea architecto quia nihil
+                                    laboriosam dicta recusandae ut consectetur!
+                                    Excepturi!
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <ul>
-                        <li>
-                            <span class="text-info">border-color</span>: The
-                            "border-color" property allows us to change the
-                            color of an element's border. Note that the border's
-                            style must be changed first, as its default style
-                            value is "none" which hides the border.
-                        </li>
-                        <li>
-                            <span class="text-info">border-style</span>: The
-                            "border-style" property allows us to change the type
-                            of border for an element. Borders can be solid,
-                            dashed, dotted, etc.
-                        </li>
-                        <li>
-                            <span class="text-info">border-width</span>: The
-                            "border-width" property allows us to change the
-                            thickness of the border for an element.
-                        </li>
-                        <li>
-                            <span class="text-info">background</span>: The
-                            "background" property allows us to change what shows
-                            inside the border area of an element, and can be set
-                            to a color or it can be a picture.
-                        </li>
-                        <li>
-                            <span class="text-info">Colors</span>: Earlier we
-                            discussed the different ways we can specify colors
-                            in CSS. Below are a few more details regarding color
-                            in CSS.
-                            <ul>
-                                <li>
-                                    <span class="text-info">Named Colors</span>:
-                                    Most of the code examples in this study
-                                    guide have used color names. The good thing
-                                    about color names is they are very easy to
-                                    remember and write, but the downside is they
-                                    are very limited as there are only about 160
-                                    of them. Here is a
-                                    <a
-                                        href="http://developer.mozilla.org/en-US/docs/Web/CSS/named-color#value"
-                                        target="_blank"
-                                        >full list of HTML color names</a
-                                    >.
-                                </li>
-                                <li>
-                                    <span class="text-info"
-                                        >Red, Green, Blue (RGB) Codes</span
-                                    >: RGB codes are a series of three numbers
-                                    that mix together to a color. The first
-                                    number represents how much red the color
-                                    contains, the second represents green, and
-                                    the third one is for blue. The numbers go
-                                    from 0 to 255, where the lower the number is
-                                    the less of that color will be mixed in. For
-                                    example, yellow would be a mix of red and
-                                    green and would be written like this
-                                    "rgb(255, 255, 0)" With just these three
-                                    colors and values, we can make over 16
-                                    million colors. Many more than with the
-                                    color names.
-                                </li>
-                                <li>
-                                    <span class="text-info"
-                                        >Hexadecimal (HEX) Codes</span
-                                    >: HEX codes are a hexadecimal (base 16)
-                                    representation of RGB codes. Like RGB codes,
-                                    HEX codes use a mix of red, green, and blue
-                                    to make colors, but instead of values
-                                    between 0 and 255, they use the hexadecimal
-                                    values between 00 and ff. All HEX color
-                                    codes start with the hash-tag symbol (#).
-                                    Using this syntax, the yellow we made using
-                                    RGB would look like "#FFFF00" in HEX. This
-                                    may seem confusing if this is your first
-                                    time reading hexadecimal numbers. There will
-                                    be a hexadecimal guide on this website in
-                                    the future, but for now you can read
-                                    <a
-                                        href="http://www.w3schools.com/colors/colors_hexadecimal.asp"
-                                        target="_blank"
-                                        >this guide</a
-                                    >.
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                </div>
+                <ul>
+                    <li>
+                        <span class="text-info">border-color</span>: The
+                        "border-color" property allows us to change the color of
+                        an element's border. Note that the border's style must
+                        be changed first, as its default style value is "none"
+                        which hides the border.
+                    </li>
+                    <li>
+                        <span class="text-info">border-style</span>: The
+                        "border-style" property allows us to change the type of
+                        border for an element. Borders can be solid, dashed,
+                        dotted, etc.
+                    </li>
+                    <li>
+                        <span class="text-info">border-width</span>: The
+                        "border-width" property allows us to change the
+                        thickness of the border for an element.
+                    </li>
+                    <li>
+                        <span class="text-info">background</span>: The
+                        "background" property allows us to change what shows
+                        inside the border area of an element, and can be set to
+                        a color or it can be a picture.
+                    </li>
+                    <li>
+                        <span class="text-info">Colors</span>: Earlier we
+                        discussed the different ways we can specify colors in
+                        CSS. Below are a few more details regarding color in
+                        CSS.
+                        <ul>
+                            <li>
+                                <span class="text-info">Named Colors</span>:
+                                Most of the code examples in this study guide
+                                have used color names. The good thing about
+                                color names is they are very easy to remember
+                                and write, but the downside is they are very
+                                limited as there are only about 160 of them.
+                                Here is a
+                                <a
+                                    href="http://developer.mozilla.org/en-US/docs/Web/CSS/named-color#value"
+                                    target="_blank"
+                                    >full list of HTML color names</a
+                                >.
+                            </li>
+                            <li>
+                                <span class="text-info"
+                                    >Red, Green, Blue (RGB) Codes</span
+                                >: RGB codes are a series of three numbers that
+                                mix together to a color. The first number
+                                represents how much red the color contains, the
+                                second represents green, and the third one is
+                                for blue. The numbers go from 0 to 255, where
+                                the lower the number is the less of that color
+                                will be mixed in. For example, yellow would be a
+                                mix of red and green and would be written like
+                                this "rgb(255, 255, 0)" With just these three
+                                colors and values, we can make over 16 million
+                                colors. Many more than with the color names.
+                            </li>
+                            <li>
+                                <span class="text-info"
+                                    >Hexadecimal (HEX) Codes</span
+                                >: HEX codes are a hexadecimal (base 16)
+                                representation of RGB codes. Like RGB codes, HEX
+                                codes use a mix of red, green, and blue to make
+                                colors, but instead of values between 0 and 255,
+                                they use the hexadecimal values between 00 and
+                                ff. All HEX color codes start with the hash-tag
+                                symbol (#). Using this syntax, the yellow we
+                                made using RGB would look like "#FFFF00" in HEX.
+                                This may seem confusing if this is your first
+                                time reading hexadecimal numbers. There will be
+                                a hexadecimal guide on this website in the
+                                future, but for now you can read
+                                <a
+                                    href="http://www.w3schools.com/colors/colors_hexadecimal.asp"
+                                    target="_blank"
+                                    >this guide</a
+                                >.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
 
-                    <h4
-                        class="copylink display-5"
-                        id="5-4-construct-and-analyze-styles-that-create-a-simple-responsive-layout"
+                <h4
+                    class="copylink display-5"
+                    id="5-4-construct-and-analyze-styles-that-create-a-simple-responsive-layout"
+                >
+                    <a
+                        href="#5-4-construct-and-analyze-styles-that-create-a-simple-responsive-layout"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >5.4 Construct and analyze styles that create a simple
+                        responsive layout
+                        <span class="tooltiptext">&#x1F517;</span></a
                     >
-                        <a
-                            href="#5-4-construct-and-analyze-styles-that-create-a-simple-responsive-layout"
-                            class="link-light link-underline-opacity-0"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >5.4 Construct and analyze styles that create a
-                            simple responsive layout
-                            <span class="tooltiptext">&#x1F517;</span></a
-                        >
-                    </h4>
-                    <ul>
-                        <li>
-                            <span class="text-info">Units</span>: Like colors,
-                            there are many ways to specify how large something
-                            is on a page. Units are broken into two categories:
-                            absolute and relative.
-                            <span class="text-info">Absolute</span>
-                            units never change as they are what they are, such
-                            as "inches", where relative units are based on the
-                            size of something else, such as "%".
-                            <span class="text-info">Relative</span>
-                            units are the preferred units to work with in
-                            HTML/CSS because they allow us to create pages that
-                            look good on devices both large and small. A few of
-                            the more popular units are explained below.
-                            <ul>
-                                <li>
-                                    <span class="text-info">Absolute</span>
-                                    <ul>
-                                        <li>
-                                            <span class="text-info">px</span>:
-                                            Pixels (px) are units that describe
-                                            the tiny squares of light that make
-                                            up a screen. Because screens can
-                                            have many different pixel
-                                            configurations, this can be a
-                                            difficult unit to work with for
-                                            aligning content.
-                                        </li>
-                                        <li>
-                                            <span class="text-info">pts</span>:
-                                            Points (pt) are technically defined
-                                            as being 1/72 of an inch, but what
-                                            is important to remember is that it
-                                            is similar to its usage in a word
-                                            processor for working with fonts
-                                            (12pt font, 14pt font, etc.).
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span class="text-info">Relative</span>
-                                    <ul>
-                                        <li>
-                                            <span class="text-info">em</span>:
-                                            Em quadrat (em) is a unit that is
-                                            relative to the default size of the
-                                            font being used. So, a font that has
-                                            its "font-size" set to "2em" will
-                                            display as two times larger than
-                                            fonts at "1em".
-                                        </li>
-                                        <li>
-                                            <span class="text-info">vw/vh</span
-                                            >: Viewport width (vw), and viewport
-                                            height (vh) are units relative to 1%
-                                            of the width and height of the
-                                            current viewport. This is useful for
-                                            making elements grow or shrink with
-                                            the browser window they are using.
-                                        </li>
-                                        <li>
-                                            <span class="text-info">%</span>:
-                                            Percent (%) is a unit that is
-                                            relative to the size of the parent
-                                            element. This is useful for sizing
-                                            and positioning elements that are
-                                            nested inside of a div.
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="text-info">viewport</span>: "viewport"
-                            is not a CSS property, but instead a value for the
-                            "meta" element's "name" attribute. The important
-                            thing to remember is that the code in the example
-                            changes the width of our pages to fit the width of
-                            the user's screen. This is useful because users may
-                            view our page on their phones, tables, laptops, or
-                            desktops, and these all have very different widths.
-                        </li>
-                        <div class="border bg-body-tertiary">
-                            <!-- prettier-ignore -->
-                            <script type="text/plain" class="language-html line-numbers"><meta name="viewport" content="width=device-width, initial-scale=1.0" /></script>
-                        </div>
-                        <li>
-                            <span class="text-info">
-                                Media Query and Break Points</span
-                            >: Media queries allow us to choose different style
-                            rulesets for different states of the user's device.
-                            For example, we can detect if a phone is in portrait
-                            mode, then make a row of pictures display as a
-                            column instead. These different media query rules
-                            are called "<span class="text-info"
-                                >breakpoints</span
-                            >" as they break our rulesets into chunks based on
-                            the user's device. Notice the example below. The CSS
-                            code in the top-right window shows the four "rect"
-                            divs as having colored backgrounds, 25% width, and
-                            they have their "float" property set to "left"
-                            making them display in a row. If you look at lines
-                            25-29, however we see that if the screen becomes
-                            1000px wide or less their "float" property is set to
-                            "none", making them display in a column. This is
-                            perfect for making layouts that look good on both
-                            portrait monitors and landscape phones. Try
-                            adjusting your browser window to see the effect.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                </h4>
+                <ul>
+                    <li>
+                        <span class="text-info">Units</span>: Like colors, there
+                        are many ways to specify how large something is on a
+                        page. Units are broken into two categories: absolute and
+                        relative.
+                        <span class="text-info">Absolute</span>
+                        units never change as they are what they are, such as
+                        "inches", where relative units are based on the size of
+                        something else, such as "%".
+                        <span class="text-info">Relative</span>
+                        units are the preferred units to work with in HTML/CSS
+                        because they allow us to create pages that look good on
+                        devices both large and small. A few of the more popular
+                        units are explained below.
+                        <ul>
+                            <li>
+                                <span class="text-info">Absolute</span>
+                                <ul>
+                                    <li>
+                                        <span class="text-info">px</span>:
+                                        Pixels (px) are units that describe the
+                                        tiny squares of light that make up a
+                                        screen. Because screens can have many
+                                        different pixel configurations, this can
+                                        be a difficult unit to work with for
+                                        aligning content.
+                                    </li>
+                                    <li>
+                                        <span class="text-info">pts</span>:
+                                        Points (pt) are technically defined as
+                                        being 1/72 of an inch, but what is
+                                        important to remember is that it is
+                                        similar to its usage in a word processor
+                                        for working with fonts (12pt font, 14pt
+                                        font, etc.).
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="text-info">Relative</span>
+                                <ul>
+                                    <li>
+                                        <span class="text-info">em</span>: Em
+                                        quadrat (em) is a unit that is relative
+                                        to the default size of the font being
+                                        used. So, a font that has its
+                                        "font-size" set to "2em" will display as
+                                        two times larger than fonts at "1em".
+                                    </li>
+                                    <li>
+                                        <span class="text-info">vw/vh</span>:
+                                        Viewport width (vw), and viewport height
+                                        (vh) are units relative to 1% of the
+                                        width and height of the current
+                                        viewport. This is useful for making
+                                        elements grow or shrink with the browser
+                                        window they are using.
+                                    </li>
+                                    <li>
+                                        <span class="text-info">%</span>:
+                                        Percent (%) is a unit that is relative
+                                        to the size of the parent element. This
+                                        is useful for sizing and positioning
+                                        elements that are nested inside of a
+                                        div.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="text-info">viewport</span>: "viewport" is
+                        not a CSS property, but instead a value for the "meta"
+                        element's "name" attribute. The important thing to
+                        remember is that the code in the example changes the
+                        width of our pages to fit the width of the user's
+                        screen. This is useful because users may view our page
+                        on their phones, tables, laptops, or desktops, and these
+                        all have very different widths.
+                    </li>
+                    <div class="border bg-body-tertiary">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-html line-numbers"><meta name="viewport" content="width=device-width, initial-scale=1.0" /></script>
+                    </div>
+                    <li>
+                        <span class="text-info">
+                            Media Query and Break Points</span
+                        >: Media queries allow us to choose different style
+                        rulesets for different states of the user's device. For
+                        example, we can detect if a phone is in portrait mode,
+                        then make a row of pictures display as a column instead.
+                        These different media query rules are called "<span
+                            class="text-info"
+                            >breakpoints</span
+                        >" as they break our rulesets into chunks based on the
+                        user's device. Notice the example below. The CSS code in
+                        the top-right window shows the four "rect" divs as
+                        having colored backgrounds, 25% width, and they have
+                        their "float" property set to "left" making them display
+                        in a row. If you look at lines 25-29, however we see
+                        that if the screen becomes 1000px wide or less their
+                        "float" property is set to "none", making them display
+                        in a column. This is perfect for making layouts that
+                        look good on both portrait monitors and landscape
+                        phones. Try adjusting your browser window to see the
+                        effect.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -4210,10 +4140,10 @@ div.rect4 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.rect1 {
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.rect1 {
     background-color: cyan;
     float: left;
     width: 25%;
@@ -4243,116 +4173,104 @@ div.rect4 {
     }
 }
 </script>
-                                </div>
                             </div>
-                            <div class="row border">
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12"
+                                style="background-color: white; color: black"
+                            >
                                 <div
-                                    class="col-lg-12"
+                                    class="rect1"
                                     style="
-                                        background-color: white;
-                                        color: black;
+                                        background-color: cyan;
+                                        padding: 0.5em;
+                                        width: 25%;
                                     "
                                 >
-                                    <div
-                                        class="rect1"
-                                        style="
-                                            background-color: cyan;
-                                            padding: 0.5em;
-                                            width: 25%;
-                                        "
-                                    >
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect2"
-                                        style="
-                                            background-color: magenta;
-                                            padding: 0.5em;
-                                            width: 25%;
-                                        "
-                                    >
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect3"
-                                        style="
-                                            background-color: yellow;
-                                            padding: 0.5em;
-                                            width: 25%;
-                                        "
-                                    >
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
-                                    <div
-                                        class="rect4"
-                                        style="
-                                            background-color: orange;
-                                            padding: 0.5em;
-                                            width: 25%;
-                                        "
-                                    >
-                                        <p>
-                                            Lorem ipsum dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            excepturi omnis sint explicabo
-                                            quisquam et rerum, molestiae
-                                            temporibus fuga est ea architecto
-                                            quia nihil laboriosam dicta
-                                            recusandae ut consectetur!
-                                            Excepturi!
-                                        </p>
-                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect2"
+                                    style="
+                                        background-color: magenta;
+                                        padding: 0.5em;
+                                        width: 25%;
+                                    "
+                                >
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect3"
+                                    style="
+                                        background-color: yellow;
+                                        padding: 0.5em;
+                                        width: 25%;
+                                    "
+                                >
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div
+                                    class="rect4"
+                                    style="
+                                        background-color: orange;
+                                        padding: 0.5em;
+                                        width: 25%;
+                                    "
+                                >
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <li>
-                            <span class="text-info">Grids</span>: One modern CSS
-                            feature that makes laying out web pages easier is
-                            "grids". Grids act as a table, but instead of
-                            holding data, they hold elements such as divs that
-                            can be organized into neat rows and columns. This
-                            removes the frustration of having to align
-                            everything by constantly adjusting the margin and
-                            padding for every element. These grids can be
-                            reorganized very easily using the media queries
-                            mentioned earlier to make the page look good across
-                            many devices. There are many ways to configure the
-                            grid system, but for this exam you only need to know
-                            its definition, functionality, and basic syntax
-                            shown in the example below.
-                        </li>
-                        <div class="container my-2">
-                            <div class="row border">
-                                <div class="col-lg-7 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                    </div>
+                    <li>
+                        <span class="text-info">Grids</span>: One modern CSS
+                        feature that makes laying out web pages easier is
+                        "grids". Grids act as a table, but instead of holding
+                        data, they hold elements such as divs that can be
+                        organized into neat rows and columns. This removes the
+                        frustration of having to align everything by constantly
+                        adjusting the margin and padding for every element.
+                        These grids can be reorganized very easily using the
+                        media queries mentioned earlier to make the page look
+                        good across many devices. There are many ways to
+                        configure the grid system, but for this exam you only
+                        need to know its definition, functionality, and basic
+                        syntax shown in the example below.
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -4368,10 +4286,10 @@ div.rect4 {
     </div>
 </body>
 </html></script>
-                                </div>
-                                <div class="col-lg-5 border bg-body-tertiary">
-                                    <!-- prettier-ignore -->
-                                    <script type="text/plain" class="language-css line-numbers">div.grid-header { grid-area: header; }
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">div.grid-header { grid-area: header; }
 div.grid-nav { grid-area: nav; }
 div.grid-article1 { grid-area: article1; }
 div.grid-article2 { grid-area: article2; }
@@ -4395,94 +4313,81 @@ div.grid-container > div {
     padding: 1.5em 0;
     font-size: 1.5em;
 }</script>
-                                </div>
                             </div>
-                            <div class="row border">
-                                <div
-                                    class="resultcol-lg-12"
-                                    style="
-                                        background-color: white;
-                                        color: black;
-                                    "
-                                >
-                                    <div class="grid-container">
-                                        <div class="grid-header">Header</div>
-                                        <div class="grid-nav">Nav</div>
-                                        <div class="grid-article1">
-                                            Article 1
-                                        </div>
-                                        <div class="grid-article2">
-                                            Article 2
-                                        </div>
-                                        <div class="grid-footer">Footer</div>
-                                    </div>
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="resultcol-lg-12"
+                                style="background-color: white; color: black"
+                            >
+                                <div class="grid-container">
+                                    <div class="grid-header">Header</div>
+                                    <div class="grid-nav">Nav</div>
+                                    <div class="grid-article1">Article 1</div>
+                                    <div class="grid-article2">Article 2</div>
+                                    <div class="grid-footer">Footer</div>
                                 </div>
                             </div>
                         </div>
-                    </ul>
+                    </div>
+                </ul>
 
-                    <h3 class="display-4 copylink" id="6-accessibility">
-                        <a
-                            href="#6-accessibility"
-                            class="link-light link-underline-opacity-0"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >3. Accessibility, Readability, and Testing
-                            <span class="tooltiptext">&#x1F517;</span></a
-                        >
-                    </h3>
-                    <ol>
-                        <h4
-                            class="copylink display-5"
-                            id="6-1-construct-well-formed-HTML-and-CSS-markup"
-                        >
-                            <a
-                                href="#6-1-construct-well-formed-HTML-and-CSS-markup"
-                                class="link-light link-underline-opacity-0"
-                                onclick="copyhref(event)"
-                                onmouseleave="revertSymbol(event)"
-                                >3.1 Construct well-formed HTML and CSS markup
-                                that conforms to industry best practices
-                                <span class="tooltiptext">&#x1F517;</span></a
-                            >
-                        </h4>
-                        <ul>
-                            <li>
-                                <span class="text-info">
-                                    Reusing rules and rule sets</span
-                                >: As mentioned previously, CSS rules and
-                                rulesets can be reused throughout a page, and
-                                across multiple pages in a website using an
-                                external stylesheet. This is the preferred
-                                method for many reasons. Doing it this way makes
-                                writing the same styles easier, faster and more
-                                consistent as we don't have to write the same
-                                thing multiple times.
-                            </li>
-                            <li>
-                                <span class="text-info">Commenting</span>:
-                                Comments are text written into the code that is
-                                ignored by the browser. This allows us to write
-                                messages in the code to ourselves and other
-                                programmers. It also allows us to test multiple
-                                versions of an element or ruleset. To do this,
-                                we can write the code for the multiple versions
-                                and turn the ones we do not want to show into
-                                comments. Then we can switch the comments to try
-                                out the other versions. As we can see in the
-                                example below, an HTML comment starts with
-                                "&lt;!--" and ends with "--&gt;". Anything
-                                between these two series of characters will be
-                                ignored by the browser. A CSS comment starts
-                                with "/*" and ends with "*/".
-                            </li>
-                            <div class="container my-2">
-                                <div class="row border">
-                                    <div
-                                        class="col-lg-7 border bg-body-tertiary"
-                                    >
-                                        <!-- prettier-ignore -->
-                                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+                <h3 class="display-4 copylink" id="6-accessibility">
+                    <a
+                        href="#6-accessibility"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >3. Accessibility, Readability, and Testing
+                        <span class="tooltiptext">&#x1F517;</span></a
+                    >
+                </h3>
+                <h4
+                    class="copylink display-5"
+                    id="6-1-construct-well-formed-HTML-and-CSS-markup"
+                >
+                    <a
+                        href="#6-1-construct-well-formed-HTML-and-CSS-markup"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >3.1 Construct well-formed HTML and CSS markup that
+                        conforms to industry best practices
+                        <span class="tooltiptext">&#x1F517;</span></a
+                    >
+                </h4>
+                <ul>
+                    <li>
+                        <span class="text-info">
+                            Reusing rules and rule sets</span
+                        >: As mentioned previously, CSS rules and rulesets can
+                        be reused throughout a page, and across multiple pages
+                        in a website using an external stylesheet. This is the
+                        preferred method for many reasons. Doing it this way
+                        makes writing the same styles easier, faster and more
+                        consistent as we don't have to write the same thing
+                        multiple times.
+                    </li>
+                    <li>
+                        <span class="text-info">Commenting</span>: Comments are
+                        text written into the code that is ignored by the
+                        browser. This allows us to write messages in the code to
+                        ourselves and other programmers. It also allows us to
+                        test multiple versions of an element or ruleset. To do
+                        this, we can write the code for the multiple versions
+                        and turn the ones we do not want to show into comments.
+                        Then we can switch the comments to try out the other
+                        versions. As we can see in the example below, an HTML
+                        comment starts with "&lt;!--" and ends with "--&gt;".
+                        Anything between these two series of characters will be
+                        ignored by the browser. A CSS comment starts with "/*"
+                        and ends with "*/".
+                    </li>
+                    <div class="container my-2">
+                        <div class="row border">
+                            <div class="col-lg-7 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
 <html lang="en-US">
 <head>
     <title>The Ultimate CS Study Guide</title>
@@ -4501,12 +4406,10 @@ div.grid-container > div {
     <p class="foo">Bar</p>
 </body>
 </html></script>
-                                    </div>
-                                    <div
-                                        class="col-lg-5 border bg-body-tertiary"
-                                    >
-                                        <!-- prettier-ignore -->
-                                        <script type="text/plain" class="language-css line-numbers">/*
+                            </div>
+                            <div class="col-lg-5 border bg-body-tertiary">
+                                <!-- prettier-ignore -->
+                                <script type="text/plain" class="language-css line-numbers">/*
     This is an example of using a comment
     to leave a message to other programmers.
     Below you can see an example of
@@ -4528,214 +4431,189 @@ p.hello {
 p.foo {
     color: green;
 }</script>
-                                    </div>
-                                </div>
-                                <div class="row border">
-                                    <div
-                                        class="col-lg-12"
-                                        style="
-                                            background-color: white;
-                                            color: black;
-                                        "
-                                    >
-                                        <p
-                                            class="hello"
-                                            style="
-                                                color: magenta;
-                                                text-decoration: underline;
-                                            "
-                                        >
-                                            Hello
-                                        </p>
-                                        <p class="foo" style="color: green">
-                                            Foo
-                                        </p>
-                                        <p class="foo" style="color: green">
-                                            Bar
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
-                            <li>
-                                <span class="text-info"> Web-Safe Fonts</span>:
-                                Many web pages use custom fonts which must be
-                                downloaded when the page loads. However not
-                                every browser can download fonts and some users
-                                turn this feature off to save bandwidth.
-                                Therefore, it is important to always add a
-                                web-safe font to the "font-family" property in
-                                your CSS. The most common web-safe fonts are
-                                listed below.
-                                <ul style="margin-top: 1em">
-                                    <li>Arial (sans-serif)</li>
-                                    <li>Times New Roman (serif)</li>
-                                    <li>Courier New (monospace)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="text-info">
-                                    Cross-Platform Usability</span
-                                >: Because different browsers interpret HTML and
-                                CSS slightly differently, it is very important
-                                to test your web pages on as many different
-                                browsers and devices as possible.
-                            </li>
-                            <li>
-                                <span class="text-info"
-                                    >Separation of Structure (HTML) and Style
-                                    (CSS)</span
-                                >: While CSS can be written inline and internal,
-                                it is always best practice to write external
-                                stylesheets. This makes the HTML code cleaner
-                                because the CSS is written in a different file.
-                                It also makes the styling more consistent as one
-                                ruleset can be applied to multiple elements,
-                                mentioned earlier.
-                            </li>
-                        </ul>
-
-                        <h4
-                            class="copylink display-5"
-                            id="6-2-apply-accessibility-principles-and-evaluate-content-accessibility"
-                        >
-                            <a
-                                href="#6-2-apply-accessibility-principles-and-evaluate-content-accessibility"
-                                class="link-light link-underline-opacity-0"
-                                onclick="copyhref(event)"
-                                onmouseleave="revertSymbol(event)"
-                                >6.2 Apply accessibility principles and evaluate
-                                content accessibility
-                                <span class="tooltiptext">&#x1F517;</span></a
+                        </div>
+                        <div class="row border">
+                            <div
+                                class="col-lg-12"
+                                style="background-color: white; color: black"
                             >
-                        </h4>
-                        <ul>
-                            <li>
-                                <span class="text-info">Text Alternatives</span
-                                >: Remember to always write descriptive text in
-                                the "alt" attribute for visual and audio content
-                                as this helps people with vision and hearing
-                                disabilities.
-                            </li>
-                            <li>
-                                <span class="text-info">Color Contrast</span>:
-                                Remember to have contrasting colors on a web
-                                page any time two elements are next to or on top
-                                of one another. For example, the background
-                                color and text color should contrast or it will
-                                be difficult to read the text. A bright yellow
-                                text would be hard to read on a white
-                                background, while dark-green text would be more
-                                legible.
-                            </li>
-                            <li>
-                                <span class="text-info"
-                                    >Legibility of Typography</span
-                                >: Some fonts, particularly handwritten or
-                                "script" fonts, can be difficult to read for
-                                many users. When choosing a legible font, check
-                                that lowercase l, uppercase I, and the number 1
-                                look different (lI1), as well as lowercase o,
-                                uppercase O, and zero 0 (oO0). Attention should
-                                also be paid to line and character spacing. Text
-                                can be difficult to read if it is too close or
-                                far away from other text.
-                            </li>
-                            <li>
-                                <span class="text-info">Tab Order</span>: Some
-                                disabilities make it difficult to use a mouse.
-                                This can make it hard to navigate links and
-                                forms. For this reason it is important to make
-                                sure the order that elements are selected when
-                                pressing the "TAB" key makes sense. The
-                                "tab-index" attribute can be added to any
-                                element to manually set the tab order. Elements
-                                should be in tab order from left-to-right, then
-                                top-to-bottom, just as we read text in a book.
-                            </li>
-                            <li>
-                                <span class="text-info">Text Hierarchy</span>:
-                                Web pages should always be laid out in a logical
-                                order. While the heading elements "h1" - "h6",
-                                make text bigger and bolder they should not be
-                                used solely for this purpose. Heading elements
-                                represent a page's hierarchy. This means that if
-                                we use an "h1" in the "header" to represent a
-                                title for the whole page, we should never use
-                                "h1" for any other content, as nothing on the
-                                page would have the same hierarchy as the page's
-                                main title. However, if a page has multiple blog
-                                articles, and each article has their title
-                                nested inside of an "h4", this is perfectly
-                                acceptable, as each blog article's title has the
-                                same logical hierarchy.
-                            </li>
-                            <li>
-                                <span class="text-info">Translation</span>: Many
-                                modern browsers have the ability to translate
-                                text inside of a web page. While there is an
-                                attribute that can be applied to the "meta"
-                                element to disable translations, we should avoid
-                                using it as language translation is a very
-                                helpful accessibility feature for people who
-                                cannot read the language that our page was
-                                written in.
-                            </li>
+                                <p
+                                    class="hello"
+                                    style="
+                                        color: magenta;
+                                        text-decoration: underline;
+                                    "
+                                >
+                                    Hello
+                                </p>
+                                <p class="foo" style="color: green">Foo</p>
+                                <p class="foo" style="color: green">Bar</p>
+                            </div>
+                        </div>
+                    </div>
+                    <li>
+                        <span class="text-info"> Web-Safe Fonts</span>: Many web
+                        pages use custom fonts which must be downloaded when the
+                        page loads. However not every browser can download fonts
+                        and some users turn this feature off to save bandwidth.
+                        Therefore, it is important to always add a web-safe font
+                        to the "font-family" property in your CSS. The most
+                        common web-safe fonts are listed below.
+                        <ul style="margin-top: 1em">
+                            <li>Arial (sans-serif)</li>
+                            <li>Times New Roman (serif)</li>
+                            <li>Courier New (monospace)</li>
                         </ul>
+                    </li>
+                    <li>
+                        <span class="text-info"> Cross-Platform Usability</span
+                        >: Because different browsers interpret HTML and CSS
+                        slightly differently, it is very important to test your
+                        web pages on as many different browsers and devices as
+                        possible.
+                    </li>
+                    <li>
+                        <span class="text-info"
+                            >Separation of Structure (HTML) and Style
+                            (CSS)</span
+                        >: While CSS can be written inline and internal, it is
+                        always best practice to write external stylesheets. This
+                        makes the HTML code cleaner because the CSS is written
+                        in a different file. It also makes the styling more
+                        consistent as one ruleset can be applied to multiple
+                        elements, mentioned earlier.
+                    </li>
+                </ul>
 
-                        <h4
-                            class="copylink display-5"
-                            id="6-3-evaluate-the-structural-integrity-of-HTML-and-CSS-markup"
-                        >
-                            <a
-                                href="#6-3-evaluate-the-structural-integrity-of-HTML-and-CSS-markup"
-                                class="link-light link-underline-opacity-0"
-                                onclick="copyhref(event)"
-                                onmouseleave="revertSymbol(event)"
-                                >6.3 Evaluate the structural integrity of HTML
-                                and CSS markup
-                                <span class="tooltiptext">&#x1F517;</span></a
-                            >
-                        </h4>
-                        <ul>
-                            <li>
-                                <span class="text-info">Syntax Errors</span>:
-                                Syntax errors are mistakes in the code that
-                                prevent it from running correctly. The most
-                                common HTML syntax error is forgetting to add
-                                end tags. The most common CSS syntax errors are
-                                forgetting the curly brackets "{}" in a ruleset,
-                                and mixing up the colon ":" and semicolon ";".
-                            </li>
-                            <li>
-                                <span class="text-info">Tag Mismatch</span>:
-                                Another common error in HTML is to mismatch
-                                tags. Elements should have their start and end
-                                tags organized like a sandwich. If a "span"
-                                element is nested inside a "p" element, the
-                                order of the tags should be
-                                &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;.
-                            </li>
-                            <li>
-                                <span class="text-info">Cascading Issues</span>:
-                                Another common CSS issue is cascading issues.
-                                This is when one element is being styled by
-                                multiple rulesets. Having a good understanding
-                                of CSS precedence (mentioned in domain 2.1) can
-                                help to troubleshoot these issues.
-                            </li>
-                        </ul>
-                    </ol>
-                </ol>
+                <h4
+                    class="copylink display-5"
+                    id="6-2-apply-accessibility-principles-and-evaluate-content-accessibility"
+                >
+                    <a
+                        href="#6-2-apply-accessibility-principles-and-evaluate-content-accessibility"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >6.2 Apply accessibility principles and evaluate content
+                        accessibility
+                        <span class="tooltiptext">&#x1F517;</span></a
+                    >
+                </h4>
+                <ul>
+                    <li>
+                        <span class="text-info">Text Alternatives</span>:
+                        Remember to always write descriptive text in the "alt"
+                        attribute for visual and audio content as this helps
+                        people with vision and hearing disabilities.
+                    </li>
+                    <li>
+                        <span class="text-info">Color Contrast</span>: Remember
+                        to have contrasting colors on a web page any time two
+                        elements are next to or on top of one another. For
+                        example, the background color and text color should
+                        contrast or it will be difficult to read the text. A
+                        bright yellow text would be hard to read on a white
+                        background, while dark-green text would be more legible.
+                    </li>
+                    <li>
+                        <span class="text-info">Legibility of Typography</span>:
+                        Some fonts, particularly handwritten or "script" fonts,
+                        can be difficult to read for many users. When choosing a
+                        legible font, check that lowercase l, uppercase I, and
+                        the number 1 look different (lI1), as well as lowercase
+                        o, uppercase O, and zero 0 (oO0). Attention should also
+                        be paid to line and character spacing. Text can be
+                        difficult to read if it is too close or far away from
+                        other text.
+                    </li>
+                    <li>
+                        <span class="text-info">Tab Order</span>: Some
+                        disabilities make it difficult to use a mouse. This can
+                        make it hard to navigate links and forms. For this
+                        reason it is important to make sure the order that
+                        elements are selected when pressing the "TAB" key makes
+                        sense. The "tab-index" attribute can be added to any
+                        element to manually set the tab order. Elements should
+                        be in tab order from left-to-right, then top-to-bottom,
+                        just as we read text in a book.
+                    </li>
+                    <li>
+                        <span class="text-info">Text Hierarchy</span>: Web pages
+                        should always be laid out in a logical order. While the
+                        heading elements "h1" - "h6", make text bigger and
+                        bolder they should not be used solely for this purpose.
+                        Heading elements represent a page's hierarchy. This
+                        means that if we use an "h1" in the "header" to
+                        represent a title for the whole page, we should never
+                        use "h1" for any other content, as nothing on the page
+                        would have the same hierarchy as the page's main title.
+                        However, if a page has multiple blog articles, and each
+                        article has their title nested inside of an "h4", this
+                        is perfectly acceptable, as each blog article's title
+                        has the same logical hierarchy.
+                    </li>
+                    <li>
+                        <span class="text-info">Translation</span>: Many modern
+                        browsers have the ability to translate text inside of a
+                        web page. While there is an attribute that can be
+                        applied to the "meta" element to disable translations,
+                        we should avoid using it as language translation is a
+                        very helpful accessibility feature for people who cannot
+                        read the language that our page was written in.
+                    </li>
+                </ul>
+
+                <h4
+                    class="copylink display-5"
+                    id="6-3-evaluate-the-structural-integrity-of-HTML-and-CSS-markup"
+                >
+                    <a
+                        href="#6-3-evaluate-the-structural-integrity-of-HTML-and-CSS-markup"
+                        class="link-light link-underline-opacity-0"
+                        onclick="copyhref(event)"
+                        onmouseleave="revertSymbol(event)"
+                        >6.3 Evaluate the structural integrity of HTML and CSS
+                        markup <span class="tooltiptext">&#x1F517;</span></a
+                    >
+                </h4>
+                <ul>
+                    <li>
+                        <span class="text-info">Syntax Errors</span>: Syntax
+                        errors are mistakes in the code that prevent it from
+                        running correctly. The most common HTML syntax error is
+                        forgetting to add end tags. The most common CSS syntax
+                        errors are forgetting the curly brackets "{}" in a
+                        ruleset, and mixing up the colon ":" and semicolon ";".
+                    </li>
+                    <li>
+                        <span class="text-info">Tag Mismatch</span>: Another
+                        common error in HTML is to mismatch tags. Elements
+                        should have their start and end tags organized like a
+                        sandwich. If a "span" element is nested inside a "p"
+                        element, the order of the tags should be
+                        &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;.
+                    </li>
+                    <li>
+                        <span class="text-info">Cascading Issues</span>: Another
+                        common CSS issue is cascading issues. This is when one
+                        element is being styled by multiple rulesets. Having a
+                        good understanding of CSS precedence (mentioned in
+                        domain 2.1) can help to troubleshoot these issues.
+                    </li>
+                </ul>
             </section>
         </main>
         <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#top">Back to Top</a>
+            <hr class="border" />
+            <nav class="navbar navbar-expand-lg justify-content-center mb-2">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Back to Top</a>
                     </li>
                 </ul>
             </nav>
+            <hr class="border" />
         </footer>
         <script src="src/copylink.js"></script>
         <script src="src/prism.js"></script>

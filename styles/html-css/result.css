@@ -1,0 +1,59 @@
+#result-1-1a {
+    background-color: magenta;
+}
+
+#result-2-1a h1 {
+    color: blue;
+}
+
+#result-2-1a-p1 {
+    color: magenta;
+}
+
+#result-2-1a-p2 {
+    color: green;
+}
+
+#result-2-2a {
+    color: green;
+}
+
+/* #result-2-2a a {
+    color: blue;
+} */
+
+#result-2-2a a:hover {
+    text-decoration: overline;
+    color: orange;
+}
+
+#result-2-2a-alert {
+    color: yellow;
+    background-color: red;
+}
+
+#result-2-2a-rotate {
+    transform: rotate(180deg);
+}
+
+#result-2-2a-magenta {
+    color: magenta;
+}
+
+#result-3-1a table,
+th,
+td {
+    border: 2px solid gray;
+    padding: 2px;
+}
+
+#result-3-1d div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+#result-3-1e span {
+    color: green;
+}

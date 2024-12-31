@@ -10,6 +10,12 @@
             href="styles/bootstrap/bootstrap.css"
         />
         <link rel="stylesheet" type="text/css" href="styles/copylink.css" />
+        <link rel="stylesheet" type="text/css" href="styles/result-reset.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="styles/html-css/result.css"
+        />
         <link rel="stylesheet" type="text/css" href="styles/prism.css" />
     </head>
 
@@ -205,10 +211,7 @@
 </head></script>
                             </div>
 
-                            <div
-                                class="col-lg-6"
-                                style="background-color: magenta; color: black"
-                            >
+                            <div class="col-lg-6 result" id="result-1-1a">
                                 <p>Hello, world!</p>
                             </div>
                         </div>
@@ -383,10 +386,7 @@
     </body>
 </html></script>
                             </div>
-                            <div
-                                class="col-lg-6 border"
-                                style="background-color: white; color: black"
-                            >
+                            <div class="col-lg-6 border result">
                                 <h1>Hello!</h1>
                             </div>
                         </div>
@@ -450,10 +450,7 @@
     </body>
 </html></script>
                             </div>
-                            <div
-                                class="col-lg-6 border"
-                                style="background-color: white; color: black"
-                            >
+                            <div class="col-lg-6 border result">
                                 <p>
                                     Line one, <br />
                                     Line two, <br />
@@ -494,10 +491,7 @@
     </body>
 </html></script>
                             </div>
-                            <div
-                                class="col-lg-6 border"
-                                style="background-color: white; color: black"
-                            >
+                            <div class="col-lg-6 border result">
                                 <p>
                                     2 &gt; 1 <br />
                                     BAND-AID&reg; <br />
@@ -622,19 +616,12 @@
                             </div>
                             <div class="row border">
                                 <div
-                                    class="col-lg-12 border"
-                                    style="background-color: white"
+                                    class="col-lg-12 border result"
+                                    id="result-2-1a"
                                 >
-                                    <h1 style="color: blue">Heading 1</h1>
-                                    <p
-                                        style="
-                                            color: magenta;
-                                            margin-bottom: auto;
-                                        "
-                                    >
-                                        Paragraph 1
-                                    </p>
-                                    <p style="color: green">Paragraph 2</p>
+                                    <h1>Heading 1</h1>
+                                    <p id="result-2-1a-p1">Paragraph 1</p>
+                                    <p id="result-2-1a-p2">Paragraph 2</p>
                                 </div>
                             </div>
                         </div>
@@ -762,23 +749,14 @@
 </html></script>
                             </div>
                             <div
-                                class="col-lg-6 border"
-                                style="background-color: white; color: black"
+                                class="col-lg-6 border result"
+                                id="result-2-2a"
                             >
-                                <p style="color: green">Regular text.</p>
-                                <p style="background-color: red; color: yellow">
-                                    Alert text.
-                                </p>
-                                <p
-                                    style="
-                                        transform: rotate(180deg);
-                                        color: green;
-                                    "
-                                >
-                                    Upside down text.
-                                </p>
+                                <p>Regular text.</p>
+                                <p id="result-2-2a-alert">Alert text.</p>
+                                <p id="result-2-2a-rotate">Upside down text.</p>
                                 <a href="">Hover over me!</a>
-                                <p style="color: magenta">
+                                <p id="result-2-2a-magenta">
                                     Text descendant of a div.
                                 </p>
                             </div>
@@ -929,10 +907,7 @@
 </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result" id="result-3-1a">
                             <table>
                                 <tr>
                                     <th colspan="2">Business Hours</th>
@@ -980,16 +955,13 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
-                            <h1 style="font-size: xx-large">Heading 1</h1>
-                            <h2 style="font-size: x-large">Heading 2</h2>
-                            <h3 style="font-size: larger">Heading 3</h3>
-                            <h4 style="font-size: large">Heading 4</h4>
-                            <h5 style="font-size: medium">Heading 5</h5>
-                            <h6 style="font-size: small">Heading 6</h6>
+                        <div class="col-lg-6 border result">
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h6>Heading 6</h6>
                         </div>
                     </div>
                 </div>
@@ -1031,17 +1003,14 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <p>
                                 Line one, <br />
                                 Line two, <br />
                                 Line three.
                             </p>
                             <hr />
-                            <p style="margin-top: 1em">More text here.</p>
+                            <p>More text here.</p>
                         </div>
                     </div>
                 </div>
@@ -1081,19 +1050,9 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
-                            <div
-                                style="
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    border: 1px solid red;
-                                "
-                            >
-                                <p style="margin-top: 1em">I am centered!</p>
+                        <div class="col-lg-6 border result" id="result-3-1d">
+                            <div>
+                                <p>I am centered!</p>
                             </div>
                         </div>
                     </div>
@@ -1128,15 +1087,8 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
-                            <p>
-                                Today is a
-                                <span style="color: green">special</span>
-                                day.
-                            </p>
+                        <div class="col-lg-6 border result" id="result-3-1e">
+                            <p>Today is a <span>special</span> day.</p>
                         </div>
                     </div>
                 </div>
@@ -1177,16 +1129,13 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
-                            <ul style="margin-bottom: 2em; margin-left: -1.5em">
+                        <div class="col-lg-6 border result">
+                            <ul>
                                 <li>Item One</li>
                                 <li>Item Two</li>
                                 <li>Item Three</li>
                             </ul>
-                            <ol class="li-ex">
+                            <ol>
                                 <li>Item One</li>
                                 <li>Item Two</li>
                                 <li>Item Three</li>
@@ -1277,13 +1226,7 @@
     </body>
 </html></script>
                                     </div>
-                                    <div
-                                        class="col-lg-6 border"
-                                        style="
-                                            background-color: white;
-                                            color: black;
-                                        "
-                                    >
+                                    <div class="col-lg-6 border result">
                                         <details>
                                             <summary>Click to Show</summary>
                                             <p>
@@ -1330,29 +1273,16 @@
     </body>
 </html></script>
                                     </div>
-                                    <div
-                                        class="col-lg-6 border"
-                                        style="
-                                            background-color: white;
-                                            color: black;
-                                        "
-                                    >
+                                    <div class="col-lg-6 border result">
                                         <figure>
                                             <img
                                                 src="media/imgs/the-birthday-cake.jpg"
                                                 alt="the birthday cake"
-                                                style="
-                                                    margin: 0px;
-                                                    width: 320px;
-                                                    height: 245px;
-                                                "
+                                                width="
+                                            320px"
+                                                height="245px"
                                             />
-                                            <figcaption
-                                                style="
-                                                    font-style: normal;
-                                                    text-align: initial;
-                                                "
-                                            >
+                                            <figcaption>
                                                 The Birthday Cake - Frees, Harry
                                                 Whittier
                                             </figcaption>
@@ -1419,10 +1349,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <a href="https://example.com/" target="_blank">
                                 example.com
                             </a>
@@ -1468,10 +1395,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <a href="#jump"> Click to jump </a>
                             <br />
                             <br />
@@ -1577,7 +1501,7 @@
                         >
                             <img
                                 src="media/imgs/hierarchy.png"
-                                style="height: 800px; width: 232px"
+                                class="img-fluid"
                             />
                         </div>
                     </div>
@@ -1622,10 +1546,7 @@
                         </div>
                     </div>
                     <div class="row border">
-                        <div
-                            class="col-lg-12 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-12 border result">
                             <img
                                 src="media/imgs/vitascope.jpg"
                                 usemap="#image-map"
@@ -1658,7 +1579,7 @@
                         elements <span class="tooltiptext">&#x1F517;</span></a
                     >
                 </h4>
-                <p style="margin-bottom: 1em">
+                <p>
                     Forms are the primary method for getting user input on a web
                     page. If you have ever made an account on a web page, you
                     have interacted with a form. Forms have text boxes,
@@ -1705,10 +1626,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-5 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-5 border result">
                             <form
                                 action="index.html"
                                 method="POST"
@@ -1798,13 +1716,7 @@
     </body>
 </html></script>
                                 </div>
-                                <div
-                                    class="col-lg-5 border"
-                                    style="
-                                        background-color: white;
-                                        color: black;
-                                    "
-                                >
+                                <div class="col-lg-5 border result">
                                     <form
                                         action="index.html"
                                         method="POST"
@@ -1862,11 +1774,7 @@
                                             rows="10"
                                         ></textarea>
                                         <br />
-                                        <input
-                                            type="submit"
-                                            value="Submit"
-                                            style="height: 30px"
-                                        />
+                                        <input type="submit" value="Submit" />
                                         <button type="reset">Reset</button>
                                     </form>
                                 </div>
@@ -2009,14 +1917,12 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <img
                                 src="media/imgs/the-birthday-cake.jpg"
                                 alt="two kittens wearing dresses at a table with a birthday cake."
-                                style="margin: 0px; width: 320px; height: 245px"
+                                width=" 320px"
+                                height="245px"
                             />
                         </div>
                     </div>
@@ -2078,10 +1984,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <picture>
                                 <source
                                     media="(min-width: 1500px)"
@@ -2091,11 +1994,7 @@
                                     media="(min-width: 1000px)"
                                     srcset="media/imgs/may.jpg"
                                 />
-                                <img
-                                    src="media/imgs/may.jpg"
-                                    alt="two cats"
-                                    style="margin: 0px"
-                                />
+                                <img src="media/imgs/may.jpg" alt="two cats" />
                             </picture>
                         </div>
                     </div>
@@ -2159,10 +2058,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <video autoplay controls muted>
                                 <track
                                     default
@@ -2244,10 +2140,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <audio controls>
                                 <source
                                     src="media/aud/sax.mp3"
@@ -2287,10 +2180,7 @@
     </body>
 </html></script>
                         </div>
-                        <div
-                            class="col-lg-6 border"
-                            style="background-color: white; color: black"
-                        >
+                        <div class="col-lg-6 border result">
                             <iframe
                                 title="example.com"
                                 src="https://example.com"
@@ -4460,7 +4350,7 @@ p.foo {
                         Therefore, it is important to always add a web-safe font
                         to the "font-family" property in your CSS. The most
                         common web-safe fonts are listed below.
-                        <ul style="margin-top: 1em">
+                        <ul>
                             <li>Arial (sans-serif)</li>
                             <li>Times New Roman (serif)</li>
                             <li>Courier New (monospace)</li>

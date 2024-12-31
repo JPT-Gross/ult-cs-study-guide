@@ -1,0 +1,130 @@
+/* 1. Use a more-intuitive box-sizing model */
+*.result,
+*.result::before,
+*.result::after {
+    box-sizing: border-box;
+}
+/* 2. Remove default margin */
+*.result {
+    margin: 0;
+    padding: 0.5rem;
+    font-family: "Times New Roman", Times, serif;
+    background-color: white;
+    color: black;
+}
+.result {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+.result img,
+.result picture,
+.result video,
+.result canvas,
+.result svg {
+    display: block;
+    max-width: 100%;
+}
+/* 6. Inherit fonts for form controls */
+.result input,
+.result button,
+.result textarea,
+.result select {
+    font: inherit;
+}
+/* 7. Avoid text overflows */
+.result p,
+.result h1,
+.result h2,
+.result h3,
+.result h4,
+.result h5,
+.result h6 {
+    overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+.result p {
+    text-wrap: pretty;
+}
+.result h1,
+.result h2,
+.result h3,
+.result h4,
+.result h5,
+.result h6 {
+    text-wrap: balance;
+}
+
+.result a,
+.result:link,
+.result:visited {
+    color: blue;
+    text-decoration: underline;
+}
+
+.result:link:active,
+.result:visited:active {
+    color: blue;
+}
+
+.result h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.result h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.result h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.result h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.result h5 {
+    display: block;
+    font-size: 0.83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+.result h6 {
+    display: block;
+    font-size: 0.67em;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+.result p {
+    margin: 0;
+    padding: 0;
+}

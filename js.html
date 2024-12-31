@@ -1,514 +1,449 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-bs-theme="dark">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <title>UCSG | JavaScript</title>
-        <link rel="stylesheet" type="text/css" href="styles/reset.css" />
-        <link rel="stylesheet" type="text/css" href="styles/main.css" />
-        <link rel="stylesheet" type="text/css" href="styles/tooltip.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="styles/bootstrap/bootstrap.css"
+        />
+        <link rel="stylesheet" type="text/css" href="styles/copylink.css" />
+        <link rel="stylesheet" type="text/css" href="styles/result-reset.css" />
+        <link rel="stylesheet" type="text/css" href="styles/js/result.css" />
         <link rel="stylesheet" type="text/css" href="styles/prism.css" />
     </head>
 
     <body>
         <header>
-            <h1 id="top">
-                <a href="index.html">The Ultimate CS Study Guide</a>
-            </h1>
-            <h2 id="test-name">JavaScript</h2>
+            <div class="container pt-2">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 id="top" class="h1">
+                            <a
+                                href="index.html"
+                                class="link-light link-underline-opacity-0 link-underline-opacity-100-hover"
+                                >The Ultimate CS Study Guide</a
+                            >
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="h1 text-end" id="test-name">JavaScript</h2>
+                    </div>
+                </div>
+            </div>
         </header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#1-operators-methods-keywords"
+        <hr class="border" />
+        <nav class="navbar navbar-expand-lg justify-content-center mb-2">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="#1-javaScript-operators-methods-and-keywords"
                         >Operators, Methods, and Keywords</a
                     >
                 </li>
-                <li>
-                    <a href="#2-variables-data-types-functions"
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="#2-variables-data-types-and-functions"
                         >Variables, Data Types, and Functions</a
                     >
                 </li>
-                <li><a href="#3-decisions-loops">Decisions and Loops</a></li>
-                <li>
-                    <a href="#4-document-object-model">Document Object Model</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#3-descisions-and-loops"
+                        >Decisions and Loops</a
+                    >
                 </li>
-                <li><a href="#5-html-forms">HTML Forms</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#4-document-object-model"
+                        >Document Object Model</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#5-html-forms">HTML Forms</a>
+                </li>
             </ul>
         </nav>
-        <main>
-            <ol class="domain-list">
-                <li class="domain-numbers">
-                    <h3
-                        class="tooltip"
-                        id="1-javaScript-operators-methods-keywords"
-                    >
-                        <a
-                            href="#1-operators-methods-keywords"
-                            class="jump"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >JavaScript Operators, Methods, and Keywords
-                            <span class="tooltiptext">&#x1f4cb;</span></a
-                        >
-                    </h3>
-                    <p>
-                        <span class="key-term">JavaScript</span>: JavaScript is
-                        programming language that is primarily used for
-                        scripting web pages to make them interactive. Because
-                        this exam assesses understanding of JavaScript in this
-                        context, it is recommended to have some background
-                        knowledge of HTML/CSS. If you are new to HTML/CSS, we
-                        have
-                        <a
-                            href="https://jpt-gross.github.io/ult-cs-study-guide/html-css.html"
-                            >a study guide for that here</a
-                        >.
-                    </p>
-                    <ol class="subdomain-list">
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="1-1-complete-debug-code-that-uses-assignment-arithmetic-operators"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#1-1-complete-debug-code-that-uses-assignment-arithmetic-operators"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that uses
-                                    assignment and arithmetic operators
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                            <ul>
-                                <li>
-                                    <span class="key-term">Assignment</span>:
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="1-2-apply-javaScript-best-practices"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#1-2-apply-javaScript-best-practices"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Apply JavaScript best practices
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="1-3-evaluate-the-use-of-internal-and-external-scripts"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#1-3-evaluate-the-use-of-internal-and-external-scripts"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Evaluate the use of internal and external
-                                    scripts
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="1-4-implement-exception-handling"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#1-4-implement-exception-handling"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Implement exception handling
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="1-5-complete-and-debug-code-that-interacts-with-the-browser-object-model"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#1-5-complete-and-debug-code-that-interacts-with-the-browser-object-model"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that interacts with
-                                    the Browser Object Model (BOM)
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                    </ol>
-                </li>
-                <li class="domain-numbers">
-                    <h3 class="tooltip" id="2-variables-data-types-functions">
-                        <a
-                            href="#2-variables-data-types-functions"
-                            class="jump"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >Variables, Data Types, and Functions
-                            <span class="tooltiptext">&#x1f4cb;</span></a
-                        >
-                    </h3>
-                    <ol class="subdomain-list">
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="2-1-declare-and-use-variables-of-primitive-data-types"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#2-1-declare-and-use-variables-of-primitive-data-types"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Declare and use variables of primitive data
-                                    types
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4 class="tooltip" id="2-2-declare-and-use-arrays">
-                                <a
-                                    class="jump"
-                                    href="#2-2-declare-and-use-arrays"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Declare and use arrays
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="2-3-complete-and-debug-code-that-uses-objects"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#2-3-complete-and-debug-code-that-uses-objects"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that uses objects
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="2-4-complete-and-debug-code-that-uses-built-in-math-functions"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#2-4-complete-and-debug-code-that-uses-built-in-math-functions"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that uses built-in
-                                    Math functions
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="2-5-complete-and-debug-functions-that-accept-parameters-and-return
-                                values"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#2-5-complete-and-debug-functions-that-accept-parameters-and-return
-                                    values"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug functions that accept
-                                    parameters and return values
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                    </ol>
-                </li>
-                <li class="domain-numbers">
-                    <h3 class="tooltip" id="3-decisions-loops">
-                        <a
-                            href="#3-decisions-loops"
-                            class="jump"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >Decisions and Loops
-                            <span class="tooltiptext">&#x1f4cb;</span></a
-                        >
-                    </h3>
-                    <ol class="subdomain-list">
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="3-1-evaluate-expressions-that-use-logical-and-comparison-operators"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#3-1-evaluate-expressions-that-use-logical-and-comparison-operators"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Evaluate expressions that use logical and
-                                    comparison operators
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="3-2-complete-and-debug-decision-statements"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#3-2-complete-and-debug-decision-statements"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug decision statements
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="3-3-complete-and-debug-loops"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#3-3-complete-and-debug-loops"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug loops
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                    </ol>
-                </li>
-                <li class="domain-numbers">
-                    <h3 class="tooltip" id="4-document-object-model">
-                        <a
-                            href="#4-document-object-model"
-                            class="jump"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >Document Object Model
-                            <span class="tooltiptext">&#x1f4cb;</span></a
-                        >
-                    </h3>
-                    <ol class="subdomain-list">
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="4-1-identify-and-construct-the-document-object-model-tree"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#4-1-identify-and-construct-the-document-object-model-tree"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Identify and construct the Document Object
-                                    Model (DOM) tree
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="4-2-identify-and-handle-document-form-keyboard-and-mouse-events"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#4-2-identify-and-handle-document-form-keyboard-and-mouse-events"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Identify and handle document, form,
-                                    keyboard, and mouse events
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="4-3-complete-and-debug-code-that-outputs-to-an-html-document"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#4-3-complete-and-debug-code-that-outputs-to-an-html-document"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that outputs to an
-                                    HTML document
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="4-4-complete-and-debug-cod-that-locates-modifies-and-adds-html-elements-and-attributes-to-documents"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#4-4-complete-and-debug-cod-that-locates-modifies-and-adds-html-elements-and-attributes-to-documents"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that locates,
-                                    modifies, and adds HTML elements and
-                                    attributes to documents
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="4-5-create-events-using-event-handlers-and-listeners"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#4-5-create-events-using-event-handlers-and-listeners"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Create events using event handlers and
-                                    listeners
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                    </ol>
-                </li>
+        <hr class="border" />
+        <main class="container">
+            <h3
+                class="display-5 copylink"
+                id="1-javaScript-operators-methods-and-keywords"
+            >
+                <a
+                    href="#1-javaScript-operators-methods-and-keywords"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    class="link-light link-underline-opacity-0"
+                    >1. JavaScript Operators, Methods, and Keywords
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h3>
+            <div class="container">
+                <p>
+                    <span class="text-info">JavaScript</span>: JavaScript is
+                    programming language that is primarily used for scripting
+                    web pages to make them interactive. Because this exam
+                    assesses understanding of JavaScript in this context, it is
+                    recommended to have some background knowledge of HTML/CSS.
+                    If you are new to HTML/CSS, we have
+                    <a
+                        href="https://jpt-gross.github.io/ult-cs-study-guide/html-css.html"
+                        >a study guide for that here</a
+                    >.
+                </p>
+            </div>
 
-                <li class="domain-numbers">
-                    <h3 class="tooltip" id="5-html-forms">
-                        <a
-                            href="#5-html-forms"
-                            class="jump"
-                            onclick="copyhref(event)"
-                            onmouseleave="revertSymbol(event)"
-                            >HTML Forms
-                            <span class="tooltiptext">&#x1f4cb;</span></a
-                        >
-                    </h3>
-                    <ol class="subdomain-list">
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="5-1-complete-and-debug-code-that-retrieves-form-input-and-sets-form-field-values"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#5-1-complete-and-debug-code-that-retrieves-form-input-and-sets-form-field-values"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that retrieves form
-                                    input and sets form field values
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="5-2-complete-and-debug-code-that-performs-input-validation"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#5-2-complete-and-debug-code-that-performs-input-validation"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Complete and debug code that performs input
-                                    validation
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                        <li class="subdomain-numbers">
-                            <h4
-                                class="tooltip"
-                                id="5-3-describe-the-form-submission-process"
-                            >
-                                <a
-                                    class="jump"
-                                    href="#5-3-describe-the-form-submission-process"
-                                    onclick="copyhref(event)"
-                                    onmouseleave="revertSymbol(event)"
-                                    >Describe the form submission process
-                                    <span class="tooltiptext"
-                                        >&#x1f4cb;</span
-                                    ></a
-                                >
-                            </h4>
-                        </li>
-                    </ol>
-                </li>
-            </ol>
+            <h4
+                class="copylink display-6"
+                id="1-1-complete-debug-code-that-uses-assignment-arithmetic-operators"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#1-1-complete-debug-code-that-uses-assignment-arithmetic-operators"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >1.1 Complete and debug code that uses assignment and
+                    arithmetic operators
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="1-2-apply-javaScript-best-practices"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#1-2-apply-javaScript-best-practices"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >1.2 Apply JavaScript best practices
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="1-3-evaluate-the-use-of-internal-and-external-scripts"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#1-3-evaluate-the-use-of-internal-and-external-scripts"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >1.3 Evaluate the use of internal and external scripts
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="1-4-implement-exception-handling"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#1-4-implement-exception-handling"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >1.4 Implement exception handling
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="1-5-complete-and-debug-code-that-interacts-with-the-browser-object-model"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#1-5-complete-and-debug-code-that-interacts-with-the-browser-object-model"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >1.5 Complete and debug code that interacts with the Browser
+                    Object Model (BOM)
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h3
+                class="display-5 copylink"
+                id="2-variables-data-types-and-functions"
+            >
+                <a
+                    href="#2-variables-data-types-and-functions"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    class="link-light link-underline-opacity-0"
+                    >2. Variables, Data Types, and Functions
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h3>
+
+            <h4
+                class="copylink display-6"
+                id="2-1-declare-and-use-variables-of-primitive-data-types"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#2-1-declare-and-use-variables-of-primitive-data-types"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >2.1 Declare and use variables of primitive data types
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4 class="copylink display-6" id="2-2-declare-and-use-arrays">
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#2-2-declare-and-use-arrays"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >2.2 Declare and use arrays
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="2-3-complete-and-debug-code-that-uses-objects"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#2-3-complete-and-debug-code-that-uses-objects"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >2.3 Complete and debug code that uses objects
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="2-4-complete-and-debug-code-that-uses-built-in-math-functions"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#2-4-complete-and-debug-code-that-uses-built-in-math-functions"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >2.4 Complete and debug code that uses built-in Math
+                    functions <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="2-5-complete-and-debug-functions-that-accept-parameters-and-return-values"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#2-5-complete-and-debug-functions-that-accept-parameters-and-return-values"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >2.5 Complete and debug functions that accept parameters and
+                    return values <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h3 class="display-5 copylink" id="3-descisions-and-loops">
+                <a
+                    href="#3-descisions-and-loops"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    class="link-light link-underline-opacity-0"
+                    >3. Decisions and Loops
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h3>
+
+            <h4
+                class="copylink display-6"
+                id="3-1-evaluate-expressions-that-use-logical-and-comparison-operators"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#3-1-evaluate-expressions-that-use-logical-and-comparison-operators"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >3.1 Evaluate expressions that use logical and comparison
+                    operators <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="3-2-complete-and-debug-decision-statements"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#3-2-complete-and-debug-decision-statements"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >3.2 Complete and debug decision statements
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4 class="copylink display-6" id="3-3-complete-and-debug-loops">
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#3-3-complete-and-debug-loops"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >3.3 Complete and debug loops
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h3 class="display-5 copylink" id="4-document-object-model">
+                <a
+                    href="#4-document-object-model"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    class="link-light link-underline-opacity-0"
+                    >4. Document Object Model
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h3>
+
+            <h4
+                class="copylink display-6"
+                id="4-1-identify-and-construct-the-document-object-model-tree"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#4-1-identify-and-construct-the-document-object-model-tree"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >4.1 Identify and construct the Document Object Model (DOM)
+                    tree <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="4-2-identify-and-handle-document-form-keyboard-and-mouse-events"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#4-2-identify-and-handle-document-form-keyboard-and-mouse-events"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >4.2 Identify and handle document, form, keyboard, and mouse
+                    events <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="4-3-complete-and-debug-code-that-outputs-to-an-html-document"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#4-3-complete-and-debug-code-that-outputs-to-an-html-document"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >4.3 Complete and debug code that outputs to an HTML
+                    document <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="4-4-complete-and-debug-cod-that-locates-modifies-and-adds-html-elements-and-attributes-to-documents"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#4-4-complete-and-debug-cod-that-locates-modifies-and-adds-html-elements-and-attributes-to-documents"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >4.4 Complete and debug code that locates, modifies, and
+                    adds HTML elements and attributes to documents
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="4-5-create-events-using-event-handlers-and-listeners"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#4-5-create-events-using-event-handlers-and-listeners"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >4.5 Create events using event handlers and listeners
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h3 class="display-5 copylink" id="5-html-forms">
+                <a
+                    href="#5-html-forms"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    class="link-light link-underline-opacity-0"
+                    >5. HTML Forms <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h3>
+
+            <h4
+                class="copylink display-6"
+                id="5-1-complete-and-debug-code-that-retrieves-form-input-and-sets-form-field-values"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#5-1-complete-and-debug-code-that-retrieves-form-input-and-sets-form-field-values"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >5.1 Complete and debug code that retrieves form input and
+                    sets form field values
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="5-2-complete-and-debug-code-that-performs-input-validation"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#5-2-complete-and-debug-code-that-performs-input-validation"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >5.2 Complete and debug code that performs input validation
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
+
+            <h4
+                class="copylink display-6"
+                id="5-3-describe-the-form-submission-process"
+            >
+                <a
+                    class="link-light link-underline-opacity-0"
+                    href="#5-3-describe-the-form-submission-process"
+                    onclick="copyhref(event)"
+                    onmouseleave="revertSymbol(event)"
+                    >5.3 Describe the form submission process
+                    <span class="tooltiptext">&#x1F517;</span></a
+                >
+            </h4>
         </main>
         <footer>
-            <nav>
-                <ul>
-                    <li><a href="#top">Back to Top</a></li>
+            <hr class="border" />
+            <nav class="navbar navbar-expand-lg justify-content-center mb-2">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Back to Top</a>
+                    </li>
                 </ul>
             </nav>
+            <hr class="border" />
         </footer>
         <script src="src/copylink.js"></script>
         <script src="src/prism.js"></script>

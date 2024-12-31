@@ -1,21 +1,99 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-bs-theme="dark">
     <head>
-        <title>The Ultimate CS Study Guide</title>
-        <link rel="stylesheet" type="text/css" href="styles/reset.css" />
-        <link rel="stylesheet" type="text/css" href="styles/home.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>UCSG | HTML/CSS</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="styles/bootstrap/bootstrap.css"
+        />
+        <link rel="stylesheet" type="text/css" href="styles/copylink.css" />
+        <link rel="stylesheet" type="text/css" href="styles/result-reset.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="styles/html-css/result.css"
+        />
+        <link rel="stylesheet" type="text/css" href="styles/prism.css" />
     </head>
+
     <body>
         <header>
-            <h1><a href="index.html">The Ultimate CS Study Guide</a></h1>
+            <div class="container pt-2">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 id="top" class="h1">
+                            <a
+                                href="index.html"
+                                class="link-light link-underline-opacity-0 link-underline-opacity-100-hover"
+                                >The Ultimate CS Study Guide</a
+                            >
+                        </h1>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="h1 text-end" id="test-name">HTML/CSS</h2>
+                    </div>
+                </div>
+            </div>
         </header>
-        <nav id="home-nav">
-            <ul>
-                <li><a href="html-css.html">HTML/CSS</a></li>
-                <li><a href="js.html">JavaScript</a></li>
-                <li><a href="java.html">Java</a></li>
-                <li><a href="csharp.html">C#</a></li>
-            </ul>
-        </nav>
+        <hr class="border" />
+        <main class="container">
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">HTML/CSS</h5>
+                            <p class="card-text">
+                                Create and work with static web pages. <br />
+                                <small class="text-body-secondary">
+                                    &#x2705; Guide complete &#x2705;</small
+                                >
+                            </p>
+                            <a href="html-css.html" class="btn btn-primary"
+                                >Study Guide</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">JavaScript</h5>
+                            <p class="card-text">
+                                Make web pages interactive <br />
+                                <small class="text-body-secondary"
+                                    >&#x1F6A7; Guide is under construction
+                                    &#x1F6A7;</small
+                                >
+                            </p>
+                            <a href="js.html" class="btn btn-primary"
+                                >Study Guide</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Java</h5>
+                            <p class="card-text">
+                                Create applets that can run anywhere. <br />
+                                <small class="text-body-secondary"
+                                    >&#x1F6A7; Guide has not been started yet
+                                    &#x1F6A7;</small
+                                >
+                            </p>
+                            <a href="java.html" class="btn btn-primary"
+                                >Study Guide</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </body>
 </html>

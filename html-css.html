@@ -2277,33 +2277,17 @@ div.rect3 {
                             </div>
                             <div class="row border">
                                 <div
-                                    class="col-lg-12 border"
-                                    style="
-                                        background-color: white;
-                                        color: black;
-                                        overflow-x: hidden;
-                                    "
+                                    class="col-lg-12 border result"
+                                    id="result-5-1a"
                                 >
-                                    <div
-                                        style="
-                                            background-color: cyan;
-                                            position: relative;
-                                            left: 50px;
-                                        "
-                                    >
+                                    <div class="rect1">
                                         <p>Relative</p>
                                     </div>
-                                    <div
-                                        style="
-                                            background-color: magenta;
-                                            position: absolute;
-                                            left: 50%;
-                                        "
-                                    >
+                                    <div class="rect2">
                                         <p>Absolute</p>
                                     </div>
 
-                                    <div style="background-color: yellow">
+                                    <div class="rect3">
                                         <p>Static</p>
                                     </div>
                                 </div>
@@ -2410,29 +2394,18 @@ div.rect3 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="
-                                    background-color: white;
-                                    color: black;
-                                    overflow-x: hidden;
-                                "
+                                class="col-lg-12 border result"
+                                id="result-5-1b"
                             >
-                                <div
-                                    style="background-color: cyan; float: left"
-                                >
+                                <div class="rect1">
                                     <p>Float left</p>
                                 </div>
 
-                                <div
-                                    style="
-                                        background-color: magenta;
-                                        float: right;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>Float right</p>
                                 </div>
 
-                                <div style="background-color: yellow">
+                                <div class="rect3">
                                     <p>No float</p>
                                 </div>
                             </div>
@@ -2491,40 +2464,18 @@ div.rect3 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="
-                                    background-color: white;
-                                    color: black;
-                                    overflow-x: hidden;
-                                "
+                                class="col-lg-12 border result"
+                                id="result-5-1c"
                             >
-                                <div
-                                    style="
-                                        background-color: cyan;
-                                        height: 50px;
-                                        width: 100px;
-                                    "
-                                >
-                                    <p>small</p>
+                                <div class="rect1">
+                                    <p>Small</p>
                                 </div>
 
-                                <div
-                                    style="
-                                        background-color: magenta;
-                                        height: 150px;
-                                        width: 300px;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>Medium</p>
                                 </div>
 
-                                <div
-                                    style="
-                                        background-color: yellow;
-                                        height: 200px;
-                                        width: 400px;
-                                    "
-                                >
+                                <div class="rect3">
                                     <p>Large</p>
                                 </div>
                             </div>
@@ -2539,10 +2490,11 @@ div.rect3 {
                         example below that if you grow/shrink the "text-area"
                         element, the cyan element will grow and shrink to fit in
                         the space to the right, but it wont get any larger than
-                        900 pixels. Also, if the "text-area" gets so wide that
-                        the cyan element becomes less than 400 pixels, it will
-                        jump down below the "text-area" element as it cannot
-                        become that small.
+                        60 percent of the width of the example box. Also, if the
+                        "text-area" gets so wide that the cyan element becomes
+                        less than 20 percent of the width of the example box, it
+                        will jump down below the "text-area" element as it
+                        cannot become that small.
                     </li>
                     <div class="container my-2">
                         <div class="row border">
@@ -2556,7 +2508,7 @@ div.rect3 {
 </head>
 <body>
     <div class="rect1">
-        <textarea name="" id="" cols="80" rows="10">
+        <textarea name="" id="" cols="80" rows="6">
         </textarea>
     </div>
     <div class="rect2">
@@ -2581,38 +2533,26 @@ div.rect3 {
 div.rect2 {
     background-color: cyan;
     height: 6em;
-    min-width: 400px;
-    max-width: 900px;
+    min-width: 20%;
+    max-width: 60%;
+    overflow-y: hidden;
 }</script>
                             </div>
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="
-                                    background-color: white;
-                                    color: black;
-                                    overflow-x: hidden;
-                                "
+                                class="col-lg-12 border result"
+                                id="result-5-1d"
                             >
-                                <div class="rect1" style="float: left">
+                                <div class="rect1">
                                     <textarea
                                         name=""
                                         id=""
                                         cols="50"
-                                        rows="10"
+                                        rows="6"
                                     ></textarea>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: cyan;
-                                        height: 6em;
-                                        min-width: 400px;
-                                        max-width: 900px;
-                                        overflow-y: hidden;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Nobis excepturi omnis
@@ -2696,22 +2636,10 @@ div.rect2 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="
-                                    background-color: white;
-                                    color: black;
-                                    height: 20em;
-                                "
+                                class="col-lg-12 border result"
+                                id="result-5-1e"
                             >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        width: 15em;
-                                        height: 5em;
-                                        float: left;
-                                    "
-                                >
+                                <div class="rect1">
                                     <p>
                                         Overflow Left On Default:
                                         <br />
@@ -2723,18 +2651,21 @@ div.rect2 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        float: left;
-                                        width: 15em;
-                                        height: 5em;
-                                        overflow: auto;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>
                                         Overflow Set To Auto:
+                                        <br />
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Nobis excepturi omnis
+                                        sint explicabo quisquam et rerum,
+                                        molestiae temporibus fuga est ea
+                                        architecto quia nihil laboriosam dicta
+                                        recusandae ut consectetur! Excepturi!
+                                    </p>
+                                </div>
+                                <div class="rect3">
+                                    <p>
+                                        Overflow Left On Default:
                                         <br />
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Nobis excepturi omnis
@@ -2846,18 +2777,10 @@ div.rect4 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="background-color: white; color: black"
+                                class="col-lg-12 border result"
+                                id="result-5-1f"
                             >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                    "
-                                >
+                                <div class="rect1">
                                     <p>
                                         Text Align: Default:
                                         <br />
@@ -2869,16 +2792,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        text-align: center;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>
                                         Text Align: Center:
                                         <br />
@@ -2890,16 +2804,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect3"
-                                    style="
-                                        background-color: yellow;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        text-align: right;
-                                    "
-                                >
+                                <div class="rect3">
                                     <p>
                                         Text Align: Right:
                                         <br />
@@ -2911,16 +2816,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect4"
-                                    style="
-                                        background-color: orange;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        text-align: justify;
-                                    "
-                                >
+                                <div class="rect4">
                                     <p>
                                         Text Align: Justify:
                                         <br />
@@ -2967,7 +2863,7 @@ div.rect4 {
     <div class="rect1">
         <p>
             This cyan element is displayed as a "block" element. This
-            <span class="line1" style="background-color: pink;">
+            <span class="line1">
                 pink "span" element displays as "inline".
             </span>.
             You cannot see the magenta element below because its
@@ -3011,45 +2907,24 @@ span.line1 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="background-color: white; color: black"
+                                class="col-lg-12 border result"
+                                id="result-5-1g"
                             >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        padding: 0.5em;
-                                    "
-                                >
+                                <div class="rect1">
                                     <p>
                                         This cyan element is displayed as a
                                         "block" element. This
-                                        <span
-                                            class="line1"
-                                            style="background-color: pink"
+                                        <span class="line1"
                                             >pink "span" element displays as
                                             "inline"</span
                                         >. You cannot see the magenta element
                                         below because its "display" is "none".
                                     </p>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        padding: 0.5em;
-                                        display: none;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>You can't see this text.</p>
                                 </div>
-                                <div
-                                    class="rect3"
-                                    style="
-                                        background-color: yellow;
-                                        padding: 0.5em;
-                                    "
-                                >
+                                <div class="rect3">
                                     <p>
                                         This is another "block" element that has
                                         moved up to fill the space of the
@@ -3113,41 +2988,19 @@ div.rect3 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="background-color: white; color: black"
+                                class="col-lg-12 border result"
+                                id="result-5-1h"
                             >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        padding: 0.5em;
-                                        float: none;
-                                    "
-                                >
+                                <div class="rect1">
                                     <p>
                                         This element is above an invisible
                                         element.
                                     </p>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        padding: 0.5em;
-                                        visibility: hidden;
-                                        float: none;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>You can't see this text.</p>
                                 </div>
-                                <div
-                                    class="rect3"
-                                    style="
-                                        background-color: yellow;
-                                        padding: 0.5em;
-                                        float: none;
-                                    "
-                                >
+                                <div class="rect3">
                                     <p>
                                         This element is below an invisible
                                         element.
@@ -3264,43 +3117,19 @@ p.sen4 {
                         </div>
                         <div class="row border">
                             <div
-                                class="col-lg-12 border"
-                                style="background-color: white; color: black"
+                                class="col-lg-12 border result"
+                                id="result-5-2a"
                             >
-                                <p
-                                    class="sen1"
-                                    style="
-                                        font-family: 'Times New Roman', Times,
-                                            serif;
-                                        color: forestgreen;
-                                        font-size: 1em;
-                                    "
-                                >
+                                <p class="sen1">
                                     The quick brown fox jumps over the lazy dog
                                 </p>
-                                <p
-                                    class="sen2"
-                                    style="
-                                        text-decoration: underline;
-                                        font-weight: bold;
-                                        font-size: 2em;
-                                    "
-                                >
+                                <p class="sen2">
                                     The quick brown fox jumps over the lazy dog
                                 </p>
-                                <p
-                                    class="sen3"
-                                    style="font-style: italic; font-size: 3em"
-                                >
+                                <p class="sen3">
                                     The quick brown fox jumps over the lazy dog
                                 </p>
-                                <p
-                                    class="sen4"
-                                    style="
-                                        font-variant: small-caps;
-                                        font-size: 4em;
-                                    "
-                                >
+                                <p class="sen4">
                                     The quick brown fox jumps over the lazy dog
                                 </p>
                             </div>
@@ -3453,20 +3282,8 @@ div.rect4 {
                             </div>
                         </div>
                         <div class="row border">
-                            <div
-                                class="col-lg-12"
-                                style="background-color: white; color: black"
-                            >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        text-indent: 1em;
-                                    "
-                                >
+                            <div class="col-lg-12 result" id="result-5-2b">
+                                <div class="rect1">
                                     <p>Text Indent:</p>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur
@@ -3480,16 +3297,7 @@ div.rect4 {
                                         consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        line-height: 2em;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>
                                         Line Height:
                                         <br />
@@ -3501,16 +3309,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect3"
-                                    style="
-                                        background-color: yellow;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        word-wrap: break-word;
-                                    "
-                                >
+                                <div class="rect3">
                                     <p>
                                         Word Wrap:
                                         <br />
@@ -3519,16 +3318,7 @@ div.rect4 {
                                         long word.
                                     </p>
                                 </div>
-                                <div
-                                    class="rect4"
-                                    style="
-                                        background-color: orange;
-                                        padding: 0.5em;
-                                        float: left;
-                                        width: 25%;
-                                        letter-spacing: 0.5em;
-                                    "
-                                >
+                                <div class="rect4">
                                     <p>
                                         Letter Spacing:
                                         <br />
@@ -3671,7 +3461,7 @@ div.rect3 {
 div.rect4 {
     float: left;
     width: 25%;
-    border-color: #000000
+    border-color: #000000;
     border-style: inset;
     border-width: 1em;
     background-color: orange;
@@ -3679,21 +3469,8 @@ div.rect4 {
                         </div>
                     </div>
                     <div class="row border">
-                        <div
-                            class="col-lg-12"
-                            style="background-color: white; color: black"
-                        >
-                            <div
-                                class="rect1"
-                                style="
-                                    background-color: cyan;
-                                    padding: 0.5em;
-                                    float: left;
-                                    width: 24%;
-                                    margin: 2px;
-                                    border: 0.25em solid rgb(255, 0, 0);
-                                "
-                            >
+                        <div class="col-lg-12 result" id="result-5-3a">
+                            <div class="rect1">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Nobis excepturi omnis sint
@@ -3703,17 +3480,7 @@ div.rect4 {
                                     Excepturi!
                                 </p>
                             </div>
-                            <div
-                                class="rect2"
-                                style="
-                                    background-color: magenta;
-                                    padding: 0.5em;
-                                    float: left;
-                                    width: 24%;
-                                    margin: 2px;
-                                    border: 0.5em dashed rgb(0, 0, 255);
-                                "
-                            >
+                            <div class="rect2">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Nobis excepturi omnis sint
@@ -3723,17 +3490,7 @@ div.rect4 {
                                     Excepturi!
                                 </p>
                             </div>
-                            <div
-                                class="rect3"
-                                style="
-                                    background-color: yellow;
-                                    padding: 0.5em;
-                                    float: left;
-                                    width: 24%;
-                                    margin: 2px;
-                                    border: 0.75em dotted #00ff00;
-                                "
-                            >
+                            <div class="rect3">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Nobis excepturi omnis sint
@@ -3743,17 +3500,7 @@ div.rect4 {
                                     Excepturi!
                                 </p>
                             </div>
-                            <div
-                                class="rect4"
-                                style="
-                                    background-color: orange;
-                                    padding: 0.5em;
-                                    float: left;
-                                    width: 24%;
-                                    margin: 2px;
-                                    border: 1em inset #000000;
-                                "
-                            >
+                            <div class="rect4">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Nobis excepturi omnis sint
@@ -4066,18 +3813,8 @@ div.rect4 {
                             </div>
                         </div>
                         <div class="row border">
-                            <div
-                                class="col-lg-12"
-                                style="background-color: white; color: black"
-                            >
-                                <div
-                                    class="rect1"
-                                    style="
-                                        background-color: cyan;
-                                        padding: 0.5em;
-                                        width: 25%;
-                                    "
-                                >
+                            <div class="col-lg-12 result" id="result-5-4b">
+                                <div class="rect1">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Nobis excepturi omnis
@@ -4087,14 +3824,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect2"
-                                    style="
-                                        background-color: magenta;
-                                        padding: 0.5em;
-                                        width: 25%;
-                                    "
-                                >
+                                <div class="rect2">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Nobis excepturi omnis
@@ -4104,14 +3834,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect3"
-                                    style="
-                                        background-color: yellow;
-                                        padding: 0.5em;
-                                        width: 25%;
-                                    "
-                                >
+                                <div class="rect3">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Nobis excepturi omnis
@@ -4121,14 +3844,7 @@ div.rect4 {
                                         recusandae ut consectetur! Excepturi!
                                     </p>
                                 </div>
-                                <div
-                                    class="rect4"
-                                    style="
-                                        background-color: orange;
-                                        padding: 0.5em;
-                                        width: 25%;
-                                    "
-                                >
+                                <div class="rect4">
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Nobis excepturi omnis
@@ -4207,8 +3923,8 @@ div.grid-container > div {
                         </div>
                         <div class="row border">
                             <div
-                                class="resultcol-lg-12"
-                                style="background-color: white; color: black"
+                                class="resultcol-lg-12 result"
+                                id="result-5-4c"
                             >
                                 <div class="grid-container">
                                     <div class="grid-header">Header</div>
@@ -4228,7 +3944,7 @@ div.grid-container > div {
                         class="link-light link-underline-opacity-0"
                         onclick="copyhref(event)"
                         onmouseleave="revertSymbol(event)"
-                        >3. Accessibility, Readability, and Testing
+                        >6. Accessibility, Readability, and Testing
                         <span class="tooltiptext">&#x1F517;</span></a
                     >
                 </h3>
@@ -4241,7 +3957,7 @@ div.grid-container > div {
                         class="link-light link-underline-opacity-0"
                         onclick="copyhref(event)"
                         onmouseleave="revertSymbol(event)"
-                        >3.1 Construct well-formed HTML and CSS markup that
+                        >6.1 Construct well-formed HTML and CSS markup that
                         conforms to industry best practices
                         <span class="tooltiptext">&#x1F517;</span></a
                     >
@@ -4324,21 +4040,10 @@ p.foo {
                             </div>
                         </div>
                         <div class="row border">
-                            <div
-                                class="col-lg-12"
-                                style="background-color: white; color: black"
-                            >
-                                <p
-                                    class="hello"
-                                    style="
-                                        color: magenta;
-                                        text-decoration: underline;
-                                    "
-                                >
-                                    Hello
-                                </p>
-                                <p class="foo" style="color: green">Foo</p>
-                                <p class="foo" style="color: green">Bar</p>
+                            <div class="col-lg-12 result" id="result-6-1a">
+                                <p class="hello">Hello</p>
+                                <p class="foo">Foo</p>
+                                <p class="foo">Bar</p>
                             </div>
                         </div>
                     </div>

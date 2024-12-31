@@ -57,3 +57,315 @@ td {
 #result-3-1e span {
     color: green;
 }
+
+#result-5-1a {
+    overflow-x: hidden;
+}
+
+#result-5-1a div.rect1 {
+    background-color: cyan;
+    position: relative;
+    left: 50px;
+}
+
+#result-5-1a div.rect2 {
+    background-color: magenta;
+    position: absolute;
+    left: 50%;
+}
+
+#result-5-1a div.rect3 {
+    background-color: yellow;
+    position: static;
+    left: 50px;
+}
+
+#result-5-1b div.rect1 {
+    background-color: cyan;
+    float: left;
+}
+
+#result-5-1b div.rect2 {
+    background-color: magenta;
+    float: right;
+}
+
+#result-5-1b div.rect3 {
+    background-color: yellow;
+}
+
+#result-5-1c div.rect1 {
+    background-color: cyan;
+    height: 50px;
+    width: 100px;
+}
+
+#result-5-1c div.rect2 {
+    background-color: magenta;
+    height: 150px;
+    width: 300px;
+}
+
+#result-5-1c div.rect3 {
+    background-color: yellow;
+    height: 200px;
+    width: 400px;
+}
+
+#result-5-1d div.rect1 {
+    float: left;
+}
+
+#result-5-1d div.rect2 {
+    background-color: cyan;
+    height: 6em;
+    min-width: 20%;
+    max-width: 60%;
+    overflow-y: hidden;
+}
+
+#result-5-1e div.rect1 {
+    background-color: cyan;
+    float: left;
+    width: 15em;
+    height: 5em;
+}
+
+#result-5-1e div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 15em;
+    height: 5em;
+    overflow: auto;
+}
+
+#result-5-1e div.rect3 {
+    float: left;
+    width: 15em;
+    visibility: hidden;
+}
+
+#result-5-1f div.rect1 {
+    background-color: cyan;
+    float: left;
+    width: 25%;
+    padding: 0.25em;
+}
+
+#result-5-1f div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+#result-5-1f div.rect3 {
+    background-color: yellow;
+    float: left;
+    width: 25%;
+    text-align: right;
+    padding: 0.25em;
+}
+
+#result-5-1f div.rect4 {
+    background-color: orange;
+    float: left;
+    width: 25%;
+    text-align: justify;
+    padding: 0.25em;
+}
+
+#result-5-1g div.rect1 {
+    background-color: cyan;
+    display: block;
+}
+
+#result-5-1g div.rect2 {
+    background-color: magenta;
+    display: none;
+}
+
+#result-5-1g div.rect3 {
+    background-color: yellow;
+}
+
+#result-5-1g span.line1 {
+    background-color: pink;
+    display: inline;
+}
+
+#result-5-1h div.rect1 {
+    background-color: cyan;
+}
+
+#result-5-1h div.rect2 {
+    background-color: magenta;
+    visibility: hidden;
+}
+
+#result-5-1h div.rect3 {
+    background-color: yellow;
+}
+
+#result-5-2a p.sen1 {
+    font-family: "Times New Roman", Times, serif;
+    color: forestgreen;
+    font-size: 1em;
+}
+
+#result-5-2a p.sen2 {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#result-5-2a p.sen3 {
+    font-style: italic;
+    font-size: 3em;
+}
+
+#result-5-2a p.sen4 {
+    font-variant: small-caps;
+    font-size: 4em;
+}
+
+#result-5-2b div.rect1 {
+    background-color: cyan;
+    float: left;
+    width: 25%;
+    text-indent: 1em;
+}
+
+#result-5-2b div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 25%;
+    line-height: 2em;
+}
+
+#result-5-2b div.rect3 {
+    background-color: yellow;
+    float: left;
+    width: 25%;
+    word-wrap: break-word;
+}
+
+#result-5-2b div.rect4 {
+    background-color: orange;
+    float: left;
+    width: 25%;
+    letter-spacing: 0.5em;
+}
+
+#result-5-3a div.rect1 {
+    float: left;
+    width: 25%;
+    border-color: rgb(255, 0, 0);
+    border-style: solid;
+    border-width: 0.25em;
+    background-color: cyan;
+}
+
+#result-5-3a div.rect2 {
+    float: left;
+    width: 25%;
+    border-color: rgb(0, 0, 255);
+    border-style: dashed;
+    border-width: 0.5em;
+    background-color: magenta;
+}
+
+#result-5-3a div.rect3 {
+    float: left;
+    width: 25%;
+    border-color: #00ff00;
+    border-style: dotted;
+    border-width: 0.75em;
+    background-color: yellow;
+}
+
+#result-5-3a div.rect4 {
+    float: left;
+    width: 25%;
+    border-color: #000000;
+    border-style: inset;
+    border-width: 1em;
+    background-color: orange;
+}
+
+#result-5-4b div.rect1 {
+    background-color: cyan;
+    float: left;
+    width: 25%;
+}
+
+#result-5-4b div.rect2 {
+    background-color: magenta;
+    float: left;
+    width: 25%;
+}
+
+#result-5-4b div.rect3 {
+    background-color: yellow;
+    float: left;
+    width: 25%;
+}
+
+#result-5-4b div.rect4 {
+    background-color: orange;
+    float: left;
+    width: 25%;
+}
+
+@media only screen and (max-width: 1000px) {
+    #result-5-4b div.rect1,
+    #result-5-4b div.rect2,
+    #result-5-4b div.rect3,
+    #result-5-4b div.rect4 {
+        float: none;
+    }
+}
+
+#result-5-4c div.grid-header {
+    grid-area: header;
+}
+#result-5-4c div.grid-nav {
+    grid-area: nav;
+}
+#result-5-4c div.grid-article1 {
+    grid-area: article1;
+}
+#result-5-4c div.grid-article2 {
+    grid-area: article2;
+}
+#result-5-4c div.grid-footer {
+    grid-area: footer;
+}
+
+#result-5-4c div.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav article1 article2"
+        "nav article1 article2"
+        "nav footer footer";
+    gap: 1em;
+    background-color: orange;
+    padding: 1em;
+}
+
+#result-5-4c div.grid-container > div {
+    background-color: green;
+    text-align: center;
+    padding: 1.5em 0;
+    font-size: 1.5em;
+}
+
+#result-6-1a p.hello {
+    color: magenta;
+    text-decoration: underline;
+}
+
+#result-6-1a p.foo {
+    color: green;
+}

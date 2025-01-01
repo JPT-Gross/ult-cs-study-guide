@@ -5597,7 +5597,7 @@ fieldset:disabled .btn {
     --bs-toast-padding-x: 0.75rem;
     --bs-toast-padding-y: 0.5rem;
     --bs-toast-spacing: 1.5rem;
-    --bs-toast-max-width: 350px;
+    --bs-toast-max-width: fit-content;
     --bs-toast-font-size: 0.875rem;
     --bs-toast-color: ;
     --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);

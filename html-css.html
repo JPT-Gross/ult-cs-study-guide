@@ -683,7 +683,7 @@
                 color: orange;
             }
 
-            div p {
+            div > p {
                 color: magenta;
             }
         </style>
@@ -773,9 +773,9 @@
                             Descendent selectors allow us to style only elements
                             of the page that exist inside of other elements. On
                             line 24 we select just the "p" elements that are
-                            nested inside of "div" elements by typing "div p" as
-                            our selector and we chose a value of "magenta" for
-                            the "color" property. Notice that the only "p"
+                            nested inside of "div" elements by typing "div > p"
+                            as our selector and we chose a value of "magenta"
+                            for the "color" property. Notice that the only "p"
                             element that is colored magenta is the last one
                             which is nested in a "div" element.
                         </li>

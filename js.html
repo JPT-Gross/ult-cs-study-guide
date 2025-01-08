@@ -142,12 +142,51 @@
                         </div>
                     </div>
                 </div>
-
                 <li>
-                    <span class="text-info">Assignment Operators</span>: We can
-                    combine assignment with mathmatic operators to perform
-                    operations on a variable and update their values all on one
-                    line.
+                    <span class="text-info">Operators</span>: Basic math
+                    operations work exactly as we would expect. We can add (+),
+                    subtract (-), multiply (*), divide (/), and get the
+                    remainder of division (%); also known as modulus.
+                </li>
+                <div class="container my-2">
+                    <div class="row border">
+                        <div class="col-lg-8 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>UCSSG | JavaScript</title>
+  </head>
+  <body>
+    <p>1 + 1 = <span id="out1"></span>
+    <p>1 - 1 = <span id="out2"></span>
+    <p>2 * 2 = <span id="out3"></span>
+    <p>10 / 2 = <span id="out4"></span>
+    <p>10 % 2 = <span id="out5"></span>
+  </body>
+  <script>
+    document.getElementById("out1").innerHTML = 1 + 1;
+    document.getElementById("out2").innerHTML = 1 - 1;
+    document.getElementById("out3").innerHTML = 2 * 2;
+    document.getElementById("out4").innerHTML = 10 / 2;
+    document.getElementById("out5").innerHTML = 10 % 2;
+    &lt;/script>
+</html></script>
+                        </div>
+                        <div class="col-lg-4 border result">
+                            <p>1 + 1 = 2</p>
+                            <p>1 - 1 = 0</p>
+                            <p>2 * 2 = 4</p>
+                            <p>10 / 2 = 5</p>
+                            <p>10 % 2 = 0</p>
+                        </div>
+                    </div>
+                </div>
+                <li>
+                    <span class="text-info">Compound Assignment Operators</span
+                    >: We can combine assignment with mathematic operators to
+                    perform operations on a variable and update their values all
+                    on one line.
                 </li>
                 <div class="container my-2">
                     <div class="row border">
@@ -164,19 +203,22 @@
       The value of y is: <span id="outy"></span>
       The value of z is: <span id="outz"></span>
       The value of a is: <span id="outa"></span>
+      The value of b is: <span id="outa"></span>
     </p>
   </body>
   <script>
-    var x, y, z, a;
-    x = y = z = a = 5;
+    var x, y, z, a, b;
+    x = y = z = a = b = 5;
     x += 2;
     y -= 2;
     z *= 2;
     a /= 2;
+    b %= 2;
     document.getElementById("outx").innerHTML = x;
     document.getElementById("outy").innerHTML = y;
     document.getElementById("outz").innerHTML = z;
     document.getElementById("outa").innerHTML = a;
+    document.getElementById("outa").innerHTML = b;
     &lt;/script>
 </html></script>
                         </div>
@@ -185,15 +227,10 @@
                             <p>The value of y is: 3</p>
                             <p>The value of z is: 10</p>
                             <p>The value of a is: 2.5</p>
+                            <p>The value of b is: 1</p>
                         </div>
                     </div>
                 </div>
-                <ul>
-                    <li><span class="text-info">Addition</span>:</li>
-                    <li><span class="text-info">Subtraction</span>:</li>
-                    <li><span class="text-info">Multiplication</span>:</li>
-                    <li><span class="text-info">Division</span>:</li>
-                </ul>
             </ul>
 
             <h4 class="copylink h3" id="1-2-apply-javaScript-best-practices">

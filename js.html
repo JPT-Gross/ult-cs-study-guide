@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="utf-8" />
         <title>UCSSG | JavaScript</title>
+        <link rel="icon" type="image/x-icon" href="media/ico/favicon.ico" />
         <link
             rel="stylesheet"
             type="text/css"
@@ -108,6 +109,92 @@
                     #</a
                 >
             </h4>
+            <ul>
+                <li>
+                    <span class="text-info">Assignment</span>: Assignment in
+                    JavaScript refers to assigning (or reassigning) a value to a
+                    variable. To assign a value to a variable we use the equal
+                    sign (=).
+                </li>
+                <div class="container my-2">
+                    <div class="row border">
+                        <div class="col-lg-8 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>UCSSG | JavaScript</title>
+  </head>
+  <body>
+    <p>
+      The value of x is: <span id="out"></span>
+    </p>
+  </body>
+  <script>
+    var x;
+    var = 5;
+    document.getElementById("out").innerHTML = x;
+  &lt;/script>
+</html></script>
+                        </div>
+                        <div class="col-lg-4 border result">
+                            <p>The value of x is: 5</p>
+                        </div>
+                    </div>
+                </div>
+
+                <li>
+                    <span class="text-info">Assignment Operators</span>: We can
+                    combine assignment with mathmatic operators to perform
+                    operations on a variable and update their values all on one
+                    line.
+                </li>
+                <div class="container my-2">
+                    <div class="row border">
+                        <div class="col-lg-8 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>UCSSG | JavaScript</title>
+  </head>
+  <body>
+    <p>
+      The value of x is: <span id="outx"></span>
+      The value of y is: <span id="outy"></span>
+      The value of z is: <span id="outz"></span>
+      The value of a is: <span id="outa"></span>
+    </p>
+  </body>
+  <script>
+    var x, y, z, a;
+    x = y = z = a = 5;
+    x += 2;
+    y -= 2;
+    z *= 2;
+    a /= 2;
+    document.getElementById("outx").innerHTML = x;
+    document.getElementById("outy").innerHTML = y;
+    document.getElementById("outz").innerHTML = z;
+    document.getElementById("outa").innerHTML = a;
+    &lt;/script>
+</html></script>
+                        </div>
+                        <div class="col-lg-4 border result">
+                            <p>The value of x is: 7</p>
+                            <p>The value of y is: 3</p>
+                            <p>The value of z is: 10</p>
+                            <p>The value of a is: 2.5</p>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li><span class="text-info">Addition</span>:</li>
+                    <li><span class="text-info">Subtraction</span>:</li>
+                    <li><span class="text-info">Multiplication</span>:</li>
+                    <li><span class="text-info">Division</span>:</li>
+                </ul>
+            </ul>
 
             <h4 class="copylink h3" id="1-2-apply-javaScript-best-practices">
                 1.2 Apply JavaScript best practices

@@ -158,11 +158,11 @@
     <title>UCSSG | JavaScript</title>
   </head>
   <body>
-    <p>1 + 1 = <span id="out1"></span>
-    <p>1 - 1 = <span id="out2"></span>
-    <p>2 * 2 = <span id="out3"></span>
-    <p>10 / 2 = <span id="out4"></span>
-    <p>10 % 2 = <span id="out5"></span>
+    <p>1 + 1 = <span id="out1"></span></p>
+    <p>1 - 1 = <span id="out2"></span></p>
+    <p>2 * 2 = <span id="out3"></span></p>
+    <p>10 / 2 = <span id="out4"></span></p>
+    <p>10 % 2 = <span id="out5"></span></p>
   </body>
   <script>
     document.getElementById("out1").innerHTML = 1 + 1;
@@ -170,7 +170,7 @@
     document.getElementById("out3").innerHTML = 2 * 2;
     document.getElementById("out4").innerHTML = 10 / 2;
     document.getElementById("out5").innerHTML = 10 % 2;
-    &lt;/script>
+  &lt;/script>
 </html></script>
                         </div>
                         <div class="col-lg-4 border result">
@@ -242,6 +242,217 @@
                     #</a
                 >
             </h4>
+            <ul>
+                <li>
+                    <span class="text-info">Comments</span>: Comments are text
+                    written inside of code that is ignored when the code is ran.
+                    There are two major reasons for adding comments to our code.
+                    One, we add comments to help ourselves and other programmers
+                    understand the code we have written. Two, we add comments to
+                    temporarily ignore code segments so they do not run while
+                    testing code. We use two forward slashes (//) to comment out
+                    a single line, and a forward slash and asterisk (/*) to
+                    start a multi-line comment, then an asterisk and forward
+                    slash to end a multi-line comment.
+                </li>
+                <div class="container my-2">
+                    <div class="row border">
+                        <div class="col-lg-8 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>UCSSG | JavaScript</title>
+  </head>
+  <body>
+    <p>
+      The value of x is: <span id="outx"></span>
+    </p>
+  </body>
+  <script>
+    var x = 5;
+    // The code on the line below will add 5 to x and update the value.
+    x += 5;
+    // x *= 5;
+    document.getElementById("outx").innerHTML = x;
+    /* 
+      x is 10, not 50 because line 15 was ignored 
+      due to being commented out.
+    */
+    &lt;/script>
+</html></script>
+                        </div>
+                        <div class="col-lg-4 border result">
+                            <p>The value of x is: 10</p>
+                        </div>
+                    </div>
+                </div>
+                <li>
+                    <span class="text-info">Indentation</span>: Code indentation
+                    is imporant for clarity and readability of our code. The
+                    browser will still run our code correctly if we do not
+                    indent our code, but it will be much harder to read. To
+                    demonstrate indentation, we will see an if/else statement
+                    below. We haven't covered this topic yet, so don't worry
+                    about what the code does, just focus on the way that it is
+                    written.
+                </li>
+                <div class="container my-2">
+                    <div class="row border">
+                        <div class="col-lg-8 border bg-body-tertiary">
+                            <!-- prettier-ignore -->
+                            <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>UCSSG | JavaScript</title>
+  </head>
+  <body>
+    <p>
+      The value of x is: <span id="outx"></span>
+    </p>
+  </body>
+  <script>
+    var x = 5;
+    var y = 5;
+    /*
+      The if/else statement below
+      does not have proper indentation
+      or spacing and is very difficult
+      to read:
+    */
+    if(x<10){
+    x+=10;}
+    else{
+    x-=10;}
+    // The code below is formatted correctly:
+    if (y < 10) {
+      y += 10;
+    }
+    else {
+      y -= 10;
+    }
+    document.getElementById("outx").innerHTML = x;
+    document.getElementById("outy").innerHTML = y;
+    &lt;/script>
+</html></script>
+                        </div>
+                        <div class="col-lg-4 border result">
+                            <p>The value of x is: 15</p>
+                            <p>The value of y is: 15</p>
+                        </div>
+                    </div>
+                </div>
+                <li>
+                    <span class="text-info">Naming Conventions</span>: Variables
+                    and functions can be named by the programmer who is writing
+                    the code. Because we can choose any names we'd like, it is
+                    imporatant to choose descriptive names and stick to a
+                    standard convention for capitalization. JavaScript
+                    conventions are to use
+                    <span class="text-info">camelCase</span>, which is to start
+                    names with a lowercase letter, than each new word starts
+                    with a capital letter, just like in the name camelCase.
+                    Names can include any letter of the alphabet, upper or
+                    lowercase, any numeric character (0-9), an under-score (_),
+                    and the dollar sign ($).
+                </li>
+                <div class="container border bg-body-tertiary my-2">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var user = "Greg"; // This variable name is all lowercase because it is one word
+var userGroup = "Admin"; // This variable uses camelCase; the "u" is lowercase, the "G" is uppercase
+var Permissions = false; // This variable name won't cause errors but is not best practice
+var important! = true; // This variable name is not allowed and will cause an error
+var function = "multiply" // This variable name is not allowed and will cause an error
+</script>
+                </div>
+                <li>
+                    <span class="text-info">Reserved Keywords</span>: Variable
+                    and function names cannot have the same name as keywords
+                    reserved by JavaScript. The common ones are "var", "let",
+                    "const", "function", "if", "else", "try", "catch",
+                    "finally". We can see a
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words"
+                        target="_blank"
+                        >complete list here</a
+                    >.
+                </li>
+                <li>
+                    <span class="text-info">script/noscript</span>: It is best
+                    practice to add a warning message to user's who are using a
+                    browser that does not support JavaScript. We do this with
+                    the "noscript" element in HTML.
+                </li>
+                <div class="container border bg-body-tertiary my-2">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>UCSSG | JavaScript</title>
+</head>
+<body>
+  <p id="out"></p>
+</body>
+<script>
+  document.getElementById("out").innerHTML = "Hello, world!";
+&lt;/script>
+<noscript>
+  Your browser does not support JavaScript.
+</noscript>
+</script>
+                </div>
+                <li>
+                    <span class="text-info">Constants</span>: Some variables we
+                    make should never change. JavaScript allows us to write
+                    "const" instead of "var" to make certain the variable value
+                    cannot be changed. If we try to change a "const", JavaScript
+                    will end in an error.
+                </li>
+                <div class="container border bg-body-tertiary my-2">
+                    <div class="row border">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-javascript line-numbers">const salesTax = 0.6;
+salesTax = 0.8;
+</script>
+                    </div>
+                    <div class="row border">
+                        <pre
+                            class="command-line"
+                            data-output="2"
+                        ><code class="language-bash">const.js
+Uncaught TypeError: invalid assignment to const 'salesTax' const.js:2:1</code>
+                    </pre>
+                    </div>
+                </div>
+                <li>
+                    <span class="text-info">console.log</span>: To catch
+                    possible bugs in our JavaScript code, we can show the
+                    current value of variables in the developer console of the
+                    browser which can be shown by pressing the
+                    <kbd>F12</kbd> key. Up to this point, we have been showing
+                    the value of variables in the code examples by using HTML
+                    and the "document.getElementById..." JavaScript code, but
+                    this takes up a lot of space. From now on, unless necessary,
+                    we will use the console.log method instead.
+                </li>
+                <div class="container border bg-body-tertiary my-2">
+                    <div class="row border">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-javascript line-numbers">var x = 5;
+x += 3;
+console.log(x);
+</script>
+                    </div>
+                    <div class="row border">
+                        <pre
+                            class="command-line"
+                            data-output="2"
+                        ><code class="language-bash">log.js
+8</code>
+                    </pre>
+                    </div>
+                </div>
+            </ul>
 
             <h4
                 class="copylink h3"

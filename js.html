@@ -505,10 +505,86 @@ console.log(x);
                     earlier, internal scripts are nested inside of HTML "script"
                     elements and external scripts are written as text files
                     saved with the ".js" file extension. We can then use the
-                    HTML "link" element to link the ".js" file with our HTML
+                    HTML "src" attribute to link the ".js" file with our HTML
                     file.
                 </li>
             </ul>
+
+            <div class="container my-2">
+                <div class="row border">
+                    <div class="col-lg-7 border bg-body-tertiary">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>UCSSG | JavaScript</title>
+    <script src="script.js">&lt;/script>
+    <script>
+        var y = 8;
+        document.getElementById("y").innerHTML = y;
+    &lt;/script>
+</head>
+<body>
+    <p>x is <span id="x"></p>
+    <p>x is <span id="y"></p>
+</body>
+</html></script>
+                    </div>
+                    <div class="col-lg-5 border bg-body-tertiary">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-javascript line-numbers">var x = 5;
+document.getElementById("x").innerHTML = x;</script>
+                    </div>
+                </div>
+                <div class="row border">
+                    <div class="col-lg-12 border result">
+                        <p>x is 5</p>
+                        <p>y is 8</p>
+                    </div>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info"
+                        >What happens when scripts are used at multiple
+                        levels</span
+                    >: If we create two scripts that contain conflicting
+                    information, the last script to run will take precedence.
+                </li>
+            </ul>
+
+            <div class="container my-2">
+                <div class="row border">
+                    <div class="col-lg-7 border bg-body-tertiary">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-html line-numbers"><!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>UCSSG | JavaScript</title>
+    <script src="script.js">&lt;/script>
+    <script>
+        var x = 8;
+    &lt;/script>
+</head>
+<body>
+</body>
+</html></script>
+                    </div>
+                    <div class="col-lg-5 border bg-body-tertiary">
+                        <!-- prettier-ignore -->
+                        <script type="text/plain" class="language-javascript line-numbers">var x = 5;</script>
+                    </div>
+                </div>
+                <div class="row border bg-body-tertiary">
+                    <pre
+                        class="command-line"
+                        data-output="2"
+                    ><code class="language-bash">console.log(x);
+8</code>
+                </pre>
+                </div>
+            </div>
 
             <h4 class="copylink h3" id="1-4-implement-exception-handling">
                 1.4 Implement exception handling
@@ -519,6 +595,61 @@ console.log(x);
                     #</a
                 >
             </h4>
+            <ul>
+                <li>
+                    <span class="text-info">try, catch, finally</span>: These
+                    three statements are for handling errors without the code
+                    stopping.
+                </li>
+                <ul>
+                    <li>
+                        try: This will hold the code we expect to contain an
+                        error.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        catch: This will hold the code that will run if "try"
+                        contains an error. Typically we just log the type of
+                        error here.
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        finally: This will hold the code that we want to run
+                        regardless of if "try" had an error. This is optional as
+                        we typically do not want to run the same code after an
+                        error versus after a success
+                    </li>
+                </ul>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">try {
+    aplert("test message");
+}
+
+catch(err) {
+    console.log(err.message);
+}
+
+finally {
+    console.log("Program over");
+}
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">error.js
+aplert is not defined
+Program over</code>
+                </pre>
+                </div>
+            </div>
 
             <h4
                 class="copylink h3"

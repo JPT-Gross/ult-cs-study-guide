@@ -665,6 +665,69 @@ Program over</code>
                 >
             </h4>
 
+            <ul>
+                <li>
+                    <span class="text-info">Displaying dialogs</span>: There are
+                    three type of dialogue boxes that can be genereated by the
+                    browser.
+                </li>
+                <ul>
+                    <li>
+                        <span class="text-info">Alert</span>: Alert dialogues
+                        are for displaying critical information to the user.
+                        Alerts provide no interaction for the user other than to
+                        close the dialogue box.
+                    </li>
+                    <li>
+                        <span class="text-info">Confirm</span>: A confirm
+                        dialogue allows us to ask a question to the user and
+                        receive a yes or no answer back from them. The answer
+                        from the user is returned as a boolean value.
+                    </li>
+                    <li>
+                        <span class="text-info">Prompt</span>: A prompt dialogue
+                        allows us to ask the user a question and receive input
+                        back from them. The input is always returned as a string
+                        value, though if we need a number, a string can always
+                        be parsed into a number.
+                    </li>
+                </ul>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var userName;
+
+alert("Welcome to my website! In order to access this site you must make an account.");
+
+if (confirm("Would you like to make an account with this site?")) {
+    userName = prompt("Great! What would you like your user name to be?");
+} else {
+    alert("Sorry to hear that. If you change your mind, feel free to visit us again.");
+}
+</script>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Determining screen size</span>: We
+                    can get the screen width and screen height of the user's
+                    screen. This is very useful for changing how the page looks
+                    if the user is using a phone versus a tablet, or monitor.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var userScreenHeight = screen.height;
+var userScreenWidth = screen.width;
+</script>
+                </div>
+            </div>
+
             <h3 class="h2 copylink" id="2-variables-data-types-and-functions">
                 2. Variables, Data Types, and Functions
                 <a

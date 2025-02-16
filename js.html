@@ -275,8 +275,8 @@
     x += 5;
     // x *= 5;
     document.getElementById("outx").innerHTML = x;
-    /* 
-      x is 10, not 50 because line 15 was ignored 
+    /*
+      x is 10, not 50 because line 15 was ignored
       due to being commented out.
     */
     &lt;/script>
@@ -750,6 +750,473 @@ var userScreenWidth = screen.width;
                     #</a
                 >
             </h4>
+
+            <ul>
+                <li>
+                    <span class="text-info">Number</span>: Any numerical data
+                    including whole numbers, decimals, negative numbers, etc.
+                </li>
+                <li>
+                    <span class="text-info">Boolean</span>: True or false only.
+                </li>
+                <li>
+                    <span class="text-info">String</span>: Characters and
+                    strings.
+                </li>
+                <li>
+                    <span class="text-info">Null</span>: Empty, not to be
+                    confused with 0 or undefined.
+                </li>
+                <li>
+                    <span class="text-info">Undefined</span>: The default data
+                    type a variable recieves if it is declared, but not
+                    initialized.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var age = 25; // Number
+var canDrive = true; // Boolean
+var name = "Karen"; // String
+var offerCode = null; // Null
+var startDate; // Undefined
+</script>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">typeOf</span>: The
+                    <code>typeof</code> operator will return the data type of a
+                    data literal or a variable. This is useful as JavaScript has
+                    "dynamic" data types; meaning the data type of a variable
+                    can change when it is reassigned.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var code = 32;
+console.log(typeof code);
+
+code = "X29f";
+console.log(typeof code);
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">typeof.js
+number
+string</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Type checking functions</span>:
+                    Sometimes we need to check for data types that JavaScript
+                    does not directy support. For instance, whether a number is
+                    an integer (unlike many other programming languages,
+                    JavaScript does not have seperate data types for integers
+                    (whole numbers) and floating point numbers (decimals)). For
+                    this, we can use the type-checking function
+                    <code>Number.isInteger();</code>
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var integer = 5;
+var float = 3.14;
+
+if (Number.isInteger(integer)) {
+    console.log(integer + " is an integer!");
+} else {
+    console.log(integer + " is not an integer!");
+}
+
+if (Number.isInteger(float)) {
+    console.log(float + " is an integer!");
+} else {
+    console.log(float + " is not an integer!");
+}
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">isInt.js
+5 is an integer!
+3.14 is not an integer!</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">use strict</span>: JavaScript is
+                    very forgiving of poorly written code. For new programmers,
+                    this can build bad habits. For experienced programmers
+                    writing large codebases, this can lead to difficult to
+                    diagnose bugs. JavaScript has the
+                    <code>"use strict";</code> statement to fix some of these
+                    issues. <code>"use strict";</code> will force some bad
+                    programming practices to end the program in an error.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">"use strict";
+x = 5; // This should be "var x = 5;", but normally JavaScript will let us get
+       // away with this and run normally. With '"use strict";', however, this will cause an error
+
+console.log(x); // Because the program ended in an error on line two, this line will not run
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">useStrict.js
+ReferenceError: assignment to undeclared variable x at useStrict.js:2:1</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info"
+                        >Converting between data types (parseInt,
+                        parseFloat)</span
+                    >: One common programming problem is having a number that is
+                    that is stored as a string (there is a difference between
+                    "6" and 6). <code>parseInt();</code> and
+                    <code>parseFloat();</code> can solve this problem. Be
+                    careful when using these functions on strings that have a
+                    combination of numbers and text. They will only convert
+                    numbers if they are they come
+                    <strong>before</strong> letters in a string.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = "5";
+var b = "5.8"; // Ints cannot have decimals, so only the five is kept. Also, parseInt does not round, it truncates
+var c = "5 6 7"; // Only the first number is converted
+var d = "5 dollars";
+var e = "$5"; // This will result in "NaN" (Not a Number) because the dollar sign is before the first number in the string
+
+console.log(parseInt(a));
+console.log(parseInt(b));
+console.log(parseInt(c));
+console.log(parseInt(d));
+console.log(parseInt(e));
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-6"
+                    ><code class="language-bash">convert.js
+5
+5
+5
+5
+NaN</code>
+                </pre>
+                </div>
+            </div>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = "5";
+var b = "5.8"; // parseFloat will keep all of this number
+var c = "5 6 7"; // Only the first number is converted
+var d = "5 dollars";
+var e = "$5"; // This will result in "NaN" (Not a Number) because the dollar sign is before the first number in the string
+
+console.log(parseFloat(a));
+console.log(parseFloat(b));
+console.log(parseFloat(c));
+console.log(parseFloat(d));
+console.log(parseFloat(e));
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-6"
+                    ><code class="language-bash">convert.js
+5
+5.8
+5
+5
+NaN</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Formatting numbers</span>: Sometimes
+                    we would like to limit the number of decimal places after a
+                    float. The <code>toFixed();</code> function helps us to
+                    achieve this. Note that the result may be rounded.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var x = 255/32;
+
+console.log(x);
+
+console.log(x.toFixed());
+console.log(x.toFixed(1));
+console.log(x.toFixed(2));
+console.log(x.toFixed(3));
+console.log(x.toFixed(4));
+console.log(x.toFixed(5));</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-8"
+                    ><code class="language-bash">fix.js
+7.96875
+8
+8.0
+7.97
+7.969
+7.9688
+7.96875 </code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">String operations</span>: String
+                    concatenation (adding strings together to build a sentence)
+                    can have unexpected results unless we understand the
+                    underlying rules. Adding two strings combines them. Adding a
+                    string to a number will combine the two and comvert the
+                    number to a string. If an expression is created that
+                    contains multiple strings and numbers PEMDAS will apply.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = "Hello "; // Notice that there is a space after the "o"
+var b = "world!";
+
+console.log(a + b);
+
+var c = 1;
+var d = "1"; // Notice that this is a string not a number
+
+console.log(c + d); // The result is the "1"s combine and the first one is converted to a string
+
+console.log("Foo" + 3 + 2); // PEMDAS dictates that "Foo" and 3 are combined first creating "Foo3"
+                            // then "Foo3" and 2 are combined to create "Foo32"
+console.log("Foo" + 3 * 2); // PEMDAS dictates that 3 * 2 happens first creating 6
+                            // then "Foo" is combined with 6 creating "Foo6"</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-5"
+                    ><code class="language-bash">concat.js
+Hello world!
+11
+Foo32
+Foo6</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">eval</span>: JavaScript's
+                    <code>eval();</code> function evaluates a string. Please
+                    note that, while we are covering this because it is on the
+                    exam, we should never use this function in a real project as
+                    it poses major security risks.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = "5 * 3";
+
+console.log(eval(a));</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2"
+                    ><code class="language-bash">eval.js
+15</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">toLocaleString</span>: JavaScript's
+                    <code>toLocaleString();</code> function will change a number
+                    into string and style it to fit a country's prefered format.
+                    For example, in the U.S., we seperate thousands places with
+                    a comma and the decimal is a period (1,000.00), but in
+                    Denmark, these are swapped (1.000,00).
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = 1234.56;
+
+console.log(a.toLocaleString("en-US"));
+console.log(a.toLocaleString("da-DK"));</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">locale.js
+1,234.56
+1.234,56</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">toPrecision</span>: The
+                    <code>toPrecision();</code> function allows us to limit the
+                    precision of a given number to a given significant digit.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = Math.PI;
+
+console.log(a);
+
+console.log(a.toPrecision(1));
+console.log(a.toPrecision(2));
+console.log(a.toPrecision(3));
+console.log(a.toPrecision(4));
+console.log(a.toPrecision(5));
+
+var b = 0.000054321;
+
+console.log(b);
+
+console.log(b.toPrecision(1));
+console.log(b.toPrecision(2));
+console.log(b.toPrecision(3));
+console.log(b.toPrecision(4));
+console.log(b.toPrecision(5));</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-13"
+                    ><code class="language-bash">precision.js
+3.141592653589793
+3
+3.1
+3.14
+3.142
+3.1416
+0.000054321
+0.00005
+0.000054
+0.0000543
+0.00005432
+0.000054321</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info"
+                        >Single quote vs. double quote (nesting)</span
+                    >: Sometimes we would like strings to print with quotation
+                    marks, but because JavaScript expects strings to be wrapped
+                    in quotation marks, how can we get these to show without
+                    being ignored? If we would like to show double quotes, in
+                    the case of <code>His name is "Harry".</code>, we must wrap
+                    the whole string in single quotes. If we want single quotes,
+                    we wrap the whole string in double quotes.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a = 'His name is "Harry".';
+var b = "His name is 'Harry'.";
+
+console.log(a);
+console.log(b);
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">quote.js
+His name is "Harry".
+His name is 'Harry'.</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Initialization</span>: To initialize
+                    a variable is to give it its first value. To declare a value
+                    is to create a variable. We often declare a varible and
+                    initialize it at the same time on the same line, but
+                    sometimes we declare a variable and initialize it later in
+                    the program.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">var a; // The variable a is declared but not initialized
+var b = 5; // The variable b is both declared and initialized
+
+a = 3; // The variable a is now initialized
+
+b = 2; // The variable b was already initialized, here it is reassigned</script>
+                </div>
+            </div>
 
             <h4 class="copylink h3" id="2-2-declare-and-use-arrays">
                 2.2 Declare and use arrays

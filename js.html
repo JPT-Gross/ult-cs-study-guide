@@ -1228,6 +1228,284 @@ b = 2; // The variable b was already initialized, here it is reassigned</script>
                 >
             </h4>
 
+            <ul>
+                <li>
+                    <span class="text-info">Single-dimensional arrays</span>: An
+                    array is a list of data. This is very useful in programming
+                    when we need a lot of data that is related. An array is
+                    declared much like a variable, though we typically use
+                    <code>const</code>, not var. Using <code>const</code> to
+                    declare an array does not mean cannot modify the items in
+                    the array, only that we cannot change the array into a
+                    regular variable.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Cow", "Pig", "Sheep"];
+
+console.log(animals);
+console.log(animals[0]); // Individual items in an array can be accessed by
+                         // their index number which always starts at 0
+
+animals[0] = "Duck";     // Despite being declared with const, we can change the
+                         // items in the array
+console.log(animals);
+animals = 5;             // But we cannot change it from an array, this will
+                         // cause an error</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-5"
+                    ><code class="language-bash">array.js
+["Cow", "Pig", "Sheep"]
+Cow
+["Duck", "Pig", "Sheep"]
+TypeError: invalid assignment to const 'animals' at array.js 10:1</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Multi-dimensional arrays</span>: A
+                    multi-dimensional array holds more arrays inside of itself.
+                    This may sound complicated, but we can visualize these types
+                    of arrays as a table. In the example below, we have a
+                    multi-dimensional array where the first "row" contains two
+                    mammals, the second row contains two birds, and the third,
+                    two reptiles.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = [["Sheep", "Cow"], ["Emu", "Chicken"], ["Lizard", "Snake"]];
+
+console.log(animals);
+</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-5"
+                    ><code class="language-bash">multiArray.js
+[["Sheep","Cow"],
+["Emu","Chicken"],
+["Lizard","Snake"]]</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Sorting</span>: As we often get data
+                    in a random order, it is useful to be able to sort it. To
+                    sort an array we can use the <code>sort();</code> function.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Sheep", "Cow", "Emu", "Chicken", "Lizard", "Snake"];
+
+console.log(animals); // Before
+
+animals.sort();
+
+console.log(animals); // After</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">sort.js
+["Sheep","Cow","Emu","Chicken","Lizard","Snake"]
+["Chicken","Cow","Emu","Lizard","Sheep","Snake"]</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Searching</span>: Another useful
+                    function that helps us work with arrays is
+                    <code>indexOf();</code> which allows us to find data in an
+                    array. If the item is in the array, it will return its index
+                    number (remember that the first item in an array is index
+                    number 0). If the item is not in the array, it will return a
+                    negative number.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Sheep", "Cow", "Pig"];
+
+console.log(animals.indexOf("Cow"));
+
+console.log(animals.indexOf("Owl"));</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-3"
+                    ><code class="language-bash">search.js
+1
+-1</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">push, pop</span>: To add and remove
+                    data from the end of an array we can use
+                    <code>push();</code> and <code>pop();</code>.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Sheep", "Cow", "Pig"];
+
+console.log(animals);
+
+animals.push("Owl");
+animals.push("Snake");
+
+console.log(animals);
+
+console.pop();
+
+console.log(animals);</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-4"
+                    ><code class="language-bash">pushpop.js
+["Sheep","Cow","Pig"]
+["Sheep","Cow","Pig","Owl","Snake"]
+["Sheep","Cow","Pig","Owl"]</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">shift, unshift</span>: To add and
+                    remove data from the beginning of an array we can use
+                    <code>unshift();</code> and <code>shift();</code>.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Sheep", "Cow", "Pig"];
+
+console.log(animals);
+
+animals.unshift("Owl");
+animals.unshift("Snake");
+
+console.log(animals);
+
+console.shift();
+
+console.log(animals);</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-4"
+                    ><code class="language-bash">shiftunshift.js
+["Sheep","Cow","Pig"]
+["Snake","Owl","Sheep","Cow","Pig"]
+["Owl","Sheep","Cow","Pig"]</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">length</span>: As our programs grow
+                    more complex, we can't predict exactly how long an array
+                    will be during specific points. As we'll see later in the
+                    "loops" section, it is very useful to know exactly how long
+                    an array is. To get the length of an array we use the
+                    <code>length</code> function.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Sheep", "Cow", "Pig"];
+
+console.log(animals.length);
+
+animals.unshift("Owl");
+animals.unshift("Snake");
+
+console.log(animals.length);
+
+console.shift();
+
+console.log(animals.length);</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-4"
+                    ><code class="language-bash">shiftunshift.js
+3
+5
+4</code>
+                </pre>
+                </div>
+            </div>
+
+            <ul>
+                <li>
+                    <span class="text-info">Accessing an array element</span>:
+                    As we've already seen in some of the examples above, we can
+                    access a specific item in an array by referring to its index
+                    number. Remember that in JavaScript (along with many other
+                    programming languages), the index of an array starts with
+                    zero.
+                </li>
+            </ul>
+
+            <div class="container border bg-body-tertiary my-2">
+                <div class="row border">
+                    <!-- prettier-ignore -->
+                    <script type="text/plain" class="language-javascript line-numbers">const animals = ["Sheep", "Cow", "Pig"];
+
+console.log(animals[0]);
+console.log(animals[1]);
+console.log(animals[2]);</script>
+                </div>
+                <div class="row border">
+                    <pre
+                        class="command-line"
+                        data-output="2-4"
+                    ><code class="language-bash">element.js
+Sheep
+Cow
+Pig</code>
+                </pre>
+                </div>
+            </div>
+
             <h4
                 class="copylink h3"
                 id="2-3-complete-and-debug-code-that-uses-objects"
